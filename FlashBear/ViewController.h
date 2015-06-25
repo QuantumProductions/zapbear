@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    //LEFT side is false, RIGHT side is true
+    bool side;
+    
+}
+
+@property (strong, nonatomic) IBOutlet UIView *bear;
+
+
 
 @end

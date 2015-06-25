@@ -17,13 +17,27 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    [self positionBear];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)positionBear
+{
+    int x = side ? (320*2/3) : (320/3);
+    self.bear.center = CGPointMake(x, self.bear.center.y);
+    
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    side = !side;
+    [self positionBear];
 }
 
 @end
