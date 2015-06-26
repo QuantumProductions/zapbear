@@ -12,10 +12,16 @@
 {
     //LEFT side is false, RIGHT side is true
     bool side;
-    
+    bool bearIsGrounded;
+    int jumpForce;
+    float gravity;
+    float fallSpeed;
+    CGSize size;
 }
 
 @property (strong, nonatomic) IBOutlet UIView *bear;
+
+@property (strong, nonatomic) NSTimer *timer;
 
 
 
