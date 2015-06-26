@@ -20,21 +20,28 @@
 {
     [super viewDidLoad];
 
-    [self positionBear];
+    //[self positionBear];
     
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(timerFire) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
-    gravity = 1;
-    jumpForce = 15;
+    gravity = 2.5;
+    jumpForce = 24;
     fallSpeed = 0;
+    
+    xPosEpsilon = 0.001;
+    xMoveInverseAcceleration = 6.5;
+    isInXPlace = false;
+    
     size = [[UIScreen mainScreen] bounds].size;
     
 }
 
 - (void)timerFire {
-    NSLog([NSString stringWithFormat:@"%f", fallSpeed]);
+    //NSLog([NSString stringWithFormat:@"%f", fallSpeed]);
     [self applyFalling];
+    
+    [self positionBear];
 
 }
 
@@ -51,15 +58,29 @@
 
 - (void)positionBear
 {
-    int x = side ? (320*2/3) : (320/3);
-    self.bear.center = CGPointMake(x, self.bear.center.y);
+    int xTarget = side ? (320*2/3) : (320/3);
+    if(!isInXPlace && self.bear.center.x - xTarget < xPosEpsilon && xTarget - self.bear.center.x < xPosEpsilon)
+    {
+        self.bear.center = CGPointMake(xTarget, self.bear.center.y);
+        isInXPlace = true;
+    }
+    else
+    {
+        float xIncrement = ABS(self.bear.center.x - xTarget)/xMoveInverseAcceleration;
+        int xDirection = -ABS(self.bear.center.x - xTarget)/(self.bear.center.x - xTarget);
+        self.bear.center = CGPointMake((self.bear.center.x + xIncrement*xDirection), self.bear.center.y);
+    }
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    side = !side;
-    [self positionBear];
-    [self jump];
+    if([self bearReachedGround])
+    {
+        side = !side;
+        isInXPlace = false;
+        //[self positionBear];
+        [self jump];
+    }
 }
 
 - (void)jump
@@ -84,7 +105,7 @@
         
         if ([self bearReachedGround])
         {
-            NSLog(@"got here");
+            //NSLog(@"got here");
             fallSpeed = 0;
             self.bear.backgroundColor = [UIColor blueColor];
             [self plantBearOnGround];

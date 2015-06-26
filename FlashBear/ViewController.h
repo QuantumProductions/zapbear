@@ -16,6 +16,10 @@
     int jumpForce;
     float gravity;
     float fallSpeed;
+    float xPosEpsilon;
+    float xMoveInverseAcceleration;
+    bool isInXPlace;
+    
     CGSize size;
 }
 
