@@ -135,6 +135,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Paul Muren";
+				TargetAttributes = {
+					5B6F84761B3CB10C003497B4 = {
+						DevelopmentTeam = 7Y7DD8XY72;
+					};
+				};
 			};
 			buildConfigurationList = 5B6F84721B3CB10C003497B4 /* Build configuration list for PBXProject "FlashBear" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -260,10 +265,13 @@
 		5B6F849B1B3CB10C003497B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -271,10 +279,13 @@
 		5B6F849C1B3CB10C003497B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -298,6 +309,7 @@
 				5B6F849C1B3CB10C003497B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

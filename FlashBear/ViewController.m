@@ -25,7 +25,7 @@
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(timerFire) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
-    gravity = 2.5;
+    gravity = 2.2;
     jumpForce = 24;
     fallSpeed = 0;
     
@@ -132,7 +132,7 @@
     self.bear.center = CGPointMake(self.bear.center.x, self.bear.center.y - 1);
     if (!lightningDelay) {
         dodged = true;
-     }
+    }
 }
 
 - (void)plantBearOnGround {
