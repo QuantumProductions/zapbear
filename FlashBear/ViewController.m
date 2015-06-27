@@ -8,19 +8,22 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
-
+- (void)loadSounds
+{
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"jump" ofType:@"wav"];
+    NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     //[self positionBear];
+    
+    [self loadSounds];
     
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(timerFire) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
@@ -133,6 +136,7 @@
     if (!lightningDelay) {
         dodged = true;
     }
+
 }
 
 - (void)plantBearOnGround {
