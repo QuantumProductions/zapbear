@@ -21,12 +21,19 @@
     bool isInXPlace;
     
     CGSize size;
+    
+    int lightningDelay;
+    int framesUntilLightningStrike;
+    
+    bool dodged;
+    
+    int points;
 }
 
 @property (strong, nonatomic) IBOutlet UIView *bear;
 
 @property (strong, nonatomic) NSTimer *timer;
 
-
+@property (strong, nonatomic) UILabel *label;
 
 @end

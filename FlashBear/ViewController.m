@@ -34,15 +34,64 @@
     isInXPlace = false;
     
     size = [[UIScreen mainScreen] bounds].size;
+
+    [self delayLightning];
     
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 40)];
+    self.label.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.label];
 }
 
-- (void)timerFire {
-    //NSLog([NSString stringWithFormat:@"%f", fallSpeed]);
+- (void)delayLightning {
+    lightningDelay = arc4random() % 500;
+    lightningDelay += 80;
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.label.text = [NSString stringWithFormat:@"%d", points];
+}
+
+- (void)prepareLightningStrike {
+    framesUntilLightningStrike = 23;
+    self.view.backgroundColor = [UIColor darkGrayColor];
+}
+
+- (void)lightningLoop
+{
+    if (lightningDelay) {
+        lightningDelay--;
+        if (lightningDelay <= 0) {
+            [self prepareLightningStrike];
+        }
+    } else {
+        framesUntilLightningStrike--;
+        if (framesUntilLightningStrike <= 0) {
+            if (dodged) {
+                [self scorePoint];
+            } else {
+                [self lightningStrikesBear];
+            }
+            dodged = false;
+            [self delayLightning];
+        }
+    }
+}
+
+- (void)lightningStrikesBear
+{
+    points = 0;
+}
+
+- (void)scorePoint
+{
+    points++;
+}
+
+- (void)timerFire
+{
     [self applyFalling];
     
     [self positionBear];
 
+    [self lightningLoop];
 }
 
 - (bool)bearReachedGround
@@ -50,15 +99,9 @@
     return self.bear.frame.origin.y + self.bear.frame.size.height >= size.height;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)positionBear
 {
-    int xTarget = side ? (320*2/3) : (320/3);
+    int xTarget = side ? (320*2/3) - 10 : (320/3) + 10;
     if(!isInXPlace && self.bear.center.x - xTarget < xPosEpsilon && xTarget - self.bear.center.x < xPosEpsilon)
     {
         self.bear.center = CGPointMake(xTarget, self.bear.center.y);
@@ -78,27 +121,32 @@
     {
         side = !side;
         isInXPlace = false;
-        //[self positionBear];
         [self jump];
     }
 }
 
 - (void)jump
 {
-    self.bear.backgroundColor = [UIColor greenColor];
+//    self.bear.backgroundColor = [UIColor greenColor];
     fallSpeed = -jumpForce;
-    //bearIsGrounded = false;
     self.bear.center = CGPointMake(self.bear.center.x, self.bear.center.y - 1);
+    if (!lightningDelay) {
+        dodged = true;
+     }
 }
 
 - (void)plantBearOnGround {
-        self.bear.center = CGPointMake(self.bear.center.x, size.height - self.bear.frame.size.height/2);
+    self.bear.center = CGPointMake(self.bear.center.x, size.height - self.bear.frame.size.height/2);
 }
 
 - (void)applyFalling
 {
-    if (![self bearReachedGround])  //(!bearIsGrounded)
+    if ([self bearReachedGround])
     {
+        fallSpeed = 0;
+        self.bear.backgroundColor = [UIColor blueColor];
+        [self plantBearOnGround];
+    } else {
         self.bear.center = CGPointMake(self.bear.center.x, self.bear.center.y + fallSpeed);
         fallSpeed += gravity;
         
