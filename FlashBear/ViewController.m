@@ -8,13 +8,14 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
-
-@end
-
 @implementation ViewController
 
-
+- (void)loadSounds
+{
+    NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"jump" ofType:@"wav"];
+    NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+}
 
 - (void)viewDidLoad
 {
@@ -22,10 +23,12 @@
 
     //[self positionBear];
     
+    [self loadSounds];
+    
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(timerFire) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
-    gravity = 2.5;
+    gravity = 2.2;
     jumpForce = 24;
     fallSpeed = 0;
     
@@ -78,6 +81,7 @@
 - (void)lightningStrikesBear
 {
     points = 0;
+    [self showMenu];
 }
 
 - (void)scorePoint
@@ -101,7 +105,7 @@
 
 - (void)positionBear
 {
-    int xTarget = side ? (320*2/3) - 10 : (320/3) + 10;
+    int xTarget = onLeftSide ? (320*2/3) - 10 : (320/3) + 10;
     if(!isInXPlace && self.bear.center.x - xTarget < xPosEpsilon && xTarget - self.bear.center.x < xPosEpsilon)
     {
         self.bear.center = CGPointMake(xTarget, self.bear.center.y);
@@ -119,7 +123,7 @@
 {
     if([self bearReachedGround])
     {
-        side = !side;
+        onLeftSide = !onLeftSide;
         isInXPlace = false;
         [self jump];
     }
@@ -132,7 +136,8 @@
     self.bear.center = CGPointMake(self.bear.center.x, self.bear.center.y - 1);
     if (!lightningDelay) {
         dodged = true;
-     }
+    }
+
 }
 
 - (void)plantBearOnGround {

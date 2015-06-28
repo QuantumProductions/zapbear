@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E05D6251B3E554E0058727A /* AVFoundation.framework */; };
+		0E05D6281B3E55C90058727A /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E05D6271B3E55C90058727A /* jump.wav */; };
 		5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847A1B3CB10C003497B4 /* UIKit.framework */; };
 		5B6F847D1B3CB10C003497B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847C1B3CB10C003497B4 /* Foundation.framework */; };
 		5B6F847F1B3CB10C003497B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E05D6251B3E554E0058727A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0E05D6271B3E55C90058727A /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 		5B6F84771B3CB10C003497B4 /* FlashBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6F847A1B3CB10C003497B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B6F847C1B3CB10C003497B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */,
 				5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */,
 				5B6F847D1B3CB10C003497B4 /* Foundation.framework in Frameworks */,
 				5B6F847F1B3CB10C003497B4 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +78,7 @@
 		5B6F84791B3CB10C003497B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E05D6251B3E554E0058727A /* AVFoundation.framework */,
 				5B6F847A1B3CB10C003497B4 /* UIKit.framework */,
 				5B6F847C1B3CB10C003497B4 /* Foundation.framework */,
 				5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */,
@@ -88,6 +94,7 @@
 				5B6F84921B3CB10C003497B4 /* ViewController.h */,
 				5B6F84931B3CB10C003497B4 /* ViewController.m */,
 				5B6F84951B3CB10C003497B4 /* ViewController.xib */,
+				0E05D6271B3E55C90058727A /* jump.wav */,
 				5B6F84811B3CB10C003497B4 /* Supporting Files */,
 			);
 			path = FlashBear;
@@ -135,6 +142,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Paul Muren";
+				TargetAttributes = {
+					5B6F84761B3CB10C003497B4 = {
+						DevelopmentTeam = 7Y7DD8XY72;
+					};
+				};
 			};
 			buildConfigurationList = 5B6F84721B3CB10C003497B4 /* Build configuration list for PBXProject "FlashBear" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -162,6 +174,7 @@
 				5B6F848D1B3CB10C003497B4 /* Default.png in Resources */,
 				5B6F848F1B3CB10C003497B4 /* Default@2x.png in Resources */,
 				5B6F84911B3CB10C003497B4 /* Default-568h@2x.png in Resources */,
+				0E05D6281B3E55C90058727A /* jump.wav in Resources */,
 				5B6F84971B3CB10C003497B4 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,10 +273,13 @@
 		5B6F849B1B3CB10C003497B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -271,10 +287,13 @@
 		5B6F849C1B3CB10C003497B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -298,6 +317,7 @@
 				5B6F849C1B3CB10C003497B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

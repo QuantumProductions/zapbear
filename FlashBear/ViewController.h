@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import <AVFoundation/AVFoundation.h>
+
 @interface ViewController : UIViewController
 {
-    //LEFT side is false, RIGHT side is true
-    bool side;
+    bool onLeftSide;
     bool bearIsGrounded;
     int jumpForce;
     float gravity;
@@ -35,5 +36,7 @@
 @property (strong, nonatomic) NSTimer *timer;
 
 @property (strong, nonatomic) UILabel *label;
+
+@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 
 @end
