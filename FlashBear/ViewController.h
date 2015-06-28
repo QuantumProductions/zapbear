@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
 #import <AVFoundation/AVFoundation.h>
+#import "Menu.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MenuDelegate>
 {
     bool onLeftSide;
     bool bearIsGrounded;
@@ -29,6 +29,8 @@
     bool dodged;
     
     int points;
+    
+    int lightnings;
 }
 
 @property (strong, nonatomic) IBOutlet UIView *bear;
@@ -38,5 +40,7 @@
 @property (strong, nonatomic) UILabel *label;
 
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+
+@property (strong, nonatomic) Menu *menu;
 
 @end

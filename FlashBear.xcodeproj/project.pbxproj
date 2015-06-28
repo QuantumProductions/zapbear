@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E05D6251B3E554E0058727A /* AVFoundation.framework */; };
 		0E05D6281B3E55C90058727A /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E05D6271B3E55C90058727A /* jump.wav */; };
+		0ED4E3961B3F735E0094E73A /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED4E3951B3F735E0094E73A /* Menu.m */; };
 		5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847A1B3CB10C003497B4 /* UIKit.framework */; };
 		5B6F847D1B3CB10C003497B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847C1B3CB10C003497B4 /* Foundation.framework */; };
 		5B6F847F1B3CB10C003497B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */; };
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		0E05D6251B3E554E0058727A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0E05D6271B3E55C90058727A /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		0ED4E3941B3F735E0094E73A /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		0ED4E3951B3F735E0094E73A /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		5B6F84771B3CB10C003497B4 /* FlashBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6F847A1B3CB10C003497B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B6F847C1B3CB10C003497B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +64,8 @@
 		5B6F846E1B3CB10C003497B4 = {
 			isa = PBXGroup;
 			children = (
+				0ED4E3941B3F735E0094E73A /* Menu.h */,
+				0ED4E3951B3F735E0094E73A /* Menu.m */,
 				5B6F84801B3CB10C003497B4 /* FlashBear */,
 				5B6F84791B3CB10C003497B4 /* Frameworks */,
 				5B6F84781B3CB10C003497B4 /* Products */,
@@ -188,6 +193,7 @@
 			files = (
 				5B6F84871B3CB10C003497B4 /* main.m in Sources */,
 				5B6F848B1B3CB10C003497B4 /* AppDelegate.m in Sources */,
+				0ED4E3961B3F735E0094E73A /* Menu.m in Sources */,
 				5B6F84941B3CB10C003497B4 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

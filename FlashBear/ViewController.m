@@ -62,6 +62,7 @@
     if (lightningDelay) {
         lightningDelay--;
         if (lightningDelay <= 0) {
+            lightnings++;
             [self prepareLightningStrike];
         }
     } else {
@@ -78,9 +79,32 @@
     }
 }
 
+- (void)showMenu {
+    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    self.menu.delegate = self;
+    [self.view addSubview:self.menu];
+}
+
+- (void)retryTapped {
+    [self.menu removeFromSuperview];
+    self.menu = nil;
+    [self delayLightning];
+}
+
 - (void)lightningStrikesBear
 {
     points = 0;
+    NSInteger bearDeaths = [[NSUserDefaults standardUserDefaults] integerForKey:@"strikes"];
+    bearDeaths++;
+    [[NSUserDefaults standardUserDefaults] setInteger:bearDeaths forKey:@"strikes"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSInteger lightning = [[NSUserDefaults standardUserDefaults] integerForKey:@"lightning"];
+    lightning+= lightnings;
+    lightnings = 0;
+    [[NSUserDefaults standardUserDefaults] setInteger:lightning forKey:@"lightning"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     [self showMenu];
 }
 
@@ -95,7 +119,9 @@
     
     [self positionBear];
 
-    [self lightningLoop];
+    if (!self.menu) {
+        [self lightningLoop];
+    }
 }
 
 - (bool)bearReachedGround
