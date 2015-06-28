@@ -31,6 +31,8 @@
     int points;
     
     int lightnings;
+    
+    NSInteger best;
 }
 
 @property (strong, nonatomic) IBOutlet UIView *bear;
@@ -40,6 +42,7 @@
 @property (strong, nonatomic) UILabel *label;
 
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong, nonatomic) AVAudioPlayer *musicPlayer;
 
 @property (strong, nonatomic) Menu *menu;
 

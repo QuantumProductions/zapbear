@@ -15,6 +15,13 @@
     NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"jump" ofType:@"wav"];
     NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"theme" ofType:@"wav"];
+    soundURL = [NSURL fileURLWithPath:soundPath];
+    self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    self.musicPlayer.numberOfLoops = -1;
+    [self.musicPlayer play];
+
 }
 
 - (void)viewDidLoad
@@ -43,6 +50,8 @@
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 40)];
     self.label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.label];
+    
+    best = [[NSUserDefaults standardUserDefaults] integerForKey:@"best"];
 }
 
 - (void)delayLightning {
@@ -97,20 +106,28 @@
     NSInteger bearDeaths = [[NSUserDefaults standardUserDefaults] integerForKey:@"strikes"];
     bearDeaths++;
     [[NSUserDefaults standardUserDefaults] setInteger:bearDeaths forKey:@"strikes"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     
     NSInteger lightning = [[NSUserDefaults standardUserDefaults] integerForKey:@"lightning"];
     lightning+= lightnings;
     lightnings = 0;
     [[NSUserDefaults standardUserDefaults] setInteger:lightning forKey:@"lightning"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
 
+    NSInteger savedBest = [[NSUserDefaults standardUserDefaults] integerForKey:@"best"];
+    if (best >= savedBest) {
+        [[NSUserDefaults standardUserDefaults] setInteger:best forKey:@"best"];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     [self showMenu];
 }
 
 - (void)scorePoint
 {
     points++;
+    if (points > best) {
+        best = points;
+    }
 }
 
 - (void)timerFire

@@ -18,6 +18,7 @@
 
 @property (strong, nonatomic) UILabel *lightningLabel;
 @property (strong, nonatomic) UILabel *deadBearLabel;
+@property (strong, nonatomic) UILabel *highscoreLabel;
 
 @property (nonatomic, assign) id <MenuDelegate> delegate;
 
