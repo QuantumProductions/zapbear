@@ -12,8 +12,7 @@
 
 @interface ViewController : UIViewController
 {
-    //LEFT side is false, RIGHT side is true
-    bool side;
+    bool onLeftSide;
     bool bearIsGrounded;
     int jumpForce;
     float gravity;
