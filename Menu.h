@@ -19,7 +19,10 @@
 @property (strong, nonatomic) UILabel *lightningLabel;
 @property (strong, nonatomic) UILabel *deadBearLabel;
 @property (strong, nonatomic) UILabel *highscoreLabel;
+@property (strong, nonatomic) UILabel *scoreLabel;
 
 @property (nonatomic, assign) id <MenuDelegate> delegate;
+
+- (id)initWithFrame:(CGRect)frame points:(NSInteger)points;
 
 @end

@@ -88,8 +88,8 @@
     }
 }
 
-- (void)showMenu {
-    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+- (void)showMenu:(NSInteger)p {
+    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) points:p];
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
 }
@@ -102,7 +102,6 @@
 
 - (void)lightningStrikesBear
 {
-    points = 0;
     NSInteger bearDeaths = [[NSUserDefaults standardUserDefaults] integerForKey:@"strikes"];
     bearDeaths++;
     [[NSUserDefaults standardUserDefaults] setInteger:bearDeaths forKey:@"strikes"];
@@ -119,7 +118,8 @@
     
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    [self showMenu];
+    [self showMenu:points];
+    points = 0;
 }
 
 - (void)scorePoint
