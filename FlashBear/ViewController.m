@@ -57,13 +57,13 @@
 - (void)delayLightning {
     lightningDelay = arc4random() % 500;
     lightningDelay += 80;
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
     self.label.text = [NSString stringWithFormat:@"%d", points];
 }
 
 - (void)prepareLightningStrike {
     framesUntilLightningStrike = 23;
-    self.view.backgroundColor = [UIColor darkGrayColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)lightningLoop
@@ -174,7 +174,6 @@
 
 - (void)jump
 {
-//    self.bear.backgroundColor = [UIColor greenColor];
     fallSpeed = -jumpForce;
     self.bear.center = CGPointMake(self.bear.center.x, self.bear.center.y - 1);
     if (!lightningDelay) {
@@ -192,7 +191,6 @@
     if ([self bearReachedGround])
     {
         fallSpeed = 0;
-        self.bear.backgroundColor = [UIColor blueColor];
         [self plantBearOnGround];
     } else {
         self.bear.center = CGPointMake(self.bear.center.x, self.bear.center.y + fallSpeed);
@@ -201,9 +199,7 @@
         
         if ([self bearReachedGround])
         {
-            //NSLog(@"got here");
             fallSpeed = 0;
-            self.bear.backgroundColor = [UIColor blueColor];
             [self plantBearOnGround];
         }
     }

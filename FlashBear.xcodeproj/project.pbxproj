@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E05D6251B3E554E0058727A /* AVFoundation.framework */; };
 		0E05D6281B3E55C90058727A /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E05D6271B3E55C90058727A /* jump.wav */; };
+		0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */; };
 		0ED4E3961B3F735E0094E73A /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED4E3951B3F735E0094E73A /* Menu.m */; };
 		0ED4E3981B3F78EE0094E73A /* theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0ED4E3971B3F78EE0094E73A /* theme.wav */; };
 		5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847A1B3CB10C003497B4 /* UIKit.framework */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		0E05D6251B3E554E0058727A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0E05D6271B3E55C90058727A /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearProto.png; sourceTree = "<group>"; };
 		0ED4E3941B3F735E0094E73A /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
 		0ED4E3951B3F735E0094E73A /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Menu.m; sourceTree = "<group>"; };
 		0ED4E3971B3F78EE0094E73A /* theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = theme.wav; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				5B6F84951B3CB10C003497B4 /* ViewController.xib */,
 				0ED4E3971B3F78EE0094E73A /* theme.wav */,
 				0E05D6271B3E55C90058727A /* jump.wav */,
+				0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */,
 				5B6F84811B3CB10C003497B4 /* Supporting Files */,
 			);
 			path = FlashBear;
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B6F84851B3CB10C003497B4 /* InfoPlist.strings in Resources */,
+				0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */,
 				5B6F848D1B3CB10C003497B4 /* Default.png in Resources */,
 				5B6F848F1B3CB10C003497B4 /* Default@2x.png in Resources */,
 				0ED4E3981B3F78EE0094E73A /* theme.wav in Resources */,

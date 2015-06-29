@@ -35,7 +35,7 @@
     NSInteger best;
 }
 
-@property (strong, nonatomic) IBOutlet UIView *bear;
+@property (strong, nonatomic) IBOutlet UIImageView *bear;
 
 @property (strong, nonatomic) NSTimer *timer;
 
