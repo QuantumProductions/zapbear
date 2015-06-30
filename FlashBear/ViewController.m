@@ -61,6 +61,11 @@
     lastLightningDelay = lightningDelay;
     self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
     self.label.text = [NSString stringWithFormat:@"%d", points];
+    int fontSize = 18 + points;
+    if (fontSize > 82) {
+        fontSize = 82;
+    }
+    self.label.font = [UIFont boldSystemFontOfSize:fontSize];
 }
 
 - (void)prepareLightningStrike {
