@@ -28,8 +28,9 @@
 {
     [super viewDidLoad];
 
-    //[self positionBear];
-    
+    self.lightning = [[Lightning alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.lightning];
+
     [self loadSounds];
     
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(timerFire) userInfo:nil repeats:true] ;
@@ -63,7 +64,9 @@
 
 - (void)prepareLightningStrike {
     framesUntilLightningStrike = 23;
-    self.view.backgroundColor = [UIColor whiteColor];
+    [self.lightning reset];
+    self.lightning.x = self.bear.center.x < size.width / 2 ? size.width * .25 : size.width * .75;
+//    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)lightningLoop
@@ -75,8 +78,9 @@
             [self prepareLightningStrike];
         }
     } else {
-        framesUntilLightningStrike--;
-        if (framesUntilLightningStrike <= 0) {
+        [self.lightning pulse];
+        if ([self.lightning struck]) {
+            [self.lightning reset];
             if (dodged) {
                 [self scorePoint];
             } else {
@@ -117,7 +121,7 @@
     }
     
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
+  
     [self showMenu:points];
     points = 0;
 }
@@ -146,9 +150,13 @@
     return self.bear.frame.origin.y + self.bear.frame.size.height >= size.height;
 }
 
+- (int)targetX {
+    return onLeftSide ? (320*2/3) - 10 : (320/3) + 10;
+}
+
 - (void)positionBear
 {
-    int xTarget = onLeftSide ? (320*2/3) - 10 : (320/3) + 10;
+    int xTarget = [self targetX];
     if(!isInXPlace && self.bear.center.x - xTarget < xPosEpsilon && xTarget - self.bear.center.x < xPosEpsilon)
     {
         self.bear.center = CGPointMake(xTarget, self.bear.center.y);

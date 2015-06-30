@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import "Menu.h"
+#import "Lightning.h"
 
 @interface ViewController : UIViewController <MenuDelegate>
 {
@@ -45,5 +46,7 @@
 @property (strong, nonatomic) AVAudioPlayer *musicPlayer;
 
 @property (strong, nonatomic) Menu *menu;
+
+@property (strong, nonatomic) Lightning *lightning;
 
 @end
