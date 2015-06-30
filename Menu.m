@@ -57,8 +57,11 @@
     
     self.scoreLabel.center = CGPointMake(frame.size.width / 2, frame.size.width / 2);
     
-    self.userInteractionEnabled = true;
-    [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(retryTapped)]];
+    UIButton *retryButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
+    [retryButton setImage:[UIImage imageNamed:@"playbutton.png"] forState:UIControlStateNormal];
+    [retryButton addTarget:self action:@selector(retryTapped) forControlEvents:UIControlEventTouchUpInside];
+    retryButton.center = CGPointMake(frame.size.width / 2, frame.size.height * .75);
+    [self addSubview:retryButton];
 
     return self;
 }

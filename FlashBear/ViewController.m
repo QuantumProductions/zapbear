@@ -131,7 +131,7 @@
     
     [[NSUserDefaults standardUserDefaults] synchronize];
   
-//    [self showMenu:points];
+    [self showMenu:points];
     points = 0;
 }
 
