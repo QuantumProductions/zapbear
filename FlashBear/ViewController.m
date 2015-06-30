@@ -58,29 +58,33 @@
 - (void)delayLightning {
     lightningDelay = arc4random() % 500;
     lightningDelay += 80;
+    lastLightningDelay = lightningDelay;
     self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
     self.label.text = [NSString stringWithFormat:@"%d", points];
 }
 
 - (void)prepareLightningStrike {
     framesUntilLightningStrike = 23;
-    [self.lightning reset];
     self.lightning.x = self.bear.center.x < size.width / 2 ? size.width * .25 : size.width * .75;
-//    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)lightningLoop
 {
     if (lightningDelay) {
         lightningDelay--;
+        if (self.lightning.alpha && lightningDelay < lastLightningDelay - 10) {
+            self.lightning.alpha = 0;
+        }
         if (lightningDelay <= 0) {
             lightnings++;
             [self prepareLightningStrike];
         }
     } else {
-        [self.lightning pulse];
-        if ([self.lightning struck]) {
-            [self.lightning reset];
+        framesUntilLightningStrike--;
+        if (framesUntilLightningStrike <= 0) {
+            [self.lightning display];
+            self.lightning.alpha = 1;
             if (dodged) {
                 [self scorePoint];
             } else {
@@ -122,7 +126,7 @@
     
     [[NSUserDefaults standardUserDefaults] synchronize];
   
-    [self showMenu:points];
+//    [self showMenu:points];
     points = 0;
 }
 

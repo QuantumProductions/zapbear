@@ -38,36 +38,30 @@
 
 }
 
-- (void)pulse
-{
-    iterations++;
-    
-    if (iterations < 23) {
-    CGPoint oldBolt = bolts[iterations-1];
-    int randX = arc4random() % 10;
-    int randY = arc4random() % 20;
-    randY += 10;
-    int flip = arc4random() % 2;
-    if (flip) {
-        randX = -randX;
+- (void)display {
+    int flip = self.x < self.frame.size.width / 2;
+    bolts[0] = CGPointMake(flip ? self.frame.size.width * .45 : self.frame.size.width * .55, -2);
+    for (iterations = 1; iterations < 22; iterations++) {
+        flip = self.x < self.frame.size.width / 2;
+        CGPoint oldBolt = bolts[iterations-1];
+        int randX = arc4random() % 15;
+        int randY = arc4random() % 5;
+        randY += 10;
+        if (oldBolt.x > self.frame.size.width * .90) {
+            randX = -randX;
+        } else if (oldBolt.x < self.frame.size.width * .10) {
+            randX = randX;
+        } else {
+            if (flip) {
+                randX = -randX;
+            }
+        }
+        
+        bolts[iterations] = CGPointMake(oldBolt.x + randX, oldBolt.y + randY);
     }
-    bolts[iterations] = CGPointMake(oldBolt.x + randX, oldBolt.y + randY);
-    } else if (iterations == 23) {
-        bolts[22] = CGPointMake(self.x, self.frame.size.height);
-    }
-
+    bolts[22] = CGPointMake(self.x, self.frame.size.height - 50);
     [self setNeedsDisplay];
 }
 
-- (void)reset {
-    iterations = 0;
-    for (int i = 0; i < 23; i++) {
-        bolts[i] = CGPointMake(self.x, -10);
-    }
-}
-
-- (bool)struck {
-    return iterations >= 23;
-}
 
 @end

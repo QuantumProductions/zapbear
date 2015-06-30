@@ -34,6 +34,8 @@
     int lightnings;
     
     NSInteger best;
+    
+    int lastLightningDelay;
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *bear;

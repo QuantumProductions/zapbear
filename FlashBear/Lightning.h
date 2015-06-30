@@ -15,9 +15,6 @@
 
 @property (nonatomic) float x;
 
-- (void)pulse;
-- (void)reset;
-
-- (bool)struck;
+- (void)display;
 
 @end
