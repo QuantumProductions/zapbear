@@ -35,7 +35,7 @@
 		0ED4E3941B3F735E0094E73A /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = ../Menu.h; sourceTree = "<group>"; };
 		0ED4E3951B3F735E0094E73A /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Menu.m; path = ../Menu.m; sourceTree = "<group>"; };
 		0ED4E3971B3F78EE0094E73A /* theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = theme.wav; sourceTree = "<group>"; };
-		5B6F84771B3CB10C003497B4 /* FlashBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6F84771B3CB10C003497B4 /* ⊂(ϟ(ェ)ϟ)⊃.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "⊂(ϟ(ェ)ϟ)⊃.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6F847A1B3CB10C003497B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B6F847C1B3CB10C003497B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -80,7 +80,7 @@
 		5B6F84781B3CB10C003497B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B6F84771B3CB10C003497B4 /* FlashBear.app */,
+				5B6F84771B3CB10C003497B4 /* ⊂(ϟ(ェ)ϟ)⊃.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 			);
 			name = FlashBear;
 			productName = FlashBear;
-			productReference = 5B6F84771B3CB10C003497B4 /* FlashBear.app */;
+			productReference = 5B6F84771B3CB10C003497B4 /* ⊂(ϟ(ェ)ϟ)⊃.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,6 +261,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "⊂(ϟ(ェ)ϟ)⊃";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -285,6 +286,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "⊂(ϟ(ェ)ϟ)⊃";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -298,7 +300,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "⊂(ϟ(ェ)ϟ)⊃";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,7 +314,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "⊂(ϟ(ェ)ϟ)⊃";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
