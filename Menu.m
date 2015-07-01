@@ -12,13 +12,14 @@
 
 - (id)initWithFrame:(CGRect)frame points:(NSInteger)points {
     self = [super initWithFrame:frame];
+
+    self.backgroundColor = [UIColor clearColor];
     
     float w = frame.size.width * .25;
     
     float h = 50;
     float h2 = h + 50;
     
-    self.backgroundColor = [UIColor whiteColor];
     self.lightningLabel = [[UILabel alloc] initWithFrame:CGRectMake(w, h, w, 50)];
     self.lightningLabel.text = [NSString stringWithFormat:@"%ld", (long)[[NSUserDefaults standardUserDefaults] integerForKey:@"lightning"]];
     self.lightningLabel.center = CGPointMake(w, h);
@@ -36,7 +37,6 @@
     bestText.text = @"BEST";
     bestText.center = CGPointMake(w * 2, h2);
     
-    self.backgroundColor = [UIColor whiteColor];
     self.deadBearLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, h, 50)];
     self.deadBearLabel.center = CGPointMake(w * 3, h);
     self.deadBearLabel.text = [NSString stringWithFormat:@"%ld", (long)[[NSUserDefaults standardUserDefaults] integerForKey:@"strikes"]];

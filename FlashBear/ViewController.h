@@ -51,4 +51,7 @@
 
 @property (strong, nonatomic) Lightning *lightning;
 
+@property (strong, nonatomic) IBOutlet UILabel *flashTitle;
+@property (strong, nonatomic) IBOutlet UILabel *bearTitle;
+
 @end

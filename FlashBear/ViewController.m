@@ -24,10 +24,46 @@
 
 }
 
+- (void)preparePhysics
+{
+    gravity = 2.2;
+    jumpForce = 24;
+    fallSpeed = 0;
+    
+    xPosEpsilon = 0.001;
+    xMoveInverseAcceleration = 6.5;
+    isInXPlace = false;
+}
+
+- (void)loadTitle
+{
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    CGPoint flash = self.flashTitle.center;
+    CGPoint bear = self.bearTitle.center;
+    self.flashTitle.center = CGPointMake(self.flashTitle.center.x, -50);
+    self.bearTitle.center = CGPointMake(self.bearTitle.center.x, 700);
+        [UIView animateWithDuration:1
+                         animations:^{
+                             self.flashTitle.center = flash;
+                         } completion:^(BOOL finished) {
+                             if (finished) {
+                                 [UIView animateWithDuration:1 animations:^{
+                                     self.bearTitle.center = bear;
+                                 }];
+                             }
+                         }];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    size = [[UIScreen mainScreen] bounds].size;
+    [self loadTitle];
+    
     self.lightning = [[Lightning alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.lightning];
 
@@ -36,15 +72,7 @@
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(timerFire) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
-    gravity = 2.2;
-    jumpForce = 24;
-    fallSpeed = 0;
-    
-    xPosEpsilon = 0.001;
-    xMoveInverseAcceleration = 6.5;
-    isInXPlace = false;
-    
-    size = [[UIScreen mainScreen] bounds].size;
+    [self preparePhysics];
 
     [self delayLightning];
     
@@ -53,6 +81,7 @@
     [self.view addSubview:self.label];
     
     best = [[NSUserDefaults standardUserDefaults] integerForKey:@"best"];
+    
 }
 
 - (void)delayLightning {
