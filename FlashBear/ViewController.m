@@ -41,32 +41,41 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    CGPoint flash = self.flashTitle.center;
-    CGPoint bear = self.bearTitle.center;
+    startFlash = self.flashTitle.center;
+    startBear = self.bearTitle.center;
+    [self animateTitle];
+    [self plantBearOnGround];
+}
+
+- (void)animateTitle {
+    self.flashTitle.alpha = 1;
+    self.bearTitle.alpha = 1;
+
     self.flashTitle.center = CGPointMake(self.flashTitle.center.x, -50);
     self.bearTitle.center = CGPointMake(self.bearTitle.center.x, 700);
-        [UIView animateWithDuration:.6
-                         animations:^{
-                             self.flashTitle.center = flash;
-                         } completion:^(BOOL finished) {
-                             if (finished) {
-                                 [UIView animateWithDuration:.6 animations:^{
-                                     self.bearTitle.center = bear;
-                                 } completion:^(BOOL finished) {
-                                     if (finished) {
-                                         [self showTitleLightningStrike];
-                                     }
-                                 }];
-                             }
-                         }];
-    
-    [self plantBearOnGround];
+    [UIView animateWithDuration:.6
+                     animations:^{
+                         self.flashTitle.center =startFlash;
+                     } completion:^(BOOL finished) {
+                         if (finished) {
+                             [UIView animateWithDuration:.6 animations:^{
+                                 self.bearTitle.center = startBear;
+                             } completion:^(BOOL finished) {
+                                 if (finished) {
+                                     [self showTitleLightningStrike];
+                                 }
+                             }];
+                         }
+                     }];
 }
 
 - (void)showTitleLightningStrike
 {
     self.lightning.x = size.width * .75;
     [self.lightning strike];
+    if (state == Title) {
+        state = Ready;
+    }
 }
 
 - (void)viewDidLoad
@@ -87,7 +96,7 @@
 
     [self delayLightning];
     
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 50, 320, 40)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, size.width, 40)];
     self.label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.label];
     
@@ -148,10 +157,12 @@
     self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) points:p];
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
+    state = ThunderStruck;
 }
 
 - (void)retryTapped
 {
+    state = Storm;
     [self.menu removeFromSuperview];
     self.menu = nil;
     [self delayLightning];
@@ -176,6 +187,7 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
   
     [self showMenu:points];
+    [self animateTitle];
     points = 0;
 }
 
@@ -233,14 +245,14 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     
-    if (state == Title) {
+    if (state == Ready) {
         state = Storm;
         self.flashTitle.alpha = 0;
         self.bearTitle.alpha = 0;
         self.lightning.alpha = 0;
         [self delayLightning];
         [self jump];
-    } else {
+    } else if (state == Storm) {
         if([self bearReachedGround])
         {
             [self jump];

@@ -13,11 +13,15 @@
 
 typedef enum : NSUInteger {
     Title,
+    Ready,
     Storm,
     ThunderStruck
 } GameState;
 @interface ViewController : UIViewController <MenuDelegate>
 {
+    CGPoint startFlash;
+    CGPoint startBear;
+    
     bool onLeftSide;
     bool bearIsGrounded;
     int jumpForce;
