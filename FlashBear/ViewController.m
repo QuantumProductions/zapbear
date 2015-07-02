@@ -226,12 +226,6 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if([self bearReachedGround])
-    {
-        onLeftSide = !onLeftSide;
-        isInXPlace = false;
-        [self jump];
-    }
     
     if (state == Title) {
         state = Storm;
@@ -239,11 +233,20 @@
         self.bearTitle.alpha = 0;
         self.lightning.alpha = 0;
         [self delayLightning];
+        [self jump];
+    } else {
+        if([self bearReachedGround])
+        {
+            [self jump];
+        }
+        
     }
 }
 
 - (void)jump
 {
+    onLeftSide = !onLeftSide;
+    isInXPlace = false;
     fallSpeed = -jumpForce;
     self.bear.center = CGPointMake(self.bear.center.x, self.bear.center.y - 1);
     if (!lightningDelay) {
