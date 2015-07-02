@@ -62,7 +62,8 @@
     
 }
 
-- (void)showTitleLightningStrike {
+- (void)showTitleLightningStrike
+{
     self.lightning.x = size.width * .75;
     [self.lightning strike];
 }
@@ -93,7 +94,8 @@
     
 }
 
-- (void)delayLightning {
+- (void)delayLightning
+{
     lightningDelay = arc4random() % 500;
     lightningDelay += 80;
     lastLightningDelay = lightningDelay;
@@ -106,7 +108,8 @@
     self.label.font = [UIFont boldSystemFontOfSize:fontSize];
 }
 
-- (void)prepareLightningStrike {
+- (void)prepareLightningStrike
+{
     framesUntilLightningStrike = 23;
     self.lightning.x = self.bear.center.x < size.width / 2 ? size.width * .25 : size.width * .75;
     self.view.backgroundColor = [UIColor whiteColor];
@@ -139,13 +142,15 @@
     }
 }
 
-- (void)showMenu:(NSInteger)p {
+- (void)showMenu:(NSInteger)p
+{
     self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) points:p];
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
 }
 
-- (void)retryTapped {
+- (void)retryTapped
+{
     [self.menu removeFromSuperview];
     self.menu = nil;
     [self delayLightning];
