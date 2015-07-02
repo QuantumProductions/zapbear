@@ -60,6 +60,7 @@
                              }
                          }];
     
+    [self plantBearOnGround];
 }
 
 - (void)showTitleLightningStrike
@@ -201,11 +202,16 @@
 
 - (bool)bearReachedGround
 {
-    return self.bear.frame.origin.y + self.bear.frame.size.height >= size.height;
+    return self.bear.frame.origin.y + self.bear.frame.size.height >= [self floor];
+}
+
+- (float)floor
+{
+    return size.height * .9;
 }
 
 - (int)targetX {
-    return onLeftSide ? (320*2/3) - 10 : (320/3) + 10;
+    return onLeftSide ? (size.width*2/3) - 10 : (size.width/3) + 10;
 }
 
 - (void)positionBear
@@ -256,7 +262,7 @@
 }
 
 - (void)plantBearOnGround {
-    self.bear.center = CGPointMake(self.bear.center.x, size.height - self.bear.frame.size.height/2);
+    self.bear.center = CGPointMake(self.bear.center.x, [self floor] - self.bear.frame.size.height/2);
 }
 
 - (void)applyFalling
