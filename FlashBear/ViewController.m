@@ -45,12 +45,12 @@
     CGPoint bear = self.bearTitle.center;
     self.flashTitle.center = CGPointMake(self.flashTitle.center.x, -50);
     self.bearTitle.center = CGPointMake(self.bearTitle.center.x, 700);
-        [UIView animateWithDuration:1
+        [UIView animateWithDuration:.6
                          animations:^{
                              self.flashTitle.center = flash;
                          } completion:^(BOOL finished) {
                              if (finished) {
-                                 [UIView animateWithDuration:1 animations:^{
+                                 [UIView animateWithDuration:.6 animations:^{
                                      self.bearTitle.center = bear;
                                  } completion:^(BOOL finished) {
                                      if (finished) {

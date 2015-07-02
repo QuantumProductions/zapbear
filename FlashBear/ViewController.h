@@ -43,6 +43,8 @@ typedef enum : NSUInteger {
     int lastLightningDelay;
     
     GameState state;
+    
+    float bearScale;
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *bear;
