@@ -52,10 +52,19 @@
                              if (finished) {
                                  [UIView animateWithDuration:1 animations:^{
                                      self.bearTitle.center = bear;
+                                 } completion:^(BOOL finished) {
+                                     if (finished) {
+                                         [self showTitleLightningStrike];
+                                     }
                                  }];
                              }
                          }];
     
+}
+
+- (void)showTitleLightningStrike {
+    self.lightning.x = size.width * .75;
+    [self.lightning strike];
 }
 
 - (void)viewDidLoad
@@ -69,7 +78,7 @@
 
     [self loadSounds];
     
-    self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(timerFire) userInfo:nil repeats:true] ;
+    self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(loop) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
     [self preparePhysics];
@@ -117,7 +126,7 @@
     } else {
         framesUntilLightningStrike--;
         if (framesUntilLightningStrike <= 0) {
-            [self.lightning display];
+            [self.lightning strike];
             self.lightning.alpha = 1;
             if (dodged) {
                 [self scorePoint];
@@ -172,14 +181,16 @@
     }
 }
 
-- (void)timerFire
+- (void)loop
 {
-    [self applyFalling];
-    
-    [self positionBear];
+    if (state == Storm) {
+        [self applyFalling];
+        
+        [self positionBear];
 
-    if (!self.menu) {
-        [self lightningLoop];
+        if (!self.menu) {
+            [self lightningLoop];
+        }
     }
 }
 
@@ -215,6 +226,14 @@
         onLeftSide = !onLeftSide;
         isInXPlace = false;
         [self jump];
+    }
+    
+    if (state == Title) {
+        state = Storm;
+        self.flashTitle.alpha = 0;
+        self.bearTitle.alpha = 0;
+        self.lightning.alpha = 0;
+        [self delayLightning];
     }
 }
 

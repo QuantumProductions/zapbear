@@ -11,6 +11,11 @@
 #import "Menu.h"
 #import "Lightning.h"
 
+typedef enum : NSUInteger {
+    Title,
+    Storm,
+    ThunderStruck
+} GameState;
 @interface ViewController : UIViewController <MenuDelegate>
 {
     bool onLeftSide;
@@ -36,6 +41,8 @@
     NSInteger best;
     
     int lastLightningDelay;
+    
+    GameState state;
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *bear;

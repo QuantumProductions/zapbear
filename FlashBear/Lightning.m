@@ -38,7 +38,7 @@
 
 }
 
-- (void)display {
+- (void)strike {
     int flip = self.x < self.frame.size.width / 2;
     bolts[0] = CGPointMake(flip ? self.frame.size.width * .45 : self.frame.size.width * .55, -2);
     for (iterations = 1; iterations < 22; iterations++) {

@@ -15,6 +15,6 @@
 
 @property (nonatomic) float x;
 
-- (void)display;
+- (void)strike;
 
 @end
