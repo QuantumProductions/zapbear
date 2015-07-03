@@ -1,0 +1,204 @@
+TFlashBear
+v7
+r1
+cCheck dependencies
+
+N/Users/paulmuren/GameDev/FlashBear/FlashBear/Default-568h@2x.png
+c00000000515C9E6200000000000048A2
+t1365024354
+s18594
+
+N/Users/paulmuren/GameDev/FlashBear/FlashBear/Default.png
+c00000000515C9E62000000000000198C
+t1365024354
+s6540
+
+N/Users/paulmuren/GameDev/FlashBear/FlashBear/Default@2x.png
+c00000000515C9E620000000000003EEB
+t1365024354
+s16107
+
+N/Users/paulmuren/GameDev/FlashBear/FlashBear/FlashBearProto.png
+c000000005591C1A20000000000188597
+t1435615650
+s1607063
+
+N/Users/paulmuren/GameDev/FlashBear/FlashBear/en.lproj/InfoPlist.strings
+c00000000558C798C000000000000002D
+t1435269516
+s45
+
+N/Users/paulmuren/GameDev/FlashBear/FlashBear/en.lproj/ViewController.xib
+c000000005596CED000000000000052E1
+t1435946704
+s21217
+
+N/Users/paulmuren/GameDev/FlashBear/FlashBear/jump.wav
+c00000000558F40A20000000000012E6C
+t1435451554
+s77420
+
+N/Users/paulmuren/GameDev/FlashBear/FlashBear/theme.wav
+c000000005591BBA0000000000153FFC0
+t1435614112
+s22282176
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Info.plist
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Resources/Default-568h@2x.png
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Resources/Default.png
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Resources/Default@2x.png
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Resources/en.lproj/ViewController.nib
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Resources/jump.wav
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Resources/theme.wav
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Info.plist
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/PkgInfo
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/Default-568h@2x.png
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/Default.png
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/Default@2x.png
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/FlashBearProto.png
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/en.lproj/InfoPlist.strings
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/en.lproj/ViewController.nib
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/jump.wav
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/playbutton.png
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/theme.wav
+t2
+s0
+
+N/Users/paulmuren/GameDev/FlashBear/playbutton.png
+c000000005596CED00000000000000721
+t1435946704
+s1825
+
+NFlashBear/FlashBear-Info.plist
+c000000005596CED00000000000000457
+t1435946704
+s1111
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies457647498#457647498#0(193"[BEROR]error: There is no SDK with the name or path 'iphoneos'[BEROR]Code Signing Identity 'iPhone Developer' does not match any valid, non-expired, code-signing certificate in your keychain.2(4@55"error: There is no SDK with the name or path 'iphoneos'457647498#18446744073709551615#0#0(1@0"0(4@122"Code Signing Identity 'iPhone Developer' does not match any valid, non-expired, code-signing certificate in your keychain.457647498#18446744073709551615#0#0(1@0"0(0#1#0"17223762176#0"0#
+
+CCompileXIB /Users/paulmuren/GameDev/FlashBear/FlashBear/en.lproj/ViewController.xib
+r0
+
+CCopyStringsFile /Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Resources/en.lproj/InfoPlist.strings FlashBear/en.lproj/InfoPlist.strings
+r0
+
+CCopyStringsFile /Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/en.lproj/InfoPlist.strings FlashBear/en.lproj/InfoPlist.strings
+r0
+
+CCpResource build/Debug/FlashBear.app/Contents/Resources/Default-568h@2x.png FlashBear/Default-568h@2x.png
+r0
+
+CCpResource build/Debug/FlashBear.app/Contents/Resources/Default.png FlashBear/Default.png
+r0
+
+CCpResource build/Debug/FlashBear.app/Contents/Resources/Default@2x.png FlashBear/Default@2x.png
+r0
+
+CCpResource build/Debug/FlashBear.app/Contents/Resources/jump.wav FlashBear/jump.wav
+r0
+
+CCpResource build/Debug/FlashBear.app/Contents/Resources/theme.wav FlashBear/theme.wav
+r0
+
+CCpResource build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/Default-568h@2x.png FlashBear/Default-568h@2x.png
+r0
+
+CCpResource build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/Default.png FlashBear/Default.png
+r0
+
+CCpResource build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/Default@2x.png FlashBear/Default@2x.png
+r0
+
+CCpResource build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/FlashBearProto.png FlashBear/FlashBearProto.png
+r0
+
+CCpResource build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/jump.wav FlashBear/jump.wav
+r0
+
+CCpResource build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/playbutton.png playbutton.png
+r0
+
+CCpResource build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Resources/theme.wav FlashBear/theme.wav
+r0
+
+CProcessInfoPlistFile /Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app/Contents/Info.plist FlashBear/FlashBear-Info.plist
+r0
+
+CProcessInfoPlistFile /Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app/Contents/Info.plist FlashBear/FlashBear-Info.plist
+r0
+
+CTouch /Users/paulmuren/GameDev/FlashBear/build/Debug/FlashBear.app
+r0
+
+CTouch /Users/paulmuren/GameDev/FlashBear/build/Debug/⊂(ϟ(ェ)ϟ)⊃.app
+r0
+

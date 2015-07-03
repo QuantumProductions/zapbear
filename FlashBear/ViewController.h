@@ -31,6 +31,8 @@ typedef enum : NSUInteger {
     float xMoveInverseAcceleration;
     bool isInXPlace;
     
+    bool bearHasBeenHitOnce;
+    
     CGSize size;
     
     int lightningDelay;

@@ -25,6 +25,7 @@
 		5B6F84911B3CB10C003497B4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6F84901B3CB10C003497B4 /* Default-568h@2x.png */; };
 		5B6F84941B3CB10C003497B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6F84931B3CB10C003497B4 /* ViewController.m */; };
 		5B6F84971B3CB10C003497B4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B6F84951B3CB10C003497B4 /* ViewController.xib */; };
+		5BC78DEF1B474C5E007B976F /* FlashBearAwfulBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC78DEE1B474C5E007B976F /* FlashBearAwfulBackground.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		5B6F84921B3CB10C003497B4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5B6F84931B3CB10C003497B4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B6F84961B3CB10C003497B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		5BC78DEE1B474C5E007B976F /* FlashBearAwfulBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearAwfulBackground.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				0ED4E3971B3F78EE0094E73A /* theme.wav */,
 				0E05D6271B3E55C90058727A /* jump.wav */,
 				0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */,
+				5BC78DEE1B474C5E007B976F /* FlashBearAwfulBackground.png */,
 				5B6F84811B3CB10C003497B4 /* Supporting Files */,
 				0E6CDBB71B422B060005A755 /* Lightning.h */,
 				0E6CDBB81B422B060005A755 /* Lightning.m */,
@@ -191,6 +194,7 @@
 			files = (
 				0E8C42DD1B434038000028B7 /* playbutton.png in Resources */,
 				5B6F84851B3CB10C003497B4 /* InfoPlist.strings in Resources */,
+				5BC78DEF1B474C5E007B976F /* FlashBearAwfulBackground.png in Resources */,
 				0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */,
 				5B6F848D1B3CB10C003497B4 /* Default.png in Resources */,
 				5B6F848F1B3CB10C003497B4 /* Default@2x.png in Resources */,

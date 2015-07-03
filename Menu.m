@@ -15,10 +15,10 @@
 
     self.backgroundColor = [UIColor clearColor];
     
-    float w = frame.size.width * .25;
+    //float w = frame.size.width * .25;
     
-    float h = 50;
-    float h2 = h + 50;
+    //float h = 50;
+    //float h2 = h + 50;
     
     
     UIButton *retryButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 48, 48)];

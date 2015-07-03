@@ -31,7 +31,7 @@
     
     CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
     // Draw them with a 2.0 stroke width so they are a bit more visible.
-    CGContextSetLineWidth(context, 2.0);
+    CGContextSetLineWidth(context, 4.0);
     
     CGContextAddLines(context, bolts, sizeof(bolts)/sizeof(bolts[0]));
     CGContextStrokePath(context);

@@ -11,6 +11,7 @@
 @interface Lightning : UIView {
     int iterations;
     CGPoint bolts[23];
+    float drawWidth;
 }
 
 @property (nonatomic) float x;

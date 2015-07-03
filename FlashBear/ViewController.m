@@ -26,12 +26,12 @@
 
 - (void)preparePhysics
 {
-    gravity = 2.2;
-    jumpForce = 24;
+    gravity = .8;
+    jumpForce = 16;
     fallSpeed = 0;
     
     xPosEpsilon = 0.001;
-    xMoveInverseAcceleration = 6.5;
+    xMoveInverseAcceleration = 10;
     isInXPlace = false;
 }
 
@@ -43,6 +43,7 @@
 {
     startFlash = self.flashTitle.center;
     startBear = self.bearTitle.center;
+    bearHasBeenHitOnce = false;
     [self animateTitle];
     [self plantBearOnGround];
 }
@@ -61,7 +62,7 @@
                              [UIView animateWithDuration:.6 animations:^{
                                  self.bearTitle.center = startBear;
                              } completion:^(BOOL finished) {
-                                 if (finished) {
+                                 if (finished && !bearHasBeenHitOnce) {
                                      [self showTitleLightningStrike];
                                  }
                              }];
@@ -109,7 +110,13 @@
     lightningDelay = arc4random() % 500;
     lightningDelay += 80;
     lastLightningDelay = lightningDelay;
-    self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
+    //self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"FlashBearAwfulBackground.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     self.label.text = [NSString stringWithFormat:@"%d", points];
     int fontSize = 18 + points;
     if (fontSize > 82) {
@@ -165,6 +172,8 @@
     state = Storm;
     [self.menu removeFromSuperview];
     self.menu = nil;
+    self.flashTitle.alpha = 0;
+    self.bearTitle.alpha = 0;
     [self delayLightning];
 }
 
@@ -188,6 +197,7 @@
   
     [self showMenu:points];
     [self animateTitle];
+    bearHasBeenHitOnce = true;
     points = 0;
 }
 
