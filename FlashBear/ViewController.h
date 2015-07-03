@@ -69,4 +69,6 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) IBOutlet UILabel *flashTitle;
 @property (strong, nonatomic) IBOutlet UILabel *bearTitle;
 
+@property (strong, nonatomic) UIImageView *bg;
+
 @end

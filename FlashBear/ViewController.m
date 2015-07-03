@@ -20,7 +20,7 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     self.musicPlayer.numberOfLoops = -1;
-    [self.musicPlayer play];
+//    [self.musicPlayer play];
 
 }
 
@@ -82,6 +82,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.bg = [[UIImageView alloc] initWithFrame:self.view.frame];
+    [self.bg setImage:[UIImage imageNamed:@"FlashBearAwfulBackground.png"]];
+    [self.view insertSubview:self.bg atIndex:0];
+    
     size = [[UIScreen mainScreen] bounds].size;
     [self loadTitle];
     
@@ -110,13 +115,6 @@
     lightningDelay = arc4random() % 500;
     lightningDelay += 80;
     lastLightningDelay = lightningDelay;
-    //self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"FlashBearAwfulBackground.png"] drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     self.label.text = [NSString stringWithFormat:@"%d", points];
     int fontSize = 18 + points;
     if (fontSize > 82) {
@@ -169,6 +167,8 @@
 
 - (void)retryTapped
 {
+    self.flashTitle.alpha = 0;
+    self.bearTitle.alpha = 0;
     state = Storm;
     [self.menu removeFromSuperview];
     self.menu = nil;
