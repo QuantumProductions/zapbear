@@ -37,6 +37,7 @@
 
 - (void)loadTitle
 {
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -94,7 +95,7 @@
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
     [self preparePhysics];
-
+    
     [self delayLightning];
     
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, size.width, 40)];
@@ -117,7 +118,11 @@
     UIGraphicsEndImageContext();
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    self.label.text = [NSString stringWithFormat:@"%d", points];
+    
+    if(state != ThunderStruck)
+    {
+        self.label.text = [NSString stringWithFormat:@"%d", points];
+    }
     int fontSize = 18 + points;
     if (fontSize > 82) {
         fontSize = 82;
@@ -194,6 +199,14 @@
     }
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSString *scoreString = [NSString stringWithFormat:@"%@", [@"Score: " stringByAppendingString:[NSString stringWithFormat:@"%d", points]]];
+    
+    NSString *bestString = [NSString stringWithFormat:@"%@", [@" Best: " stringByAppendingString:[NSString stringWithFormat:@"%ld", (long)best]]];
+    
+    self.label.font = [UIFont boldSystemFontOfSize:18];
+    
+    self.label.text = [NSString stringWithFormat:@"%@", [scoreString stringByAppendingString:[NSString stringWithFormat:@"%@", bestString]]];
   
     [self showMenu:points];
     [self animateTitle];
