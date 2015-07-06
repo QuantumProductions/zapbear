@@ -96,14 +96,20 @@
     
     [self preparePhysics];
     
-    [self delayLightning];
-    
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, size.width, 40)];
     self.label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.label];
     
     best = [[NSUserDefaults standardUserDefaults] integerForKey:@"best"];
-    
+}
+
+- (void)drawBackground
+{
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"FlashBearAwfulBackground.png"] drawInRect:self.view.frame];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 }
 
 - (void)delayLightning
@@ -112,12 +118,7 @@
     lightningDelay += 80;
     lastLightningDelay = lightningDelay;
     //self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"FlashBearAwfulBackground.png"] drawInRect:self.view.frame];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    [self drawBackground];
     
     if(state != ThunderStruck)
     {
@@ -150,6 +151,10 @@
         }
     } else {
         framesUntilLightningStrike--;
+        if (framesUntilLightningStrike == 19) {
+            [self drawBackground];
+        }
+        
         if (framesUntilLightningStrike <= 0) {
             [self.lightning strike];
             self.lightning.alpha = 1;
