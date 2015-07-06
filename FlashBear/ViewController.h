@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "Menu.h"
 #import "Lightning.h"
+#import <GameKit/GameKit.h>
 
 typedef enum : NSUInteger {
     Title,
@@ -17,7 +18,7 @@ typedef enum : NSUInteger {
     Storm,
     ThunderStruck
 } GameState;
-@interface ViewController : UIViewController <MenuDelegate>
+@interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate>
 {
     CGPoint startFlash;
     CGPoint startBear;
@@ -70,5 +71,7 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) IBOutlet UILabel *bearTitle;
 
 @property (strong, nonatomic) UIImageView *bg;
+
+@property (strong, nonatomic) NSArray *scoresToReport;
 
 @end

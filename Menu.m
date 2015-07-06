@@ -78,7 +78,7 @@
 }
 
 - (void)scoreTapped {
-
+    [self.delegate scoreTapped];
 }
 
 @end

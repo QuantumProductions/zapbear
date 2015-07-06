@@ -113,7 +113,7 @@
     lastLightningDelay = lightningDelay;
     //self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
     UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"FlashBearAwfulBackground.png"] drawInRect:self.view.bounds];
+    [[UIImage imageNamed:@"FlashBearAwfulBackground.png"] drawInRect:self.view.frame];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
@@ -171,9 +171,17 @@
     [self.view addSubview:self.menu];
 }
 
+- (void)scoreTapped
+{
+    [self showGameCenter];
+}
+
 - (void)retryTapped
 {
+    points = 0;
     self.flashTitle.alpha = 0;
+    self.label.textColor = [UIColor blackColor];
+    self.label.text = @"0";
     self.bearTitle.alpha = 0;
     state = Storm;
     [self.menu removeFromSuperview];
@@ -202,13 +210,23 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     self.label.text = [NSString stringWithFormat:@"%d / %d", points, best];
-//    self.label.font = [UIFont boldSystemFontOfSize:18];
+    self.label.font = [UIFont boldSystemFontOfSize:24];
+    self.label.textColor = [UIColor redColor];
+
   
     [self showMenu:points];
     state = ThunderStruck;
     [self animateTitle];
     bearHasBeenHitOnce = true;
-    points = 0;
+    
+    __weak GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    self.scoresToReport = [self scores];
+    
+    if (localPlayer.isAuthenticated) {
+        [self reportScores];
+    } else {
+        [self authenticateLocalPlayer];
+    }
 }
 
 - (void)scorePoint
@@ -267,6 +285,9 @@
     
     if (state == Ready) {
         state = Storm;
+        points = 0;
+        self.label.text = @"0";
+        self.label.textColor = [UIColor blackColor];
         self.flashTitle.alpha = 0;
         self.bearTitle.alpha = 0;
         self.lightning.alpha = 0;
@@ -313,6 +334,49 @@
             fallSpeed = 0;
             [self plantBearOnGround];
         }
+    }
+}
+
+- (NSArray *)scores {
+    GKScore *pts = [[GKScore alloc] initWithLeaderboardIdentifier:@"flashbear_lightning_dodges"];
+    pts.value = best;
+    return @[pts];
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+    [self dismissViewControllerAnimated:false completion:^{
+        
+    }];
+
+}
+
+- (void)authenticateLocalPlayer {
+    __weak GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+    };
+}
+
+- (void)reportScores {
+    self.scoresToReport = [self scores];
+    for (GKScore *s in self.scoresToReport) {
+        NSLog(@"score: %lld", s.value);
+    }
+    [GKScore reportScores:self.scoresToReport withCompletionHandler:^(NSError *error) {
+        NSLog(@"error: %@", error);
+    }];
+}
+
+- (void)showGameCenter {
+    GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+    
+    if (gameCenterController != nil) {
+        gameCenterController.gameCenterDelegate = self;
+        [self presentViewController:gameCenterController animated:false completion:^{
+            
+        }];
+    } else {
+        
     }
 }
 
