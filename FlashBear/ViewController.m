@@ -20,7 +20,7 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     self.musicPlayer.numberOfLoops = -1;
-//    [self.musicPlayer play];
+    [self.musicPlayer play];
 
 }
 
@@ -37,6 +37,7 @@
 
 - (void)loadTitle
 {
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -82,11 +83,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.bg = [[UIImageView alloc] initWithFrame:self.view.frame];
-    [self.bg setImage:[UIImage imageNamed:@"FlashBearAwfulBackground.png"]];
-    [self.view insertSubview:self.bg atIndex:0];
-    
     size = [[UIScreen mainScreen] bounds].size;
     [self loadTitle];
     
@@ -99,7 +95,7 @@
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
     [self preparePhysics];
-
+    
     [self delayLightning];
     
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, size.width, 40)];
@@ -115,7 +111,18 @@
     lightningDelay = arc4random() % 500;
     lightningDelay += 80;
     lastLightningDelay = lightningDelay;
-    self.label.text = [NSString stringWithFormat:@"%d", points];
+    //self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"FlashBearAwfulBackground.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+    
+    if(state != ThunderStruck)
+    {
+        self.label.text = [NSString stringWithFormat:@"%d", points];
+    }
     int fontSize = 18 + points;
     if (fontSize > 82) {
         fontSize = 82;
@@ -162,7 +169,6 @@
     self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) points:p];
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
-    state = ThunderStruck;
 }
 
 - (void)retryTapped
@@ -194,8 +200,12 @@
     }
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    self.label.text = [NSString stringWithFormat:@"%d / %d", points, best];
+//    self.label.font = [UIFont boldSystemFontOfSize:18];
   
     [self showMenu:points];
+    state = ThunderStruck;
     [self animateTitle];
     bearHasBeenHitOnce = true;
     points = 0;
