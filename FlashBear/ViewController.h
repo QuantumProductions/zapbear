@@ -11,6 +11,7 @@
 #import "Menu.h"
 #import "Lightning.h"
 #import <GameKit/GameKit.h>
+#import <iAD/iAD.h>
 
 typedef enum : NSUInteger {
     Title,
@@ -18,7 +19,7 @@ typedef enum : NSUInteger {
     Storm,
     ThunderStruck
 } GameState;
-@interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate>
+@interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate, ADBannerViewDelegate>
 {
     CGPoint startFlash;
     CGPoint startBear;
@@ -63,6 +64,10 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong, nonatomic) AVAudioPlayer *musicPlayer;
 
+@property (strong, nonatomic) AVAudioPlayer *thunderPlayer;
+@property (strong, nonatomic) AVAudioPlayer *thunder2Player;
+@property (strong, nonatomic) AVAudioPlayer *lightningPlayer;
+
 @property (strong, nonatomic) Menu *menu;
 
 @property (strong, nonatomic) Lightning *lightning;
@@ -73,5 +78,7 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) UIImageView *bg;
 
 @property (strong, nonatomic) NSArray *scoresToReport;
+
+@property (strong, nonatomic) ADBannerView *arbitrary;
 
 @end

@@ -20,8 +20,18 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     self.musicPlayer.numberOfLoops = -1;
-    [self.musicPlayer play];
+//    [self.musicPlayer play];
 
+    soundPath = [[NSBundle mainBundle] pathForResource:@"lightning2" ofType:@"wav"];
+    soundURL = [NSURL fileURLWithPath:soundPath];
+
+    self.thunderPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    [self.thunderPlayer play];
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"lightning" ofType:@"mp3"];
+    soundURL = [NSURL fileURLWithPath:soundPath];
+
+    self.lightningPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
 }
 
 - (void)preparePhysics
@@ -74,10 +84,21 @@
 - (void)showTitleLightningStrike
 {
     self.lightning.x = size.width * .75;
+    [self.lightningPlayer play];
     [self.lightning strike];
     if (state == Title) {
         state = Ready;
     }
+    self.arbitrary.alpha = 0;
+}
+
+- (void)loadMoney
+{
+    self.arbitrary = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+    self.arbitrary.frame = CGRectMake(0, size.height - 44, size.width, 44);
+    [self.view addSubview:self.arbitrary];
+    self.arbitrary.delegate = self;
+    self.arbitrary.alpha = 0;
 }
 
 - (void)viewDidLoad
@@ -91,6 +112,7 @@
 
     [self loadSounds];
     
+    [self.thunder2Player play];
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(loop) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
@@ -101,6 +123,8 @@
     [self.view addSubview:self.label];
     
     best = [[NSUserDefaults standardUserDefaults] integerForKey:@"best"];
+    
+    [self loadMoney];
 }
 
 - (void)drawBackground
@@ -120,6 +144,8 @@
     //self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
     [self drawBackground];
     
+    [self.thunderPlayer play];
+    
     if(state != ThunderStruck)
     {
         self.label.text = [NSString stringWithFormat:@"%d", points];
@@ -133,6 +159,7 @@
 
 - (void)prepareLightningStrike
 {
+//    [self.lightningPlayer stop];
     framesUntilLightningStrike = 23;
     self.lightning.x = self.bear.center.x < size.width / 2 ? size.width * .25 : size.width * .75;
     self.view.backgroundColor = [UIColor whiteColor];
@@ -156,6 +183,7 @@
         }
         
         if (framesUntilLightningStrike <= 0) {
+            [self.lightningPlayer play];
             [self.lightning strike];
             self.lightning.alpha = 1;
             if (dodged) {
@@ -194,6 +222,7 @@
     self.flashTitle.alpha = 0;
     self.bearTitle.alpha = 0;
     [self delayLightning];
+    self.arbitrary.alpha = 1;
 }
 
 - (void)lightningStrikesBear
@@ -309,6 +338,7 @@
 
 - (void)jump
 {
+    [self.audioPlayer play];
     onLeftSide = !onLeftSide;
     isInXPlace = false;
     fallSpeed = -jumpForce;
@@ -384,6 +414,28 @@
         
     }
 }
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    NSLog(@"error: %@", error);
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave {
+    return true;
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner {
+    
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    
+}
+
+- (void)bannerViewWillLoadAd:(ADBannerView *)banner {
+    
+}
+    
+    
 
 
 @end
