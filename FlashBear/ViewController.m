@@ -118,9 +118,21 @@
     
     [self preparePhysics];
     
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, size.width, 40)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, size.width, 40)];
     self.label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.label];
+    
+    self.bestLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, size.height - 150, size.width, 40)];
+    self.bestLabel.font = [UIFont boldSystemFontOfSize:40];
+    self.bestLabel.textColor = [UIColor whiteColor];
+    self.bestLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.bestLabel];
+
+    self.highscoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 70, size.width, 40)];
+    self.highscoreLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.highscoreLabel];
+    self.highscoreLabel.textColor = [UIColor blackColor];
+    self.highscoreLabel.font = [UIFont systemFontOfSize:40];
     
     best = [[NSUserDefaults standardUserDefaults] integerForKey:@"best"];
     
@@ -136,6 +148,11 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 }
 
+- (void)showScore
+{
+    self.label.text = [NSString stringWithFormat:@"%d", points];
+}
+
 - (void)delayLightning
 {
     lightningDelay = arc4random() % 500;
@@ -148,7 +165,7 @@
     
     if(state != ThunderStruck)
     {
-        self.label.text = [NSString stringWithFormat:@"%d", points];
+        [self showScore];
     }
     int fontSize = 18 + points;
     if (fontSize > 82) {
@@ -202,6 +219,15 @@
     self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) points:p];
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
+    
+    NSInteger total = [[NSUserDefaults standardUserDefaults] integerForKey:@"total"];
+    for (int i = points; i > 0; i--) {
+        total+= i;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setInteger:total forKey:@"total"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
 }
 
 - (void)scoreTapped
@@ -211,6 +237,7 @@
 
 - (void)retryTapped
 {
+    accumulationDelay = 60;
     points = 0;
     self.flashTitle.alpha = 0;
     self.label.textColor = [UIColor blackColor];
@@ -223,6 +250,8 @@
     self.bearTitle.alpha = 0;
     [self delayLightning];
     self.arbitrary.alpha = 1;
+    self.bestLabel.alpha = 0;
+    self.highscoreLabel.alpha = 0;
 }
 
 - (void)lightningStrikesBear
@@ -243,12 +272,24 @@
     
     [[NSUserDefaults standardUserDefaults] synchronize];
     
-    self.label.text = [NSString stringWithFormat:@"%d / %d", points, best];
+    self.label.text = [NSString stringWithFormat:@"%d", points];
     self.label.font = [UIFont boldSystemFontOfSize:24];
-    self.label.textColor = [UIColor redColor];
 
-  
+    displayTotal = [[NSUserDefaults standardUserDefaults] integerForKey:@"total"];
     [self showMenu:points];
+    NSInteger actualTotal = displayTotal;
+    for (int i = points; i > 0; i--) {
+        actualTotal += i;
+    }
+    
+    self.bestLabel.text = [NSString stringWithFormat:@"Best %ld", best];
+    self.highscoreLabel.text = [NSString stringWithFormat:@"ϟ %ld", displayTotal];
+    
+    self.bestLabel.alpha = 1;
+    self.highscoreLabel.alpha = 1;
+    
+    [[NSUserDefaults standardUserDefaults] integerForKey:@"total"];
+    
     state = ThunderStruck;
     [self animateTitle];
     bearHasBeenHitOnce = true;
@@ -281,6 +322,21 @@
         if (!self.menu) {
             [self lightningLoop];
         }
+    } else if (state == ThunderStruck) {
+        accumulationDelay--;
+        if (accumulationDelay <= 0) {
+            accumulationDelay = 10;
+            [self showAccumulation];
+        }
+    }
+}
+
+- (void)showAccumulation {
+    if (points > 0) {
+        displayTotal += points;
+        points--;
+        [self showScore];
+        self.highscoreLabel.text = [NSString stringWithFormat:@"ϟ %ld", (long)displayTotal];
     }
 }
 

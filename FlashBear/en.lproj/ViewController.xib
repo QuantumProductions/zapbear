@@ -42,7 +42,6 @@
 						<string key="NSFrame">{{8, 216}, {200, 332}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSHuggingPriority">{251, 251}</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>

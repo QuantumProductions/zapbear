@@ -21,6 +21,9 @@ typedef enum : NSUInteger {
 } GameState;
 @interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate, ADBannerViewDelegate>
 {
+    int accumulationDelay;
+    NSInteger displayTotal;
+    
     CGPoint startFlash;
     CGPoint startBear;
     
@@ -60,6 +63,8 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) NSTimer *timer;
 
 @property (strong, nonatomic) UILabel *label;
+@property (strong, nonatomic) UILabel *highscoreLabel;
+@property (strong, nonatomic) UILabel *bestLabel;
 
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong, nonatomic) AVAudioPlayer *musicPlayer;
