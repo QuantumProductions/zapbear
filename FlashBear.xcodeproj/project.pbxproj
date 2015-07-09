@@ -36,7 +36,8 @@
 		5BC78DF21B47537A007B976F /* FlashBearAwfulPlayButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC78DF01B47537A007B976F /* FlashBearAwfulPlayButton.png */; };
 		5BC78DF31B47537A007B976F /* FlashBearAwfulScoreButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC78DF11B47537A007B976F /* FlashBearAwfulScoreButton.png */; };
 		5BC78DF71B4DE1FC007B976F /* thunder4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5BC78DF61B4DE1FC007B976F /* thunder4.mp3 */; };
-		5BC78DFB1B4DE8F4007B976F /* preThunder3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BC78DFA1B4DE8F4007B976F /* preThunder3.wav */; };
+		5BC78DFD1B4DF825007B976F /* FlashBearAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BC78DFC1B4DF825007B976F /* FlashBearAppIcon.png */; };
+		5BC78DFF1B4DF88F007B976F /* preThunder3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5BC78DFE1B4DF88F007B976F /* preThunder3.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,7 +77,8 @@
 		5BC78DF01B47537A007B976F /* FlashBearAwfulPlayButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearAwfulPlayButton.png; sourceTree = "<group>"; };
 		5BC78DF11B47537A007B976F /* FlashBearAwfulScoreButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearAwfulScoreButton.png; sourceTree = "<group>"; };
 		5BC78DF61B4DE1FC007B976F /* thunder4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder4.mp3; sourceTree = "<group>"; };
-		5BC78DFA1B4DE8F4007B976F /* preThunder3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = preThunder3.wav; path = ../../../../../Applications/Audacity/preThunder3.wav; sourceTree = "<group>"; };
+		5BC78DFC1B4DF825007B976F /* FlashBearAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearAppIcon.png; sourceTree = "<group>"; };
+		5BC78DFE1B4DF88F007B976F /* preThunder3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = preThunder3.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,11 +147,12 @@
 				5BC78DEE1B474C5E007B976F /* FlashBearAwfulBackground.png */,
 				5BC78DF01B47537A007B976F /* FlashBearAwfulPlayButton.png */,
 				5BC78DF11B47537A007B976F /* FlashBearAwfulScoreButton.png */,
+				5BC78DFC1B4DF825007B976F /* FlashBearAppIcon.png */,
 				0E0F58931B4B4815002CF575 /* lightning.mp3 */,
 				0E0F58991B4B49BA002CF575 /* lightning2.wav */,
 				0E0F58941B4B4815002CF575 /* thunder.mp3 */,
 				0E0F58951B4B4815002CF575 /* thunder2.mp3 */,
-				5BC78DFA1B4DE8F4007B976F /* preThunder3.wav */,
+				5BC78DFE1B4DF88F007B976F /* preThunder3.wav */,
 				5BC78DF61B4DE1FC007B976F /* thunder4.mp3 */,
 				5B6F84811B3CB10C003497B4 /* Supporting Files */,
 				0E6CDBB71B422B060005A755 /* Lightning.h */,
@@ -232,6 +235,7 @@
 				0E0F58971B4B4815002CF575 /* thunder.mp3 in Resources */,
 				0E8C42DD1B434038000028B7 /* playbutton.png in Resources */,
 				5B6F84851B3CB10C003497B4 /* InfoPlist.strings in Resources */,
+				5BC78DFD1B4DF825007B976F /* FlashBearAppIcon.png in Resources */,
 				5BC78DEF1B474C5E007B976F /* FlashBearAwfulBackground.png in Resources */,
 				0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */,
 				0E0F58981B4B4815002CF575 /* thunder2.mp3 in Resources */,
@@ -241,7 +245,7 @@
 				0ED4E3981B3F78EE0094E73A /* theme.wav in Resources */,
 				5BC78DF31B47537A007B976F /* FlashBearAwfulScoreButton.png in Resources */,
 				5B6F84911B3CB10C003497B4 /* Default-568h@2x.png in Resources */,
-				5BC78DFB1B4DE8F4007B976F /* preThunder3.wav in Resources */,
+				5BC78DFF1B4DF88F007B976F /* preThunder3.wav in Resources */,
 				0E05D6281B3E55C90058727A /* jump.wav in Resources */,
 				0E0F58961B4B4815002CF575 /* lightning.mp3 in Resources */,
 				5B6F84971B3CB10C003497B4 /* ViewController.xib in Resources */,
