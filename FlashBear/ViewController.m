@@ -142,7 +142,7 @@
     
     [self preparePhysics];
     
-    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, size.width, 40)];
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 5, size.width, 40)];
     self.label.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.label];
     
