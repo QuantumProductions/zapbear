@@ -11,12 +11,14 @@
 
 @implementation Menu
 
-- (id)initWithFrame:(CGRect)frame points:(NSInteger)points {
+- (id)initWithFrame:(CGRect)frame points:(NSInteger)pts {
     self = [super initWithFrame:frame];
 
     self.backgroundColor = [UIColor clearColor];
     
     //float w = frame.size.width * .25;
+
+    points = pts;
     
     float h = frame.size.height * .20;
     
@@ -45,13 +47,7 @@
 //    best.textAlignment = NSTextAlignmentRight;
 //    [panel addSubview:best];
 //    
-//    self.highscoreLabel = [[UILabel alloc] initWithFrame:CGRectMake(panel.frame.size.width - 65, best.frame.size.height + best.frame.origin.y, 50, 25)];
-//    NSInteger highscore = [[NSUserDefaults standardUserDefaults] integerForKey:@"best"];
-//    self.highscoreLabel.text = [NSString stringWithFormat:@"%ld", (long)highscore];
-//    self.highscoreLabel.backgroundColor = [UIColor clearColor];
-//    self.highscoreLabel.textColor = [UIColor redColor];
-//    self.highscoreLabel.font = [UIFont systemFontOfSize:24];
-//    
+    
 //    panel.layer.cornerRadius = 2.0f;
 //    panel.clipsToBounds = YES;
 //    self.highscoreLabel.textAlignment = NSTextAlignmentRight;
