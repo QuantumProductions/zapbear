@@ -20,18 +20,42 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     self.musicPlayer.numberOfLoops = -1;
-//    [self.musicPlayer play];
+    [self.musicPlayer play];
 
-    soundPath = [[NSBundle mainBundle] pathForResource:@"lightning2" ofType:@"wav"];
+    soundPath = [[NSBundle mainBundle] pathForResource:@"thunder4" ofType:@"mp3"];
     soundURL = [NSURL fileURLWithPath:soundPath];
 
     self.thunderPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     [self.thunderPlayer play];
     
+    self.thunderPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    //[self.thunderPlayer2 play];
+    
+    self.thunderPlayer3 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    //[self.thunderPlayer3 play];
+    
+    self.thunderPlayers = @[self.thunderPlayer, self.thunderPlayer2, self.thunderPlayer3];
+    thunderPlayerIndex = 0;
+    
+    soundPath = [[NSBundle mainBundle] pathForResource:@"preThunder3" ofType:@"wav"];
+    soundURL = [NSURL fileURLWithPath:soundPath];
+    
+    self.preThunderPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    [self.preThunderPlayer play];
+    
     soundPath = [[NSBundle mainBundle] pathForResource:@"lightning" ofType:@"mp3"];
     soundURL = [NSURL fileURLWithPath:soundPath];
 
     self.lightningPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+}
+
+- (void)playNextThunderPlayer
+{
+
+    AVAudioPlayer *p = self.thunderPlayers[thunderPlayerIndex];
+    [p play];
+    
+    thunderPlayerIndex = (thunderPlayerIndex + 1) % self.thunderPlayers.count;
 }
 
 - (void)preparePhysics
@@ -112,7 +136,7 @@
 
     [self loadSounds];
     
-    [self.thunder2Player play];
+    //[self.thunderPlayer2 play];
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(loop) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
@@ -144,15 +168,15 @@
     //self.view.backgroundColor = [UIColor colorWithRed:113.0/255.0 green:119.0/255.0 blue:190.0/255.0 alpha:1];
     [self drawBackground];
     
-    [self.thunderPlayer play];
+    //[self playNextThunderPlayer];
     
     if(state != ThunderStruck)
     {
         self.label.text = [NSString stringWithFormat:@"%d", points];
     }
     int fontSize = 18 + points;
-    if (fontSize > 82) {
-        fontSize = 82;
+    if (fontSize > 42) {
+        fontSize = 42;
     }
     self.label.font = [UIFont boldSystemFontOfSize:fontSize];
 }
@@ -161,6 +185,7 @@
 {
 //    [self.lightningPlayer stop];
     framesUntilLightningStrike = 23;
+    [self.preThunderPlayer play];
     self.lightning.x = self.bear.center.x < size.width / 2 ? size.width * .25 : size.width * .75;
     self.view.backgroundColor = [UIColor whiteColor];
 }
@@ -183,7 +208,7 @@
         }
         
         if (framesUntilLightningStrike <= 0) {
-            [self.lightningPlayer play];
+            [self playNextThunderPlayer];
             [self.lightning strike];
             self.lightning.alpha = 1;
             if (dodged) {

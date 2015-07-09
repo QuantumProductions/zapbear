@@ -33,6 +33,8 @@ typedef enum : NSUInteger {
     float xMoveInverseAcceleration;
     bool isInXPlace;
     
+    int thunderPlayerIndex;
+    
     bool bearHasBeenHitOnce;
     
     CGSize size;
@@ -65,7 +67,10 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) AVAudioPlayer *musicPlayer;
 
 @property (strong, nonatomic) AVAudioPlayer *thunderPlayer;
-@property (strong, nonatomic) AVAudioPlayer *thunder2Player;
+@property (strong, nonatomic) AVAudioPlayer *thunderPlayer2;
+@property (strong, nonatomic) AVAudioPlayer *thunderPlayer3;
+@property (strong, nonatomic) NSArray *thunderPlayers;
+@property (strong, nonatomic) AVAudioPlayer *preThunderPlayer;
 @property (strong, nonatomic) AVAudioPlayer *lightningPlayer;
 
 @property (strong, nonatomic) Menu *menu;
