@@ -76,11 +76,14 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    startFlash = self.flashTitle.center;
-    startBear = self.bearTitle.center;
-    bearHasBeenHitOnce = false;
-    [self animateTitle];
-    [self plantBearOnGround];
+    if (!loaded) {
+        loaded = true;
+        startFlash = self.flashTitle.center;
+        startBear = self.bearTitle.center;
+        bearHasBeenHitOnce = false;
+        [self animateTitle];
+        [self plantBearOnGround];
+    }
 }
 
 - (void)animateTitle {
@@ -113,7 +116,6 @@
     if (state == Title) {
         state = Ready;
     }
-    self.arbitrary.alpha = 0;
 }
 
 - (void)loadMoney
@@ -307,8 +309,8 @@
         actualTotal += i;
     }
     
-    self.bestLabel.text = [NSString stringWithFormat:@"Best %ld", best];
-    self.highscoreLabel.text = [NSString stringWithFormat:@"ϟ %ld", displayTotal];
+    self.bestLabel.text = [NSString stringWithFormat:@"Best %ld", (long)best];
+    self.highscoreLabel.text = [NSString stringWithFormat:@"ϟ %ld", (long)displayTotal];
     
     self.bestLabel.alpha = 1;
     self.highscoreLabel.alpha = 1;
@@ -362,6 +364,8 @@
         points--;
         [self showScore];
         self.highscoreLabel.text = [NSString stringWithFormat:@"ϟ %ld", (long)displayTotal];
+    } else {
+        
     }
 }
 
@@ -414,6 +418,10 @@
             [self jump];
         }
         
+    } else if (state == ThunderStruck) {
+        if (points <= 0) {
+            [self retryTapped];
+        }
     }
 }
 

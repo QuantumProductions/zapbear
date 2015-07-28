@@ -15,6 +15,7 @@
 		0E0F589A1B4B49BA002CF575 /* lightning2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E0F58991B4B49BA002CF575 /* lightning2.wav */; };
 		0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */; };
 		0E6CDBB91B422B060005A755 /* Lightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CDBB81B422B060005A755 /* Lightning.m */; };
+		0E792DEA1B4DFB3700E5B6DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E792DE91B4DFB3700E5B6DE /* Images.xcassets */; };
 		0E8C42DD1B434038000028B7 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8C42DC1B434038000028B7 /* playbutton.png */; };
 		0E9F74D91B4C4A5D003ABED9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9F74D81B4C4A5D003ABED9 /* iAd.framework */; };
 		0EA059131B4B063D0028A7F0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA059121B4B063D0028A7F0 /* GameKit.framework */; };
@@ -50,6 +51,7 @@
 		0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearProto.png; sourceTree = "<group>"; };
 		0E6CDBB71B422B060005A755 /* Lightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lightning.h; sourceTree = "<group>"; };
 		0E6CDBB81B422B060005A755 /* Lightning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lightning.m; sourceTree = "<group>"; };
+		0E792DE91B4DFB3700E5B6DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0E8C42DC1B434038000028B7 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
 		0E9F74D81B4C4A5D003ABED9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		0EA059121B4B063D0028A7F0 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -57,7 +59,7 @@
 		0ED4E3941B3F735E0094E73A /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = ../Menu.h; sourceTree = "<group>"; };
 		0ED4E3951B3F735E0094E73A /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Menu.m; path = ../Menu.m; sourceTree = "<group>"; };
 		0ED4E3971B3F78EE0094E73A /* theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = theme.wav; sourceTree = "<group>"; };
-		5B6F84771B3CB10C003497B4 /* ⊂(ϟ(ェ)ϟ)⊃.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "⊂(ϟ(ェ)ϟ)⊃.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6F84771B3CB10C003497B4 /* ZapBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZapBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6F847A1B3CB10C003497B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B6F847C1B3CB10C003497B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -112,7 +114,7 @@
 		5B6F84781B3CB10C003497B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B6F84771B3CB10C003497B4 /* ⊂(ϟ(ェ)ϟ)⊃.app */,
+				5B6F84771B3CB10C003497B4 /* ZapBear.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +159,7 @@
 				5B6F84811B3CB10C003497B4 /* Supporting Files */,
 				0E6CDBB71B422B060005A755 /* Lightning.h */,
 				0E6CDBB81B422B060005A755 /* Lightning.m */,
+				0E792DE91B4DFB3700E5B6DE /* Images.xcassets */,
 			);
 			path = FlashBear;
 			sourceTree = "<group>";
@@ -192,7 +195,7 @@
 			);
 			name = FlashBear;
 			productName = FlashBear;
-			productReference = 5B6F84771B3CB10C003497B4 /* ⊂(ϟ(ェ)ϟ)⊃.app */;
+			productReference = 5B6F84771B3CB10C003497B4 /* ZapBear.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E0F589A1B4B49BA002CF575 /* lightning2.wav in Resources */,
+				0E792DEA1B4DFB3700E5B6DE /* Images.xcassets in Resources */,
 				0E0F58971B4B4815002CF575 /* thunder.mp3 in Resources */,
 				0E8C42DD1B434038000028B7 /* playbutton.png in Resources */,
 				5B6F84851B3CB10C003497B4 /* InfoPlist.strings in Resources */,
@@ -317,7 +321,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "⊂(ϟ(ェ)ϟ)⊃";
+				PRODUCT_NAME = ZapBear;
 				PROVISIONING_PROFILE = "74c9e116-679b-4ecc-8b9c-c38266d6c887";
 				SDKROOT = iphoneos;
 			};
@@ -335,7 +339,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Quantum Productions, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Quantum Productions, LLC";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -343,7 +348,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PRODUCT_NAME = "⊂(ϟ(ェ)ϟ)⊃";
+				PRODUCT_NAME = ZapBear;
+				PROVISIONING_PROFILE = "0feb89da-be84-400e-a7e7-5333b316da66";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -352,12 +358,14 @@
 		5B6F849B1B3CB10C003497B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Anthony Broussard (4MKZKS737V)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
-				PRODUCT_NAME = "⊂(ϟ(ェ)ϟ)⊃";
+				PRODUCT_NAME = ZapBear;
 				PROVISIONING_PROFILE = "74c9e116-679b-4ecc-8b9c-c38266d6c887";
 				WRAPPER_EXTENSION = app;
 			};
@@ -366,13 +374,15 @@
 		5B6F849C1B3CB10C003497B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Quantum Productions, LLC";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Quantum Productions, LLC";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
-				PRODUCT_NAME = "⊂(ϟ(ェ)ϟ)⊃";
-				PROVISIONING_PROFILE = "";
+				PRODUCT_NAME = ZapBear;
+				PROVISIONING_PROFILE = "0feb89da-be84-400e-a7e7-5333b316da66";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

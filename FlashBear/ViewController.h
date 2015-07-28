@@ -58,6 +58,8 @@ typedef enum : NSUInteger {
     GameState state;
     
     float bearScale;
+    
+    bool loaded;
 }
 
 @property (strong, nonatomic) IBOutlet UIImageView *bear;
