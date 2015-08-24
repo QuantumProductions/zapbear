@@ -25,5 +25,8 @@
 
 - (void)activate;
 
+- (void)touchBegan;
+
+- (UIView *)view;
 
 @end

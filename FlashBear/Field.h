@@ -27,4 +27,6 @@
 
 - (void)touchBegan;
 
+- (UIView *)view;
+
 @end

@@ -12,7 +12,7 @@
 @implementation FlashStage
 
 - (void)activate {
-    self.vc.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     flash = 8;
 }
 

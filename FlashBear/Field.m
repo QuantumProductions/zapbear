@@ -18,7 +18,12 @@
     [self showStorm];
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(loop) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-
+    self.bear = [[Bear alloc] initWithFrame:CGRectMake(0, 0, 200, 332)];
+    [self.bear setSize:[[UIScreen mainScreen] bounds].size];
+    [self.bear plantBearOnGround];
+    [self.view addSubview:self.bear];
+    
+    
     return self;
 }
 
@@ -35,7 +40,11 @@
 }
 
 - (void)touchBegan {
-    
+    [self.stage touchBegan];
+}
+
+- (UIView *)view {
+    return self.vc.view;
 }
 
 @end

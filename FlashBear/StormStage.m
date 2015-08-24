@@ -15,7 +15,7 @@
     lightningDelay = arc4random() % 500;
     lightningDelay += 80;
     lastLightningDelay = lightningDelay;
-    self.vc.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor blackColor];
 }
 
 - (void)zapLoop {

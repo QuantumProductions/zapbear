@@ -23,4 +23,7 @@
 - (void)loop;
 - (void)jump;
 
+- (void)setSize:(CGSize)s;
+- (void)plantBearOnGround;
+
 @end

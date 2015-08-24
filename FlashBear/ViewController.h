@@ -19,7 +19,8 @@ typedef enum : NSUInteger {
     ThunderStruck
 } GameState;
 
-@interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate>
+@interface ViewController : UIViewController
+//<MenuDelegate, GKGameCenterControllerDelegate>
 {
     int accumulationDelay;
     NSInteger displayTotal;
@@ -52,8 +53,6 @@ typedef enum : NSUInteger {
 }
 
 @property (strong, nonatomic) Field *f;
-
-@property (strong, nonatomic) IBOutlet UIImageView *bear;
 
 @property (strong, nonatomic) UILabel *label;
 @property (strong, nonatomic) UILabel *highscoreLabel;

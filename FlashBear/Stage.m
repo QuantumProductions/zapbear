@@ -43,4 +43,12 @@
     return self.f.vc;
 }
 
+- (void)touchBegan {
+    [self.bear jump];
+}
+
+- (UIView *)view {
+    return self.f.view;
+}
+
 @end

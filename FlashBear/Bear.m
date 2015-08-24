@@ -10,6 +10,12 @@
 
 @implementation Bear
 
+- (id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    self.image = [UIImage imageNamed:@"FlashBearProto.png"];
+    return self;
+}
+
 - (bool)bearReachedGround
 {
     return self.frame.origin.y + self.frame.size.height >= [self floor];
@@ -77,6 +83,7 @@
 
 - (void)jump
 {
+    NSLog( @"jump" );
 //    [self.audioPlayer play];
 //    onLeftSide = !onLeftSide;
 //    isInXPlace = false;
@@ -90,6 +97,10 @@
 
 - (void)loop {
     
+}
+
+- (void)setSize:(CGSize)s {
+    size = s;
 }
 
 @end
