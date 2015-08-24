@@ -13,7 +13,7 @@
 - (void)preparePhysics
 {
     gravity = .8;
-    jumpForce = 16;
+    jumpForce = 6;
     fallSpeed = 0;
     
     xPosEpsilon = 0.001;
@@ -98,6 +98,7 @@
 
 - (void)loop {
     [self positionBear];
+    [self applyFalling];
 }
 
 - (void)setSize:(CGSize)s {
