@@ -23,7 +23,6 @@
     [self.bear plantBearOnGround];
     [self.view addSubview:self.bear];
     
-    
     return self;
 }
 

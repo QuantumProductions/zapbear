@@ -10,9 +10,21 @@
 
 @implementation Bear
 
+- (void)preparePhysics
+{
+    gravity = .8;
+    jumpForce = 16;
+    fallSpeed = 0;
+    
+    xPosEpsilon = 0.001;
+    xMoveInverseAcceleration = 10;
+    isInXPlace = false;
+}
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     self.image = [UIImage imageNamed:@"FlashBearProto.png"];
+    [self preparePhysics];
     return self;
 }
 
@@ -47,17 +59,6 @@
 }
 
 
-- (void)preparePhysics
-{
-    gravity = .8;
-    jumpForce = 16;
-    fallSpeed = 0;
-    
-    xPosEpsilon = 0.001;
-    xMoveInverseAcceleration = 10;
-    isInXPlace = false;
-}
-
 - (void)plantBearOnGround {
     self.center = CGPointMake(self.center.x, [self floor] - self.frame.size.height/2);
 }
@@ -85,10 +86,10 @@
 {
     NSLog( @"jump" );
 //    [self.audioPlayer play];
-//    onLeftSide = !onLeftSide;
-//    isInXPlace = false;
-//    fallSpeed = -jumpForce;
-//    self.bear.center = CGPointMake(self.bear.center.x, self.bear.center.y - 1);
+    onLeftSide = !onLeftSide;
+    isInXPlace = false;
+    fallSpeed = -jumpForce;
+    self.center = CGPointMake(self.center.x, self.center.y - 1);
 //    if (!lightningDelay) {
 //        dodged = true;
 //    }
@@ -96,7 +97,7 @@
 }
 
 - (void)loop {
-    
+    [self positionBear];
 }
 
 - (void)setSize:(CGSize)s {

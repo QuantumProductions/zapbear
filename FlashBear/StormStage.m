@@ -25,8 +25,4 @@
     }
 }
 
-- (void)bearLoop {
-    
-}
-
 @end
