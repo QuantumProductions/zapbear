@@ -61,12 +61,17 @@
     scoreButton.center = CGPointMake(frame.size.width / 2, frame.size.height * .95);
     [self addSubview:scoreButton];
 
+    UIView *adTapper = [[UIView alloc] initWithFrame:CGRectMake(0, scoreButton.frame.size.height + scoreButton.frame.origin.y, frame.size.width, frame.size.height * .2)];
+    adTapper.userInteractionEnabled = true;
+    [adTapper addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(adTapped)]];
+    
     return self;
 }
 
-- (void)retryTapped {
-    [self.delegate retryTapped];
+- (void)adTapped {
+    [self.delegate adTapped];
 }
+
 
 - (void)scoreTapped {
     [self.delegate scoreTapped];

@@ -243,7 +243,7 @@
 
 - (void)showMenu:(NSInteger)p
 {
-    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) points:p];
+    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height - self.arbitrary.frame.size.height) points:p];
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
     
@@ -523,8 +523,6 @@
 - (void)bannerViewWillLoadAd:(ADBannerView *)banner {
     
 }
-    
-    
 
 
 @end
