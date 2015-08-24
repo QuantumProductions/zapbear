@@ -84,16 +84,12 @@
 
 - (void)jump
 {
-    NSLog( @"jump" );
-//    [self.audioPlayer play];
-    onLeftSide = !onLeftSide;
-    isInXPlace = false;
-    fallSpeed = -jumpForce;
-    self.center = CGPointMake(self.center.x, self.center.y - 1);
-//    if (!lightningDelay) {
-//        dodged = true;
-//    }
-    
+    if ([self bearReachedGround]) {
+        onLeftSide = !onLeftSide;
+        isInXPlace = false;
+        fallSpeed = -jumpForce;
+        self.center = CGPointMake(self.center.x, self.center.y - 1);
+    }    
 }
 
 - (void)loop {
