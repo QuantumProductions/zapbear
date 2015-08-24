@@ -38,6 +38,10 @@
     self.stage = [[StormStage alloc] initWithField:self];
 }
 
+- (void)showZap {
+    self.stage = [[ZapStage alloc] initWithField:self];
+}
+
 - (void)touchBegan {
     [self.stage touchBegan];
 }

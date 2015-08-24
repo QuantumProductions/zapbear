@@ -19,7 +19,7 @@
 - (void)zapLoop {
     flash--;
     if (flash == 0) {
-        [self.f showStorm];
+        [self.f showZap];
     }
 }
 

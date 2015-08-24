@@ -28,6 +28,7 @@
 		0ECE2CC21B8BAC64004C4AD9 /* StormStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CC11B8BAC64004C4AD9 /* StormStage.m */; };
 		0ECE2CC51B8BAC7E004C4AD9 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CC41B8BAC7E004C4AD9 /* Field.m */; };
 		0ECE2CC81B8BB236004C4AD9 /* FlashStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CC71B8BB236004C4AD9 /* FlashStage.m */; };
+		0ECE2CCB1B8BBE33004C4AD9 /* ZapStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CCA1B8BBE33004C4AD9 /* ZapStage.m */; };
 		0ED4E3961B3F735E0094E73A /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED4E3951B3F735E0094E73A /* Menu.m */; };
 		0ED4E3981B3F78EE0094E73A /* theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0ED4E3971B3F78EE0094E73A /* theme.wav */; };
 		5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847A1B3CB10C003497B4 /* UIKit.framework */; };
@@ -80,6 +81,8 @@
 		0ECE2CC41B8BAC7E004C4AD9 /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
 		0ECE2CC61B8BB236004C4AD9 /* FlashStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashStage.h; sourceTree = "<group>"; };
 		0ECE2CC71B8BB236004C4AD9 /* FlashStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashStage.m; sourceTree = "<group>"; };
+		0ECE2CC91B8BBE33004C4AD9 /* ZapStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZapStage.h; sourceTree = "<group>"; };
+		0ECE2CCA1B8BBE33004C4AD9 /* ZapStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZapStage.m; sourceTree = "<group>"; };
 		0ED4E3941B3F735E0094E73A /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = ../Menu.h; sourceTree = "<group>"; };
 		0ED4E3951B3F735E0094E73A /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Menu.m; path = ../Menu.m; sourceTree = "<group>"; };
 		0ED4E3971B3F78EE0094E73A /* theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = theme.wav; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				0ECE2CC11B8BAC64004C4AD9 /* StormStage.m */,
 				0ECE2CC61B8BB236004C4AD9 /* FlashStage.h */,
 				0ECE2CC71B8BB236004C4AD9 /* FlashStage.m */,
+				0ECE2CC91B8BBE33004C4AD9 /* ZapStage.h */,
+				0ECE2CCA1B8BBE33004C4AD9 /* ZapStage.m */,
 			);
 			name = Stages;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				0ED4E3961B3F735E0094E73A /* Menu.m in Sources */,
 				0ECE2CB31B8BA7AA004C4AD9 /* UIViewController+ArbitraryAds.m in Sources */,
 				0ECE2CBB1B8BAB25004C4AD9 /* SoundPlayer.m in Sources */,
+				0ECE2CCB1B8BBE33004C4AD9 /* ZapStage.m in Sources */,
 				5B6F84941B3CB10C003497B4 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -29,4 +29,6 @@
 
 - (UIView *)view;
 
+- (void)showZap;
+
 @end

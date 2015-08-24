@@ -89,7 +89,7 @@
         isInXPlace = false;
         fallSpeed = -jumpForce;
         self.center = CGPointMake(self.center.x, self.center.y - 1);
-    }    
+    }
 }
 
 - (void)loop {
