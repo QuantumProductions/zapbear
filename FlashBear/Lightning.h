@@ -3,7 +3,7 @@
 //  FlashBear
 //
 //  Created by quantum on 29/06/2015.
-//  Copyright (c) 2015 Paul Muren. All rights reserved.
+//  CopyrighT (c) 2015 Quantum Productions. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,6 +12,8 @@
     int iterations;
     CGPoint bolts[23];
     float drawWidth;
+    
+    bool strikingLeft;
 }
 
 @property (nonatomic) float x;

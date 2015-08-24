@@ -3,7 +3,7 @@
 //  FlashBear
 //
 //  Created by quantum on 27/06/2015.
-//  Copyright (c) 2015 Paul Muren. All rights reserved.
+//  CopyrighT (c) 2015 Quantum Productions. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

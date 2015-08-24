@@ -3,15 +3,14 @@
 //  FlashBear
 //
 //  Created by Paul Muren on 6/25/15.
-//  Copyright (c) 2015 Paul Muren. All rights reserved.
+//  CopyrighT (c) 2015 Quantum Productions. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import <AVFoundation/AVFoundation.h>
 #import "Menu.h"
 #import "Lightning.h"
 #import <GameKit/GameKit.h>
-#import <iAD/iAD.h>
+#import "Field.h"
 
 typedef enum : NSUInteger {
     Title,
@@ -19,24 +18,14 @@ typedef enum : NSUInteger {
     Storm,
     ThunderStruck
 } GameState;
-@interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate, ADBannerViewDelegate>
+
+@interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate>
 {
     int accumulationDelay;
     NSInteger displayTotal;
     
     CGPoint startFlash;
     CGPoint startBear;
-    
-    bool onLeftSide;
-    bool bearIsGrounded;
-    int jumpForce;
-    float gravity;
-    float fallSpeed;
-    float xPosEpsilon;
-    float xMoveInverseAcceleration;
-    bool isInXPlace;
-    
-    int thunderPlayerIndex;
     
     bool bearHasBeenHitOnce;
     
@@ -62,23 +51,13 @@ typedef enum : NSUInteger {
     bool loaded;
 }
 
-@property (strong, nonatomic) IBOutlet UIImageView *bear;
+@property (strong, nonatomic) Field *f;
 
-@property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) IBOutlet UIImageView *bear;
 
 @property (strong, nonatomic) UILabel *label;
 @property (strong, nonatomic) UILabel *highscoreLabel;
 @property (strong, nonatomic) UILabel *bestLabel;
-
-@property (strong, nonatomic) AVAudioPlayer *audioPlayer;
-@property (strong, nonatomic) AVAudioPlayer *musicPlayer;
-
-@property (strong, nonatomic) AVAudioPlayer *thunderPlayer;
-@property (strong, nonatomic) AVAudioPlayer *thunderPlayer2;
-@property (strong, nonatomic) AVAudioPlayer *thunderPlayer3;
-@property (strong, nonatomic) NSArray *thunderPlayers;
-@property (strong, nonatomic) AVAudioPlayer *preThunderPlayer;
-@property (strong, nonatomic) AVAudioPlayer *lightningPlayer;
 
 @property (strong, nonatomic) Menu *menu;
 
@@ -90,7 +69,5 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) UIImageView *bg;
 
 @property (strong, nonatomic) NSArray *scoresToReport;
-
-@property (strong, nonatomic) ADBannerView *arbitrary;
 
 @end
