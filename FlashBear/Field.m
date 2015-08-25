@@ -9,6 +9,7 @@
 #import "Field.h"
 #import "FlashStage.h"
 #import "StormStage.h"
+#import "ZapStage.h"
 
 @implementation Field
 
@@ -39,7 +40,7 @@
 }
 
 - (void)showZap {
-    self.stage = [[ZapStage alloc] initWithField:self];
+   self.stage = [[ZapStage alloc] initWithField:self];
 }
 
 - (void)touchBegan {

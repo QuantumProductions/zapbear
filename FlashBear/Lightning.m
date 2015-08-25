@@ -19,8 +19,9 @@
         bolts[i] = CGPointMake(frame.size.width / 2, -10);
     }
     
-    bolts[0] = CGPointMake(self.x, -2);
-
+//    bolts[0] = CGPointMake(self.center.x, 5);
+//    bolts[1] = CGPointMake(bolts[0].x - 10, bolts[0].y + 10);
+    
     strikingLeft = arc4random() % 2;
     
     return self;
@@ -40,15 +41,31 @@
 }
 
 - (void)strike {
+    iterations++;
+    
     int direction = strikingLeft ? - 1 : 1;
-    if (iterations < 22) {
-        CGPoint oldBolt = bolts[iterations-1];
-        int randX = arc4random() % 5;
-        int randY = arc4random() % 2;
-        randY += 1;
-        bolts[iterations] = CGPointMake(oldBolt.x + (direction * randX), oldBolt.y + (direction * randY));
-        iterations++;
+    CGPoint oldBolt = bolts[iterations-1];
+    int randX = arc4random() % 15;
+    int randY = arc4random() % 8;
+    if (iterations <= 2) {
+        randX += arc4random() % 15;
+        randX += 8;
+    } else if (iterations <= 23) {
+        randY += 17;
     }
+    if (oldBolt.x > self.frame.size.width * .90) {
+        randX = -randX;
+    } else if (oldBolt.x < self.frame.size.width * .10) {
+        randX = -randX;
+    }
+    bolts[iterations] = CGPointMake(oldBolt.x + (direction * randX), oldBolt.y + randY);
+    
+    if (iterations > 23) {
+        strikingLeft = arc4random() % 2;
+        iterations = 0;
+    }
+
+    [self setNeedsDisplay];
 }
 
 //- (void)strike {

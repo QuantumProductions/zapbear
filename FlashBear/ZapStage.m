@@ -11,7 +11,14 @@
 @implementation ZapStage
 
 - (void)activate {
-    
+    self.lightning = [[Lightning alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.lightning];
+    self.view.backgroundColor = [UIColor blackColor];
 }
+
+- (void)zapLoop {
+    [self.lightning strike];
+}
+
 
 @end
