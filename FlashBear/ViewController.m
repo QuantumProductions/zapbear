@@ -65,15 +65,19 @@
     size = [[UIScreen mainScreen] bounds].size;
     [self loadTitle];
     self.f = [[Field alloc] initWithVC:self];
+    self.bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FlashBearAwfulBackground.png"]];
+    [self.view insertSubview:self.bg atIndex:0];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showBg) name:@"showbg" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBg) name:@"hidebg" object:nil];
 }
 
-- (void)drawBackground
-{
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"FlashBearAwfulBackground.png"] drawInRect:self.view.frame];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+- (void)showBg {
+    self.bg.alpha = 1;
+}
+
+- (void)hideBg {
+    self.bg.alpha = 0;
 }
 
 - (void)scoreTapped

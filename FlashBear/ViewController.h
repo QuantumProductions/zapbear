@@ -52,6 +52,8 @@ typedef enum : NSUInteger {
     bool loaded;
 }
 
+@property (strong, nonatomic) UIImageView *bg;
+
 @property (strong, nonatomic) Field *f;
 
 @property (strong, nonatomic) UILabel *label;
@@ -64,8 +66,6 @@ typedef enum : NSUInteger {
 
 @property (strong, nonatomic) IBOutlet UILabel *flashTitle;
 @property (strong, nonatomic) IBOutlet UILabel *bearTitle;
-
-@property (strong, nonatomic) UIImageView *bg;
 
 @property (strong, nonatomic) NSArray *scoresToReport;
 

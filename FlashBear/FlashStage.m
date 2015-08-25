@@ -14,6 +14,7 @@
 - (void)activate {
     self.view.backgroundColor = [UIColor whiteColor];
     flash = 8;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"hidebg" object:nil];
 }
 
 - (void)zapLoop {

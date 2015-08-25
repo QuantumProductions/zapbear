@@ -12,6 +12,7 @@
 @implementation ZapStage
 
 - (void)activate {
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"showbg" object:nil];
     self.lightning = [[Lightning alloc] initWithFrame:self.view.frame field:self.f];
     [self.view addSubview:self.lightning];
     self.view.backgroundColor = [UIColor blackColor];
