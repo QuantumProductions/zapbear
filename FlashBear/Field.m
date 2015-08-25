@@ -20,7 +20,8 @@
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(loop) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     self.bear = [[Bear alloc] initWithFrame:CGRectMake(0, 0, 200, 332)];
-    [self.bear setSize:[[UIScreen mainScreen] bounds].size];
+    size = [[UIScreen mainScreen] bounds].size;
+    [self.bear setSize:size];
     [self.bear plantBearOnGround];
     [self.view addSubview:self.bear];
     
@@ -36,6 +37,11 @@
 }
 
 - (void)showStorm {
+    if (self.stage.class == [ZapStage class]) {
+        ZapStage *z = (ZapStage *)self.stage;
+        [z.lightning removeFromSuperview];
+        z.lightning = nil;
+    }
     self.stage = [[StormStage alloc] initWithField:self];
 }
 
@@ -49,6 +55,11 @@
 
 - (UIView *)view {
     return self.vc.view;
+}
+
+- (bool)shouldStrikeBear:(Lightning *)l {
+    bool bearOnLeft = self.bear.center.x < size.width / 2;
+    return bearOnLeft == l.onLeft;
 }
 
 @end

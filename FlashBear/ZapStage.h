@@ -9,8 +9,11 @@
 #import "Stage.h"
 #import "Lightning.h"
 
-@interface ZapStage : Stage
+@interface ZapStage : Stage {
+    int afterImageFrames;
+}
 
 @property (strong, nonatomic) Lightning *lightning;
+
 
 @end

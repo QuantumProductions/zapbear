@@ -7,17 +7,26 @@
 //
 
 #import "ZapStage.h"
+#import "Field.h"
 
 @implementation ZapStage
 
 - (void)activate {
-    self.lightning = [[Lightning alloc] initWithFrame:self.view.frame];
+    self.lightning = [[Lightning alloc] initWithFrame:self.view.frame field:self.f];
     [self.view addSubview:self.lightning];
     self.view.backgroundColor = [UIColor blackColor];
+    afterImageFrames = 50;
 }
 
 - (void)zapLoop {
-    [self.lightning strike];
+    if ([self.lightning struck]) {
+        afterImageFrames--;
+        if (afterImageFrames <= 0) {
+            [self.f showStorm];
+        }
+    } else {
+        [self.lightning strike];
+    }
 }
 
 

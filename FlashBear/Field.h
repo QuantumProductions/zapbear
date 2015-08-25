@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "Bear.h"
 #import "Stage.h"
+#import "Lightning.h"
 
-@interface Field : NSObject
+@interface Field : NSObject {
+    CGSize size;
+}
 
 @property (strong, nonatomic) Bear *bear;
 @property (strong, nonatomic) Stage *stage;
@@ -30,5 +33,7 @@
 - (UIView *)view;
 
 - (void)showZap;
+
+- (bool)shouldStrikeBear:(Lightning *)l;
 
 @end

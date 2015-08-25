@@ -12,7 +12,7 @@
 
 @interface Stage : NSObject
 
-@property (strong, nonatomic) Field *f;
+@property (nonatomic, assign) Field *f;
 
 - (void)loop;
 - (void)zapLoop;
