@@ -37,7 +37,12 @@
     // Draw them with a 2.0 stroke width so they are a bit more visible.
     CGContextSetLineWidth(context, 4.0);
     
-    CGContextAddLines(context, bolts, sizeof(bolts)/sizeof(bolts[0]));
+    CGPoint zaps[iterations];
+    for (int i = 0; i < iterations; i++) {
+        zaps[i] = CGPointMake(bolts[i].x, bolts[i].y);
+    }
+    
+    CGContextAddLines(context, zaps, sizeof(zaps) / sizeof(zaps[0]));
     CGContextStrokePath(context);
 
 }
