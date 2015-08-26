@@ -16,13 +16,9 @@
     self.f = f;
     self.backgroundColor = [UIColor clearColor];
     
-    
     for (int i = 0; i < 23; i++) {
         bolts[i] = CGPointMake(frame.size.width / 2, -10);
     }
-    
-//    bolts[0] = CGPointMake(self.center.x, 5);
-//    bolts[1] = CGPointMake(bolts[0].x - 10, bolts[0].y + 10);
     
     strikingLeft = arc4random() % 2;
     

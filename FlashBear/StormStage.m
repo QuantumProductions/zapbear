@@ -12,10 +12,19 @@
 @implementation StormStage
 
 - (void)activate {
-    lightningDelay = arc4random() % 500;
-    lightningDelay += 80;
-    lastLightningDelay = lightningDelay;
-    lightningDelay = 80;
+    lightningDelay = arc4random() % 400;
+    lightningDelay += 40;
+    
+    if (lightningDelay > 300) {
+        int r = arc4random() % 3;
+        
+        if (r == 0) {
+            lightningDelay -= 200;
+        } else if (r == 1) {
+            lightningDelay-= 150;
+        }
+    }
+    
     self.view.backgroundColor = [UIColor blackColor];
 }
 

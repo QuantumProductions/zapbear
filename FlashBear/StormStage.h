@@ -10,7 +10,6 @@
 
 @interface StormStage : Stage {
     float lightningDelay;
-    float lastLightningDelay;
 }
 
 @end
