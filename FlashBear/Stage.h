@@ -17,6 +17,7 @@
 - (void)loop;
 - (void)zapLoop;
 - (void)bearLoop;
+- (void)scoreLoop;
 
 - (id)initWithField:(Field *)field;
 

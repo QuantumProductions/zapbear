@@ -23,6 +23,7 @@
     if ([self.lightning struck]) {
         afterImageFrames--;
         if (afterImageFrames <= 0) {
+            [self.bear redraw];
             [self.f showStorm];
         }
     } else {

@@ -34,9 +34,14 @@
     return self.f.bear;
 }
 
+- (void)scoreLoop {
+    [self.f.scorer loop];
+}
+
 - (void)loop {
     [self zapLoop];
     [self bearLoop];
+    [self scoreLoop];
 }
 
 - (UIViewController *)vc {

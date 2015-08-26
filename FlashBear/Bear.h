@@ -25,5 +25,6 @@
 
 - (void)setSize:(CGSize)s;
 - (void)plantBearOnGround;
+- (void)redraw;
 
 @end

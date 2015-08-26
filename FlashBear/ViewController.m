@@ -28,6 +28,7 @@
 
 - (void)hideBg {
     self.bg.alpha = 0;
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)scoreTapped

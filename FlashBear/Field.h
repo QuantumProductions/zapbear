@@ -40,4 +40,6 @@
 
 - (bool)shouldStrikeBear:(Lightning *)l;
 
+- (void)thunderStruck:(Lightning *)l;
+
 @end

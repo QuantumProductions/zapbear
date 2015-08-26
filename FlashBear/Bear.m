@@ -23,7 +23,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    self.image = [UIImage imageNamed:@"FlashBearProto.png"];
+    [self redraw];
     [self preparePhysics];
     return self;
 }
@@ -99,6 +99,10 @@
 
 - (void)setSize:(CGSize)s {
     size = s;
+}
+
+- (void)redraw {
+    self.image = [UIImage imageNamed:@"FlashBearProto.png"];
 }
 
 @end

@@ -67,8 +67,8 @@
         if (iterations >= 33) {
             bool shouldStrikeBear = [self.f shouldStrikeBear:self];
             if (shouldStrikeBear) {
-                [self.f.scorer reset];
                 bolts[iterations] = self.f.bear.center;
+                [self.f thunderStruck:self];
             } else {
                 bolts[iterations] = CGPointMake(oldBolt.x + (direction * randX), self.frame.size.height * .85);
             }

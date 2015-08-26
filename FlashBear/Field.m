@@ -10,6 +10,7 @@
 #import "FlashStage.h"
 #import "StormStage.h"
 #import "ZapStage.h"
+#import "ThunderStruck.h"
 
 @implementation Field
 
@@ -35,7 +36,6 @@
 }
 
 - (void)scoreLoop {
-    [self.scorer loop];
     self.label.text = [self.scorer description];
 }
 
@@ -79,6 +79,10 @@
         return true;
     }
     return false;
+}
+
+- (void)thunderStruck:(Lightning *)l {
+    self.stage = [[ThunderStruck alloc] initWithField:self lightning:l];
 }
 
 @end

@@ -13,6 +13,8 @@
 		0E0F58971B4B4815002CF575 /* thunder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E0F58941B4B4815002CF575 /* thunder.mp3 */; };
 		0E0F58981B4B4815002CF575 /* thunder2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E0F58951B4B4815002CF575 /* thunder2.mp3 */; };
 		0E0F589A1B4B49BA002CF575 /* lightning2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E0F58991B4B49BA002CF575 /* lightning2.wav */; };
+		0E223A561B8E4488003F160B /* ZappedBear1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E223A551B8E4488003F160B /* ZappedBear1.png */; };
+		0E223A591B8E4497003F160B /* ThunderStruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E223A581B8E4497003F160B /* ThunderStruck.m */; };
 		0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */; };
 		0E6CDBB91B422B060005A755 /* Lightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CDBB81B422B060005A755 /* Lightning.m */; };
 		0E792DEA1B4DFB3700E5B6DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E792DE91B4DFB3700E5B6DE /* Images.xcassets */; };
@@ -57,6 +59,9 @@
 		0E0F58941B4B4815002CF575 /* thunder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder.mp3; sourceTree = "<group>"; };
 		0E0F58951B4B4815002CF575 /* thunder2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder2.mp3; sourceTree = "<group>"; };
 		0E0F58991B4B49BA002CF575 /* lightning2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lightning2.wav; sourceTree = "<group>"; };
+		0E223A551B8E4488003F160B /* ZappedBear1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZappedBear1.png; sourceTree = "<group>"; };
+		0E223A571B8E4497003F160B /* ThunderStruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThunderStruck.h; sourceTree = "<group>"; };
+		0E223A581B8E4497003F160B /* ThunderStruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThunderStruck.m; sourceTree = "<group>"; };
 		0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearProto.png; sourceTree = "<group>"; };
 		0E6CDBB71B422B060005A755 /* Lightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lightning.h; sourceTree = "<group>"; };
 		0E6CDBB81B422B060005A755 /* Lightning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lightning.m; sourceTree = "<group>"; };
@@ -148,6 +153,8 @@
 				0ECE2CC71B8BB236004C4AD9 /* FlashStage.m */,
 				0ECE2CC91B8BBE33004C4AD9 /* ZapStage.h */,
 				0ECE2CCA1B8BBE33004C4AD9 /* ZapStage.m */,
+				0E223A571B8E4497003F160B /* ThunderStruck.h */,
+				0E223A581B8E4497003F160B /* ThunderStruck.m */,
 			);
 			name = Stages;
 			sourceTree = "<group>";
@@ -207,6 +214,7 @@
 				5BC78DF01B47537A007B976F /* FlashBearAwfulPlayButton.png */,
 				5BC78DF11B47537A007B976F /* FlashBearAwfulScoreButton.png */,
 				5BC78DFC1B4DF825007B976F /* FlashBearAppIcon.png */,
+				0E223A551B8E4488003F160B /* ZappedBear1.png */,
 				0E0F58931B4B4815002CF575 /* lightning.mp3 */,
 				0E0F58991B4B49BA002CF575 /* lightning2.wav */,
 				0E0F58941B4B4815002CF575 /* thunder.mp3 */,
@@ -306,6 +314,7 @@
 				0E0F58981B4B4815002CF575 /* thunder2.mp3 in Resources */,
 				5BC78DF71B4DE1FC007B976F /* thunder4.mp3 in Resources */,
 				5B6F848D1B3CB10C003497B4 /* Default.png in Resources */,
+				0E223A561B8E4488003F160B /* ZappedBear1.png in Resources */,
 				5B6F848F1B3CB10C003497B4 /* Default@2x.png in Resources */,
 				0ED4E3981B3F78EE0094E73A /* theme.wav in Resources */,
 				5BC78DF31B47537A007B976F /* FlashBearAwfulScoreButton.png in Resources */,
@@ -325,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E223A591B8E4497003F160B /* ThunderStruck.m in Sources */,
 				0ECE2CBE1B8BAC37004C4AD9 /* Stage.m in Sources */,
 				0ECE2CC81B8BB236004C4AD9 /* FlashStage.m in Sources */,
 				0ECE2CC21B8BAC64004C4AD9 /* StormStage.m in Sources */,
