@@ -64,9 +64,6 @@ typedef enum : NSUInteger {
 
 @property (strong, nonatomic) Lightning *lightning;
 
-@property (strong, nonatomic) IBOutlet UILabel *flashTitle;
-@property (strong, nonatomic) IBOutlet UILabel *bearTitle;
-
 @property (strong, nonatomic) NSArray *scoresToReport;
 
 @end

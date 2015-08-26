@@ -10,60 +10,10 @@
 
 @implementation ViewController
 
-- (void)loadTitle
-{
-
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    if (!loaded) {
-        loaded = true;
-        startFlash = self.flashTitle.center;
-        startBear = self.bearTitle.center;
-        bearHasBeenHitOnce = false;
-        [self animateTitle];
-//        [self plantBearOnGround];
-    }
-}
-
-- (void)animateTitle {
-    self.flashTitle.alpha = 1;
-    self.bearTitle.alpha = 1;
-
-    self.flashTitle.center = CGPointMake(self.flashTitle.center.x, -50);
-    self.bearTitle.center = CGPointMake(self.bearTitle.center.x, 700);
-    [UIView animateWithDuration:.6
-                     animations:^{
-                         self.flashTitle.center =startFlash;
-                     } completion:^(BOOL finished) {
-                         if (finished) {
-                             [UIView animateWithDuration:.6 animations:^{
-                                 self.bearTitle.center = startBear;
-                             } completion:^(BOOL finished) {
-                                 if (finished && !bearHasBeenHitOnce) {
-                                     [self showTitleLightningStrike];
-                                 }
-                             }];
-                         }
-                     }];
-}
-
-- (void)showTitleLightningStrike
-{
-    self.lightning.x = size.width * .75;
-//    [self.lightningPlayer play];
-    [self.lightning strike];
-    if (state == Title) {
-        state = Ready;
-    }
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     size = [[UIScreen mainScreen] bounds].size;
-    [self loadTitle];
     self.f = [[Field alloc] initWithVC:self];
     self.bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FlashBearAwfulBackground.png"]];
     [self.view insertSubview:self.bg atIndex:0];
