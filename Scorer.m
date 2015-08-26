@@ -110,5 +110,21 @@
 //    }
 //}
 
+- (void)loop {
+    milliseconds += 16;
+    if (milliseconds > 1000) {
+        milliseconds -= 1000;
+        seconds++;
+    }
+}
+- (void)reset {
+    milliseconds = 0;
+    seconds = 0;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"%d.%d", seconds, milliseconds];
+}
+
 
 @end

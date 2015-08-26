@@ -10,6 +10,7 @@
 #import "Bear.h"
 #import "Stage.h"
 #import "Lightning.h"
+#import "Scorer.h";
 
 @interface Field : NSObject {
     CGSize size;
@@ -17,8 +18,11 @@
 
 @property (strong, nonatomic) Bear *bear;
 @property (strong, nonatomic) Stage *stage;
+@property (strong, nonatomic) Scorer *scorer;
 
 @property (strong, nonatomic) UIViewController *vc;
+
+@property (strong, nonatomic) UILabel *label;
 
 @property (strong, nonatomic) NSTimer *timer;
 

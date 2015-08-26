@@ -26,4 +26,6 @@
 
 - (id)initWithFrame:(CGRect)frame field:(Field *)f;
 
+- (CGPoint)latest;
+
 @end

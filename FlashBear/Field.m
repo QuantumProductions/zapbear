@@ -24,12 +24,24 @@
     [self.bear setSize:size];
     [self.bear plantBearOnGround];
     [self.view addSubview:self.bear];
+
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, size.width, 40)];
+    self.label.textAlignment = NSTextAlignmentCenter;
+    self.label.font = [UIFont systemFontOfSize:40];
+    [self.view addSubview:self.label];
+    self.scorer = [[Scorer alloc] init];
     
     return self;
 }
 
+- (void)scoreLoop {
+    [self.scorer loop];
+    self.label.text = [self.scorer description];
+}
+
 - (void)loop {
     [self.stage loop];
+    [self scoreLoop];
 }
 
 - (void)showLightning {
@@ -59,7 +71,14 @@
 
 - (bool)shouldStrikeBear:(Lightning *)l {
     bool bearOnLeft = self.bear.center.x < size.width / 2;
-    return bearOnLeft == l.onLeft;
+    bool lightningLeft = l.latest.x < size.width / 2;
+    
+    if (lightningLeft && bearOnLeft) {
+        return true;
+    } else if (!lightningLeft && !bearOnLeft) {
+        return true;
+    }
+    return false;
 }
 
 @end

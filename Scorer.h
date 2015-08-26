@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Scorer : NSObject
+@interface Scorer : NSObject {
+    int milliseconds;
+    int seconds;
+}
+
+- (void)loop;
+- (void)reset;
 
 @end

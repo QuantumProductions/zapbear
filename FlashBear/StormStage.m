@@ -15,6 +15,7 @@
     lightningDelay = arc4random() % 500;
     lightningDelay += 80;
     lastLightningDelay = lightningDelay;
+    lightningDelay = 80;
     self.view.backgroundColor = [UIColor blackColor];
 }
 
