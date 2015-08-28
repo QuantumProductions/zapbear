@@ -38,11 +38,7 @@
 }
 
 - (void)scoreTapped {
-   [self showGameCenter];
-}
-
-- (void)adTapped {
-    
+//   [self showGameCenter];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -50,7 +46,7 @@
 }
 
 - (void)showMenu {
-    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height - self.arbitrary.frame.size.height)];
+    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height - self.arbitrary.frame.size.height) points:0];
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
 }

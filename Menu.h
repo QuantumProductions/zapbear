@@ -10,7 +10,6 @@
 
 @protocol MenuDelegate <NSObject>
 
-- (void)adTapped;
 - (void)scoreTapped;
 
 @end
