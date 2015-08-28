@@ -56,4 +56,8 @@
     return self.f.view;
 }
 
+- (SoundPlayer *)soundPlayer {
+    return self.f.soundPlayer;
+}
+
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 @class Field;
 #import "Bear.h"
+#import "SoundPlayer.h"
 
 @interface Stage : NSObject
 
@@ -29,5 +30,7 @@
 - (void)touchBegan;
 
 - (UIView *)view;
+
+- (SoundPlayer *)soundPlayer;
 
 @end

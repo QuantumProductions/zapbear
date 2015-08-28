@@ -31,6 +31,8 @@
     self.label.font = [UIFont systemFontOfSize:40];
     [self.view addSubview:self.label];
     self.scorer = [[Scorer alloc] init];
+
+    self.soundPlayer = [[SoundPlayer alloc] init];
     
     return self;
 }

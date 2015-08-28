@@ -22,5 +22,7 @@
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong, nonatomic) AVAudioPlayer *musicPlayer;
 
+- (void)playThunder;
+- (void)playLightning;
 
 @end

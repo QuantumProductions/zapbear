@@ -10,7 +10,8 @@
 #import "Bear.h"
 #import "Stage.h"
 #import "Lightning.h"
-#import "Scorer.h";
+#import "Scorer.h"
+#import "SoundPlayer.h"
 
 @interface Field : NSObject {
     CGSize size;
@@ -25,6 +26,8 @@
 @property (strong, nonatomic) UILabel *label;
 
 @property (strong, nonatomic) NSTimer *timer;
+
+@property (strong, nonatomic) SoundPlayer *soundPlayer;
 
 - (void)showLightning;
 

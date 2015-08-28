@@ -15,6 +15,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     flash = 8;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"hidebg" object:nil];
+    [self.soundPlayer playThunder];
 }
 
 - (void)zapLoop {

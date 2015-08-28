@@ -17,6 +17,7 @@
     [self.view addSubview:self.lightning];
     self.view.backgroundColor = [UIColor blackColor];
     afterImageFrames = 50;
+    [self.soundPlayer playLightning];
 }
 
 - (void)zapLoop {

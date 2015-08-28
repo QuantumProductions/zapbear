@@ -10,6 +10,13 @@
 
 @implementation SoundPlayer
 
+- (id)init {
+    self = [super init];
+    [self loadSounds];
+    [self.musicPlayer play];
+    return self;
+}
+
 - (void)loadSounds
 {
     NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"jump" ofType:@"wav"];
@@ -20,7 +27,6 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     self.musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     self.musicPlayer.numberOfLoops = -1;
-    [self.musicPlayer play];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"thunder4" ofType:@"mp3"];
     soundURL = [NSURL fileURLWithPath:soundPath];
@@ -29,10 +35,8 @@
     [self.thunderPlayer play];
     
     self.thunderPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-    //[self.thunderPlayer2 play];
     
     self.thunderPlayer3 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-    //[self.thunderPlayer3 play];
     
     self.thunderPlayers = @[self.thunderPlayer, self.thunderPlayer2, self.thunderPlayer3];
     thunderPlayerIndex = 0;
@@ -49,8 +53,7 @@
     self.lightningPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
 }
 
-- (void)playNextThunderPlayer
-{
+- (void)playThunder {
     
     AVAudioPlayer *p = self.thunderPlayers[thunderPlayerIndex];
     [p play];
@@ -58,5 +61,8 @@
     thunderPlayerIndex = (thunderPlayerIndex + 1) % self.thunderPlayers.count;
 }
 
+- (void)playLightning {
+    [self.lightningPlayer play];
+}
 
 @end
