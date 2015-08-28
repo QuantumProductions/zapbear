@@ -87,4 +87,13 @@
     self.stage = [[ThunderStruck alloc] initWithField:self lightning:l];
 }
 
+- (void)adTapped {
+    [self.arbitrary banne]
+}
+- (void)scoreTapped {
+    
+    
+}
+
+
 @end

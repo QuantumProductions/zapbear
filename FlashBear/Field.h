@@ -12,8 +12,10 @@
 #import "Lightning.h"
 #import "Scorer.h"
 #import "SoundPlayer.h"
+#import "Menu.h"
+#import <iAD/iAD.h>
 
-@interface Field : NSObject {
+@interface Field : NSObject <MenuDelegate> {
     CGSize size;
 }
 
@@ -22,12 +24,12 @@
 @property (strong, nonatomic) Scorer *scorer;
 
 @property (strong, nonatomic) UIViewController *vc;
-
+@property (strong, nonatomic) Menu *menu;
 @property (strong, nonatomic) UILabel *label;
-
 @property (strong, nonatomic) NSTimer *timer;
-
 @property (strong, nonatomic) SoundPlayer *soundPlayer;
+
+@property (strong, nonatomic) ADBannerView *arbitrary;
 
 - (void)showLightning;
 
@@ -44,5 +46,7 @@
 - (bool)shouldStrikeBear:(Lightning *)l;
 
 - (void)thunderStruck:(Lightning *)l;
+
+- (ADBannerView *)arbitrary;
 
 @end

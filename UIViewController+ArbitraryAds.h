@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <iAD/iAD.h>
 
-@interface UIViewController (ArbitraryAds)
+@interface UIViewController (ArbitraryAds) <ADBannerViewDelegate>
 
-- (void)bannerView:(ADBannerView *)banner;
 - (void)bannerViewActionDidFinish:(ADBannerView *)banner;
-- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner;
 - (void)bannerViewDidLoadAd:(ADBannerView *)banner;
 - (void)bannerViewWillLoadAd:(ADBannerView *)banner;
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner;
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error;
 - (void)loadMoney;
+- (void)hideMoney;
 
 @property (strong, nonatomic) ADBannerView *arbitrary;
 

@@ -11,6 +11,7 @@
 #import "Lightning.h"
 #import <GameKit/GameKit.h>
 #import "Field.h"
+#import "UIViewController+ArbitraryAds.h"
 
 typedef enum : NSUInteger {
     Title,
@@ -19,8 +20,7 @@ typedef enum : NSUInteger {
     ThunderStruck
 } GameState;
 
-@interface ViewController : UIViewController
-//<MenuDelegate, GKGameCenterControllerDelegate>
+@interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate>
 {
     int accumulationDelay;
     NSInteger displayTotal;
