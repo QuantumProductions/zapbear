@@ -15,6 +15,7 @@
     self = [super initWithField:field];
     [l removeFromSuperview];
     l = nil;
+    [self.f reportScores];
     return self;
 }
 

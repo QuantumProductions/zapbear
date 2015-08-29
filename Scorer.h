@@ -16,4 +16,6 @@
 - (void)loop;
 - (void)reset;
 
+- (NSInteger)points;
+
 @end

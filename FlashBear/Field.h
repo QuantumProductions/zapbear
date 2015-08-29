@@ -14,8 +14,9 @@
 #import "SoundPlayer.h"
 #import "Menu.h"
 #import <iAD/iAD.h>
+#import <GameKit/GameKit.h>
 
-@interface Field : NSObject <MenuDelegate> {
+@interface Field : NSObject <MenuDelegate, GKGameCenterControllerDelegate> {
     CGSize size;
 }
 
@@ -30,6 +31,8 @@
 @property (strong, nonatomic) SoundPlayer *soundPlayer;
 
 @property (strong, nonatomic) ADBannerView *arbitrary;
+
+@property (strong, nonatomic) NSArray *scoresToReport;
 
 - (void)showLightning;
 
@@ -48,5 +51,7 @@
 - (void)thunderStruck:(Lightning *)l;
 
 - (ADBannerView *)arbitrary;
+
+- (void)reportScores;
 
 @end

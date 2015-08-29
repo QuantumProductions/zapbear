@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "Menu.h"
 #import "Lightning.h"
-#import <GameKit/GameKit.h>
 #import "Field.h"
 #import "UIViewController+ArbitraryAds.h"
 
@@ -20,7 +19,7 @@ typedef enum : NSUInteger {
     ThunderStruck
 } GameState;
 
-@interface ViewController : UIViewController <MenuDelegate, GKGameCenterControllerDelegate>
+@interface ViewController : UIViewController <MenuDelegate>
 {
     int accumulationDelay;
     NSInteger displayTotal;
@@ -63,7 +62,5 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) Menu *menu;
 
 @property (strong, nonatomic) Lightning *lightning;
-
-@property (strong, nonatomic) NSArray *scoresToReport;
 
 @end

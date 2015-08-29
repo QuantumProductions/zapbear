@@ -34,6 +34,8 @@
 
     self.soundPlayer = [[SoundPlayer alloc] init];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showScores) name:@"showscores" object:nil];
+    
     return self;
 }
 
@@ -92,5 +94,51 @@
     
 }
 
+- (NSArray *)scores {
+    GKScore *pts = [[GKScore alloc] initWithLeaderboardIdentifier:@"flashbear_storm_survival"];
+    pts.value = [self.scorer points];
+    return @[pts];
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+    [self.vc dismissViewControllerAnimated:false completion:^{
+        
+    }];
+    
+}
+
+- (void)authenticateLocalPlayer {
+    __weak GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+    };
+}
+
+- (void)reportScores {
+    self.scoresToReport = [self scores];
+    for (GKScore *s in self.scoresToReport) {
+        NSLog(@"score: %lld", s.value);
+    }
+    [GKScore reportScores:self.scoresToReport withCompletionHandler:^(NSError *error) {
+        NSLog(@"error: %@", error);
+    }];
+}
+
+- (void)showScores {
+    [self showGameCenter];
+}
+
+- (void)showGameCenter {
+    GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+    
+    if (gameCenterController != nil) {
+        gameCenterController.gameCenterDelegate = self;
+        [self.vc presentViewController:gameCenterController animated:false completion:^{
+            
+        }];
+    } else {
+        
+    }
+}
 
 @end

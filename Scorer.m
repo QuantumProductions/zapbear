@@ -84,5 +84,9 @@
     return [NSString stringWithFormat:@"%d.%d", seconds, milliseconds];
 }
 
+- (NSInteger)points {
+    return (seconds * 1000) + milliseconds;
+}
+
 
 @end
