@@ -16,6 +16,7 @@
     size = [[UIScreen mainScreen] bounds].size;
     self.f = [[Field alloc] initWithVC:self];
     self.bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FlashBearAwfulBackground.png"]];
+    self.bg.frame = CGRectMake(0, 0, size.width, size.height);
     [self.view insertSubview:self.bg atIndex:0];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showBg) name:@"showbg" object:nil];
