@@ -39,9 +39,9 @@
 }
 
 - (void)loop {
+    [self scoreLoop];
     [self zapLoop];
     [self bearLoop];
-    [self scoreLoop];
 }
 
 - (UIViewController *)vc {
