@@ -21,10 +21,10 @@
     points = pts;
     
     
-    UIButton *scoreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 48, 48)];
+    UIButton *scoreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
     [scoreButton setImage:[UIImage imageNamed:@"FlashBearAwfulScoreButton.png"] forState:UIControlStateNormal];
     [scoreButton addTarget:self action:@selector(scoreTapped) forControlEvents:UIControlEventTouchUpInside];
-    scoreButton.center = CGPointMake(frame.size.width / 2, frame.size.height * .95);
+    scoreButton.center = CGPointMake(frame.size.width / 2, frame.size.height * .94);
     [self addSubview:scoreButton];
    
     return self;

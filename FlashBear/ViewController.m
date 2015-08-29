@@ -38,7 +38,7 @@
 }
 
 - (void)scoreTapped {
-//   [self showGameCenter];
+   [self showGameCenter];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -54,6 +54,49 @@
 - (void)hideMenu {
     [self.menu removeFromSuperview];
     self.menu = nil;
+}
+
+- (NSArray *)scores {
+    GKScore *pts = [[GKScore alloc] initWithLeaderboardIdentifier:@"flashbear_lightning_dodges"];
+    pts.value = best;
+    return @[pts];
+}
+
+- (void)gameCenterViewControllerDidFinish:(GKGameCenterViewController *)gameCenterViewController {
+    [self dismissViewControllerAnimated:false completion:^{
+        
+    }];
+    
+}
+
+- (void)authenticateLocalPlayer {
+    __weak GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    
+    localPlayer.authenticateHandler = ^(UIViewController *viewController, NSError *error){
+    };
+}
+
+- (void)reportScores {
+    self.scoresToReport = [self scores];
+    for (GKScore *s in self.scoresToReport) {
+        NSLog(@"score: %lld", s.value);
+    }
+    [GKScore reportScores:self.scoresToReport withCompletionHandler:^(NSError *error) {
+        NSLog(@"error: %@", error);
+    }];
+}
+
+- (void)showGameCenter {
+    GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
+    
+    if (gameCenterController != nil) {
+        gameCenterController.gameCenterDelegate = self;
+        [self presentViewController:gameCenterController animated:false completion:^{
+            
+        }];
+    } else {
+        
+    }
 }
 
 

@@ -34,6 +34,7 @@
     [super touchBegan];
     [self.f.scorer reset];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showbg" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"hideMenu" object:nil];
     [self.f showStorm];
 }
 
