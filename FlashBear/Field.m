@@ -119,9 +119,16 @@
     for (GKScore *s in self.scoresToReport) {
         NSLog(@"score: %lld", s.value);
     }
-    [GKScore reportScores:self.scoresToReport withCompletionHandler:^(NSError *error) {
-        NSLog(@"error: %@", error);
-    }];
+    __weak GKLocalPlayer *localPlayer = [GKLocalPlayer localPlayer];
+    
+    if (localPlayer.isAuthenticated) {
+        [GKScore reportScores:self.scoresToReport withCompletionHandler:^(NSError *error) {
+            NSLog(@"error: %@", error);
+        }];
+
+    } else {
+        [self authenticateLocalPlayer];
+    }
 }
 
 - (void)showScores {
