@@ -19,11 +19,9 @@
 		0E6CDBB91B422B060005A755 /* Lightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CDBB81B422B060005A755 /* Lightning.m */; };
 		0E792DEA1B4DFB3700E5B6DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E792DE91B4DFB3700E5B6DE /* Images.xcassets */; };
 		0E8C42DD1B434038000028B7 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8C42DC1B434038000028B7 /* playbutton.png */; };
-		0E9F74D91B4C4A5D003ABED9 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9F74D81B4C4A5D003ABED9 /* iAd.framework */; };
 		0EA059131B4B063D0028A7F0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA059121B4B063D0028A7F0 /* GameKit.framework */; };
 		0EC37A431B4748FE00F571BE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EC37A421B4748FE00F571BE /* QuartzCore.framework */; };
 		0ECE2CB01B8BA71A004C4AD9 /* Scorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CAF1B8BA71A004C4AD9 /* Scorer.m */; };
-		0ECE2CB31B8BA7AA004C4AD9 /* UIViewController+ArbitraryAds.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CB21B8BA7AA004C4AD9 /* UIViewController+ArbitraryAds.m */; };
 		0ECE2CB61B8BA87E004C4AD9 /* Bear.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CB51B8BA87E004C4AD9 /* Bear.m */; };
 		0ECE2CBB1B8BAB25004C4AD9 /* SoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CBA1B8BAB25004C4AD9 /* SoundPlayer.m */; };
 		0ECE2CBE1B8BAC37004C4AD9 /* Stage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CBD1B8BAC37004C4AD9 /* Stage.m */; };
@@ -72,8 +70,6 @@
 		0EC37A421B4748FE00F571BE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		0ECE2CAE1B8BA71A004C4AD9 /* Scorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Scorer.h; path = ../Scorer.h; sourceTree = "<group>"; };
 		0ECE2CAF1B8BA71A004C4AD9 /* Scorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Scorer.m; path = ../Scorer.m; sourceTree = "<group>"; };
-		0ECE2CB11B8BA7AA004C4AD9 /* UIViewController+ArbitraryAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ArbitraryAds.h"; path = "../UIViewController+ArbitraryAds.h"; sourceTree = "<group>"; };
-		0ECE2CB21B8BA7AA004C4AD9 /* UIViewController+ArbitraryAds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ArbitraryAds.m"; path = "../UIViewController+ArbitraryAds.m"; sourceTree = "<group>"; };
 		0ECE2CB41B8BA87E004C4AD9 /* Bear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bear.h; sourceTree = "<group>"; };
 		0ECE2CB51B8BA87E004C4AD9 /* Bear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bear.m; sourceTree = "<group>"; };
 		0ECE2CB91B8BAB25004C4AD9 /* SoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundPlayer.h; sourceTree = "<group>"; };
@@ -120,7 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E9F74D91B4C4A5D003ABED9 /* iAd.framework in Frameworks */,
 				0EA059131B4B063D0028A7F0 /* GameKit.framework in Frameworks */,
 				0EC37A431B4748FE00F571BE /* QuartzCore.framework in Frameworks */,
 				0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */,
@@ -136,8 +131,6 @@
 		0ECE2CB71B8BA892004C4AD9 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				0ECE2CB11B8BA7AA004C4AD9 /* UIViewController+ArbitraryAds.h */,
-				0ECE2CB21B8BA7AA004C4AD9 /* UIViewController+ArbitraryAds.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -345,7 +338,6 @@
 				0ECE2CC51B8BAC7E004C4AD9 /* Field.m in Sources */,
 				0E6CDBB91B422B060005A755 /* Lightning.m in Sources */,
 				0ED4E3961B3F735E0094E73A /* Menu.m in Sources */,
-				0ECE2CB31B8BA7AA004C4AD9 /* UIViewController+ArbitraryAds.m in Sources */,
 				0ECE2CBB1B8BAB25004C4AD9 /* SoundPlayer.m in Sources */,
 				0ECE2CCB1B8BBE33004C4AD9 /* ZapStage.m in Sources */,
 				5B6F84941B3CB10C003497B4 /* ViewController.m in Sources */,

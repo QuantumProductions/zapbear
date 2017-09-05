@@ -14,12 +14,15 @@
 
 @implementation Field
 
-- (id)initWithVC:(UIViewController *)vc {
-    self = [super init];
-    self.vc = vc;
+- (void)start {
     [self showStorm];
     self.timer = [NSTimer timerWithTimeInterval:.016 target:self selector:@selector(loop) userInfo:nil repeats:true] ;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+- (id)initWithVC:(UIViewController *)vc {
+    self = [super init];
+    self.vc = vc;
     self.bear = [[Bear alloc] initWithFrame:CGRectMake(0, 0, 200, 332)];
     size = [[UIScreen mainScreen] bounds].size;
     [self.bear setSize:size];

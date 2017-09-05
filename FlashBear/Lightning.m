@@ -20,9 +20,14 @@
         bolts[i] = CGPointMake(frame.size.width / 2, -10);
     }
     
-    strikingLeft = arc4random() % 2;
+    strikingLeft = [self getDirection];
+
     
     return self;
+}
+
+- (bool)getDirection {
+    return arc4random() % 2;
 }
 
 - (void)drawRect:(CGRect)rect

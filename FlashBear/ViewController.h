@@ -10,7 +10,6 @@
 #import "Menu.h"
 #import "Lightning.h"
 #import "Field.h"
-#import "UIViewController+ArbitraryAds.h"
 
 typedef enum : NSUInteger {
     Title,
@@ -19,8 +18,7 @@ typedef enum : NSUInteger {
     ThunderStruck
 } GameState;
 
-@interface ViewController : UIViewController <MenuDelegate>
-{
+@interface ViewController : UIViewController <MenuDelegate> {
     int accumulationDelay;
     NSInteger displayTotal;
     
@@ -62,5 +60,7 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) Menu *menu;
 
 @property (strong, nonatomic) Lightning *lightning;
+
+@property (strong, nonatomic) UILabel *titleLabel;
 
 @end

@@ -30,8 +30,6 @@
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) SoundPlayer *soundPlayer;
 
-@property (strong, nonatomic) ADBannerView *arbitrary;
-
 @property (strong, nonatomic) NSArray *scoresToReport;
 
 - (void)showLightning;
@@ -50,8 +48,8 @@
 
 - (void)thunderStruck:(Lightning *)l;
 
-- (ADBannerView *)arbitrary;
-
 - (void)reportScores;
+
+- (void)start;
 
 @end

@@ -28,4 +28,6 @@
 
 - (CGPoint)latest;
 
+- (bool)getDirection;
+
 @end
