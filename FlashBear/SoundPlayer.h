@@ -11,6 +11,7 @@
 
 @interface SoundPlayer : NSObject {
         int thunderPlayerIndex;
+    int lightningPlayerIndex;
 }
 
 @property (strong, nonatomic) AVAudioPlayer *thunderPlayer;
@@ -19,6 +20,11 @@
 @property (strong, nonatomic) NSArray *thunderPlayers;
 @property (strong, nonatomic) AVAudioPlayer *preThunderPlayer;
 @property (strong, nonatomic) AVAudioPlayer *lightningPlayer;
+@property (strong, nonatomic) AVAudioPlayer *lightningPlayer2;
+@property (strong, nonatomic) AVAudioPlayer *lightningPlayer3;
+@property (strong, nonatomic) AVAudioPlayer *lightningPlayer4;
+@property (strong, nonatomic) AVAudioPlayer *lightningPlayer5;
+@property (strong, nonatomic) NSArray *lightningPlayers;
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
 @property (strong, nonatomic) AVAudioPlayer *musicPlayer;
 

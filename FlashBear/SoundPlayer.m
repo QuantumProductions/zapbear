@@ -32,7 +32,7 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     
     self.thunderPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-//    [self.thunderPlayer play];
+    [self.thunderPlayer play];
     
     self.thunderPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     
@@ -45,12 +45,17 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     
     self.preThunderPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-//    [self.preThunderPlayer play];
+    [self.preThunderPlayer play];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"lightning" ofType:@"mp3"];
     soundURL = [NSURL fileURLWithPath:soundPath];
     
-//    self.lightningPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    self.lightningPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    self.lightningPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    self.lightningPlayer3 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    self.lightningPlayer4 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    self.lightningPlayer5 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+    self.lightningPlayers = @[self.lightningPlayer, self.lightningPlayer2, self.lightningPlayer3, self.lightningPlayer4, self.lightningPlayer5];
 }
 
 - (void)playThunder {
@@ -62,7 +67,9 @@
 }
 
 - (void)playLightning {
-//    [self.lightningPlayer play];
+    AVAudioPlayer *p = self.lightningPlayers[lightningPlayerIndex];
+    [p play];
+    lightningPlayerIndex = (lightningPlayerIndex + 1) % self.lightningPlayers.count;
 }
 
 @end
