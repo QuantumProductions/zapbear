@@ -81,7 +81,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%d.%d", seconds, milliseconds];
+    return [NSString stringWithFormat:@"%d pts", [self points]];
 }
 
 - (NSInteger)points {
