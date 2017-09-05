@@ -32,7 +32,7 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     
     self.thunderPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-    [self.thunderPlayer play];
+//    [self.thunderPlayer play];
     
     self.thunderPlayer2 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     
@@ -45,12 +45,12 @@
     soundURL = [NSURL fileURLWithPath:soundPath];
     
     self.preThunderPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
-    [self.preThunderPlayer play];
+//    [self.preThunderPlayer play];
     
     soundPath = [[NSBundle mainBundle] pathForResource:@"lightning" ofType:@"mp3"];
     soundURL = [NSURL fileURLWithPath:soundPath];
     
-    self.lightningPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
+//    self.lightningPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
 }
 
 - (void)playThunder {
@@ -62,7 +62,7 @@
 }
 
 - (void)playLightning {
-    [self.lightningPlayer play];
+//    [self.lightningPlayer play];
 }
 
 @end
