@@ -3,10 +3,11 @@
 //  FlashBear
 //
 //  Created by Paul Muren on 6/25/15.
-//  CopyrighT (c) 2015 Quantum Productions. All rights reserved.
+//  Copyright (c) 2015 Quantum Productions. All rights reserved.
 //
 
 #import "ViewController.h"
+#import "Colors.h"
 
 @implementation ViewController
 
@@ -21,6 +22,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showBg) name:@"showbg" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBg) name:@"hidebg" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideRedBg) name:@"hideredbg" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMenu) name:@"showMenu" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenu) name:@"hideMenu" object:nil];
     state = Title;
@@ -44,6 +46,11 @@
     self.view.backgroundColor = [UIColor whiteColor];
 }
 
+- (void)hideRedBg {
+    self.bg.alpha = 0;
+    self.view.backgroundColor = [Colors red];
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if (state == Title) {
         state = Storm;
@@ -55,9 +62,9 @@
 }
 
 - (void)showMenu {
-//    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height - self.arbitrary.frame.size.height) points:0];
-//    self.menu.delegate = self;
-//    [self.view addSubview:self.menu];
+    self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height - 60) points:0];
+    self.menu.delegate = self;
+    [self.view addSubview:self.menu];
 }
 
 //- (BOOL)prefersStatusBarHidden {

@@ -15,5 +15,6 @@
 
 @property (strong, nonatomic) Lightning *lightning;
 
+- (void)createLightning;
 
 @end

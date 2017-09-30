@@ -21,10 +21,13 @@
     points = pts;
     
     
-    UIButton *scoreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 70)];
-    [scoreButton setImage:[UIImage imageNamed:@"FlashBearAwfulScoreButton.png"] forState:UIControlStateNormal];
+    UIButton *scoreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 70)];
+    [scoreButton setTitle:@"LEADERBOARD" forState:UIControlStateNormal];
+    [scoreButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [scoreButton setBackgroundColor:[UIColor blackColor]];
+//    [scoreButton setImage:[UIImage imageNamed:@"FlashBearAwfulScoreButton.png"] forState:UIControlStateNormal];
     [scoreButton addTarget:self action:@selector(scoreTapped) forControlEvents:UIControlEventTouchUpInside];
-    scoreButton.center = CGPointMake(frame.size.width / 2, frame.size.height * .94);
+    scoreButton.center = CGPointMake(frame.size.width / 2, frame.size.height - 100);
     [self addSubview:scoreButton];
    
     return self;

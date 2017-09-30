@@ -11,10 +11,18 @@
 
 @implementation FlashStage
 
-- (void)activate {
+- (void)flashBackground {
     self.view.backgroundColor = [UIColor whiteColor];
+}
+
+- (NSString *)noteName {
+    return @"hidebg";
+}
+
+- (void)activate {
+    [self flashBackground];
     flash = 8;
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"hidebg" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:[self noteName] object:nil];
     [self.soundPlayer playThunder];
 }
 

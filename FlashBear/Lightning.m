@@ -21,7 +21,6 @@
     }
     
     strikingLeft = [self getDirection];
-
     
     return self;
 }
@@ -30,11 +29,14 @@
     return arc4random() % 2;
 }
 
-- (void)drawRect:(CGRect)rect
-{
+- (void)assignColor:(CGContextRef)context {
+    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
+}
+
+- (void)drawRect:(CGRect)rect {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0);
+    [self assignColor:context];
     // Draw them with a 2.0 stroke width so they are a bit more visible.
     CGContextSetLineWidth(context, 4.0);
     
@@ -48,8 +50,12 @@
 
 }
 
-- (void)strike {
+- (void)incrementIterations {
     iterations++;
+}
+
+- (void)strike {
+    [self incrementIterations];
     
     if (iterations <= 34) {
         int direction = strikingLeft ? - 1 : 1;

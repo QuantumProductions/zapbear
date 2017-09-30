@@ -17,5 +17,6 @@
 - (void)reset;
 
 - (NSInteger)points;
+- (bool)advanced;
 
 @end

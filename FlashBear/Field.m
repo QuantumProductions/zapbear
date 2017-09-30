@@ -8,8 +8,10 @@
 
 #import "Field.h"
 #import "FlashStage.h"
+#import "RedFlashStage.h"
 #import "StormStage.h"
 #import "ZapStage.h"
+#import "RedZapStage.h"
 #import "ThunderStruck.h"
 
 @implementation Field
@@ -52,11 +54,20 @@
 }
 
 - (void)showLightning {
-    self.stage = [[FlashStage alloc] initWithField:self];
+    if ([self.scorer advanced]) {
+        int r = arc4random() % 2;
+        if (r == 0) {
+            self.stage = [[FlashStage alloc] initWithField:self];
+        } else {
+            self.stage = [[RedFlashStage alloc] initWithField:self];
+        }
+    } else {
+        self.stage = [[FlashStage alloc] initWithField:self];
+    }
 }
 
 - (void)showStorm {
-    if (self.stage.class == [ZapStage class]) {
+    if (self.stage.class == [ZapStage class] || self.stage.class == [RedZapStage class]) {
         ZapStage *z = (ZapStage *)self.stage;
         [z.lightning removeFromSuperview];
         z.lightning = nil;
@@ -65,7 +76,12 @@
 }
 
 - (void)showZap {
-   self.stage = [[ZapStage alloc] initWithField:self];
+    if ([self.stage class] == [FlashStage class]) {
+        self.stage = [[ZapStage alloc] initWithField:self];
+    } else {
+        self.stage = [[RedZapStage alloc] initWithField:self];
+    }
+   
 }
 
 - (void)touchBegan {
@@ -100,6 +116,7 @@
 - (NSArray *)scores {
     GKScore *pts = [[GKScore alloc] initWithLeaderboardIdentifier:@"flashbear_storm_survival"];
     pts.value = [self.scorer points];
+    NSLog([NSString stringWithFormat:@"%lld", pts.value]);
     return @[pts];
 }
 

@@ -88,5 +88,8 @@
     return (seconds * 1000) + milliseconds;
 }
 
+- (bool)advanced {
+    return seconds > 60;
+}
 
 @end

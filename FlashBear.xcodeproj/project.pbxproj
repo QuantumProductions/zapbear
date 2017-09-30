@@ -16,6 +16,10 @@
 		0E223A561B8E4488003F160B /* ZappedBear1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E223A551B8E4488003F160B /* ZappedBear1.png */; };
 		0E223A591B8E4497003F160B /* ThunderStruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E223A581B8E4497003F160B /* ThunderStruck.m */; };
 		0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */; };
+		0E55669A1F7F28D500C9B060 /* RedFlashStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5566991F7F28D500C9B060 /* RedFlashStage.m */; };
+		0E55669D1F7F297800C9B060 /* RedZapStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55669C1F7F297800C9B060 /* RedZapStage.m */; };
+		0E5566A01F7F29B300C9B060 /* RedLightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55669F1F7F29B300C9B060 /* RedLightning.m */; };
+		0E5566A31F7F2C9E00C9B060 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5566A21F7F2C9E00C9B060 /* Colors.m */; };
 		0E6CDBB91B422B060005A755 /* Lightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CDBB81B422B060005A755 /* Lightning.m */; };
 		0E792DEA1B4DFB3700E5B6DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E792DE91B4DFB3700E5B6DE /* Images.xcassets */; };
 		0E8C42DD1B434038000028B7 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8C42DC1B434038000028B7 /* playbutton.png */; };
@@ -61,6 +65,14 @@
 		0E223A571B8E4497003F160B /* ThunderStruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThunderStruck.h; sourceTree = "<group>"; };
 		0E223A581B8E4497003F160B /* ThunderStruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThunderStruck.m; sourceTree = "<group>"; };
 		0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearProto.png; sourceTree = "<group>"; };
+		0E5566981F7F28D500C9B060 /* RedFlashStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedFlashStage.h; sourceTree = "<group>"; };
+		0E5566991F7F28D500C9B060 /* RedFlashStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedFlashStage.m; sourceTree = "<group>"; };
+		0E55669B1F7F297800C9B060 /* RedZapStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedZapStage.h; sourceTree = "<group>"; };
+		0E55669C1F7F297800C9B060 /* RedZapStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedZapStage.m; sourceTree = "<group>"; };
+		0E55669E1F7F29B300C9B060 /* RedLightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedLightning.h; sourceTree = "<group>"; };
+		0E55669F1F7F29B300C9B060 /* RedLightning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedLightning.m; sourceTree = "<group>"; };
+		0E5566A11F7F2C9E00C9B060 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
+		0E5566A21F7F2C9E00C9B060 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
 		0E6CDBB71B422B060005A755 /* Lightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lightning.h; sourceTree = "<group>"; };
 		0E6CDBB81B422B060005A755 /* Lightning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lightning.m; sourceTree = "<group>"; };
 		0E792DE91B4DFB3700E5B6DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -146,8 +158,12 @@
 				0ECE2CC71B8BB236004C4AD9 /* FlashStage.m */,
 				0ECE2CC91B8BBE33004C4AD9 /* ZapStage.h */,
 				0ECE2CCA1B8BBE33004C4AD9 /* ZapStage.m */,
+				0E5566981F7F28D500C9B060 /* RedFlashStage.h */,
+				0E5566991F7F28D500C9B060 /* RedFlashStage.m */,
 				0E223A571B8E4497003F160B /* ThunderStruck.h */,
 				0E223A581B8E4497003F160B /* ThunderStruck.m */,
+				0E55669B1F7F297800C9B060 /* RedZapStage.h */,
+				0E55669C1F7F297800C9B060 /* RedZapStage.m */,
 			);
 			name = Stages;
 			sourceTree = "<group>";
@@ -217,11 +233,15 @@
 				5B6F84811B3CB10C003497B4 /* Supporting Files */,
 				0E6CDBB71B422B060005A755 /* Lightning.h */,
 				0E6CDBB81B422B060005A755 /* Lightning.m */,
+				0E55669E1F7F29B300C9B060 /* RedLightning.h */,
+				0E55669F1F7F29B300C9B060 /* RedLightning.m */,
 				0E792DE91B4DFB3700E5B6DE /* Images.xcassets */,
 				0ECE2CB91B8BAB25004C4AD9 /* SoundPlayer.h */,
 				0ECE2CBA1B8BAB25004C4AD9 /* SoundPlayer.m */,
 				0ECE2CC31B8BAC7E004C4AD9 /* Field.h */,
 				0ECE2CC41B8BAC7E004C4AD9 /* Field.m */,
+				0E5566A11F7F2C9E00C9B060 /* Colors.h */,
+				0E5566A21F7F2C9E00C9B060 /* Colors.m */,
 			);
 			path = FlashBear;
 			sourceTree = "<group>";
@@ -329,8 +349,10 @@
 			files = (
 				0E223A591B8E4497003F160B /* ThunderStruck.m in Sources */,
 				0ECE2CBE1B8BAC37004C4AD9 /* Stage.m in Sources */,
+				0E55669D1F7F297800C9B060 /* RedZapStage.m in Sources */,
 				0ECE2CC81B8BB236004C4AD9 /* FlashStage.m in Sources */,
 				0ECE2CC21B8BAC64004C4AD9 /* StormStage.m in Sources */,
+				0E5566A01F7F29B300C9B060 /* RedLightning.m in Sources */,
 				5B6F84871B3CB10C003497B4 /* main.m in Sources */,
 				0ECE2CB01B8BA71A004C4AD9 /* Scorer.m in Sources */,
 				5B6F848B1B3CB10C003497B4 /* AppDelegate.m in Sources */,
@@ -338,8 +360,10 @@
 				0ECE2CC51B8BAC7E004C4AD9 /* Field.m in Sources */,
 				0E6CDBB91B422B060005A755 /* Lightning.m in Sources */,
 				0ED4E3961B3F735E0094E73A /* Menu.m in Sources */,
+				0E5566A31F7F2C9E00C9B060 /* Colors.m in Sources */,
 				0ECE2CBB1B8BAB25004C4AD9 /* SoundPlayer.m in Sources */,
 				0ECE2CCB1B8BBE33004C4AD9 /* ZapStage.m in Sources */,
+				0E55669A1F7F28D500C9B060 /* RedFlashStage.m in Sources */,
 				5B6F84941B3CB10C003497B4 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

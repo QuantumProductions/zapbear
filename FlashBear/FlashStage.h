@@ -12,4 +12,8 @@
     int flash;
 }
 
+- (void)flashBackground;
+
+- (NSString *)noteName;
+
 @end

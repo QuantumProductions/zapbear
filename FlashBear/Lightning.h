@@ -30,4 +30,8 @@
 
 - (bool)getDirection;
 
+- (void)incrementIterations;
+
+- (void)assignColor:(CGContextRef)context;
+
 @end
