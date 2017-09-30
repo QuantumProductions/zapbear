@@ -13,4 +13,8 @@
 
 - (id)initWithField:(Field *)field lightning:(Lightning *)l;
 
+- (void)announceHit;
+
+- (NSString *)noteName;
+
 @end

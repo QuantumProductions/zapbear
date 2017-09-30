@@ -13,6 +13,7 @@
 #import "ZapStage.h"
 #import "RedZapStage.h"
 #import "ThunderStruck.h"
+#import "RedThunderStruck.h"
 
 @implementation Field
 
@@ -54,6 +55,8 @@
 }
 
 - (void)showLightning {
+            self.stage = [[RedFlashStage alloc] initWithField:self];
+    return;
     if ([self.scorer advanced]) {
         int r = arc4random() % 2;
         if (r == 0) {
@@ -105,7 +108,12 @@
 }
 
 - (void)thunderStruck:(Lightning *)l {
-    self.stage = [[ThunderStruck alloc] initWithField:self lightning:l];
+    if ([l advanced]) {
+        self.stage = [[RedThunderStruck alloc] initWithField:self lightning:l];
+    } else {
+        self.stage = [[ThunderStruck alloc] initWithField:self lightning:l];
+    }
+    
 }
 
 - (void)scoreTapped {

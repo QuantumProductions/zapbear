@@ -103,4 +103,8 @@
     return bolts[iterations];
 }
 
+- (bool)advanced {
+    return false;
+}
+
 @end

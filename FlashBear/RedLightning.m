@@ -21,4 +21,8 @@
     CGContextSetRGBStrokeColor(context, 1.0, 0.769, 0.196, 1.0);
 }
 
+- (bool)advanced {
+    return true;
+}
+
 @end

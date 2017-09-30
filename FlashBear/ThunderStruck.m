@@ -23,9 +23,12 @@
     
 }
 
+- (NSString *)noteName {
+    return @"hidebg";
+}
+
 - (void)activate {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"hidebg" object:nil];
-//    [[NSNotificationCenter defaultCenter] postNotificationName:@"loadMoney" object:nil];
+    [[NSNotificationCenter defaultCenter] postNotificationName:[self noteName] object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showMenu" object:nil];
 
     self.bear.image = [UIImage imageNamed:@"ZappedBear1.png"];

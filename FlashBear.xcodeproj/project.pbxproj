@@ -20,6 +20,7 @@
 		0E55669D1F7F297800C9B060 /* RedZapStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55669C1F7F297800C9B060 /* RedZapStage.m */; };
 		0E5566A01F7F29B300C9B060 /* RedLightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55669F1F7F29B300C9B060 /* RedLightning.m */; };
 		0E5566A31F7F2C9E00C9B060 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5566A21F7F2C9E00C9B060 /* Colors.m */; };
+		0E5566A61F7F2E2B00C9B060 /* RedThunderStruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5566A51F7F2E2B00C9B060 /* RedThunderStruck.m */; };
 		0E6CDBB91B422B060005A755 /* Lightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CDBB81B422B060005A755 /* Lightning.m */; };
 		0E792DEA1B4DFB3700E5B6DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E792DE91B4DFB3700E5B6DE /* Images.xcassets */; };
 		0E8C42DD1B434038000028B7 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8C42DC1B434038000028B7 /* playbutton.png */; };
@@ -73,6 +74,8 @@
 		0E55669F1F7F29B300C9B060 /* RedLightning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedLightning.m; sourceTree = "<group>"; };
 		0E5566A11F7F2C9E00C9B060 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 		0E5566A21F7F2C9E00C9B060 /* Colors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Colors.m; sourceTree = "<group>"; };
+		0E5566A41F7F2E2B00C9B060 /* RedThunderStruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedThunderStruck.h; sourceTree = "<group>"; };
+		0E5566A51F7F2E2B00C9B060 /* RedThunderStruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedThunderStruck.m; sourceTree = "<group>"; };
 		0E6CDBB71B422B060005A755 /* Lightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lightning.h; sourceTree = "<group>"; };
 		0E6CDBB81B422B060005A755 /* Lightning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lightning.m; sourceTree = "<group>"; };
 		0E792DE91B4DFB3700E5B6DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 				0E5566991F7F28D500C9B060 /* RedFlashStage.m */,
 				0E223A571B8E4497003F160B /* ThunderStruck.h */,
 				0E223A581B8E4497003F160B /* ThunderStruck.m */,
+				0E5566A41F7F2E2B00C9B060 /* RedThunderStruck.h */,
+				0E5566A51F7F2E2B00C9B060 /* RedThunderStruck.m */,
 				0E55669B1F7F297800C9B060 /* RedZapStage.h */,
 				0E55669C1F7F297800C9B060 /* RedZapStage.m */,
 			);
@@ -347,6 +352,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E5566A61F7F2E2B00C9B060 /* RedThunderStruck.m in Sources */,
 				0E223A591B8E4497003F160B /* ThunderStruck.m in Sources */,
 				0ECE2CBE1B8BAC37004C4AD9 /* Stage.m in Sources */,
 				0E55669D1F7F297800C9B060 /* RedZapStage.m in Sources */,
