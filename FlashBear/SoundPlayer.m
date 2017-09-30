@@ -17,8 +17,7 @@
     return self;
 }
 
-- (void)loadSounds
-{
+- (void)loadSounds {
     NSString *soundPath = [[NSBundle mainBundle] pathForResource:@"jump" ofType:@"wav"];
     NSURL *soundURL = [NSURL fileURLWithPath:soundPath];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
@@ -56,6 +55,10 @@
     self.lightningPlayer4 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     self.lightningPlayer5 = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:nil];
     self.lightningPlayers = @[self.lightningPlayer, self.lightningPlayer2, self.lightningPlayer3, self.lightningPlayer4, self.lightningPlayer5];
+}
+
+- (void)playJump {
+//    [self.audioPlayer play];
 }
 
 - (void)playThunder {

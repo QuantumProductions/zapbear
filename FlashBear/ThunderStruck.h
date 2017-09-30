@@ -9,7 +9,9 @@
 #import "Stage.h"
 #import "Lightning.h"
 
-@interface ThunderStruck : Stage
+@interface ThunderStruck : Stage {
+    bool ready;
+}
 
 - (id)initWithField:(Field *)field lightning:(Lightning *)l;
 

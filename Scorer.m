@@ -81,7 +81,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%d pts", [self points]];
+    return [NSString stringWithFormat:@"%ld pts", (long)[self points]];
 }
 
 - (NSInteger)points {

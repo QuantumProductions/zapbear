@@ -30,5 +30,6 @@
 
 - (void)playThunder;
 - (void)playLightning;
+- (void)playJump;
 
 @end

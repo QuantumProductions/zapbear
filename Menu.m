@@ -8,6 +8,7 @@
 
 #import "Menu.h"
 #import <QuartzCore/QuartzCore.h>
+#import "Colors.h"
 
 @implementation Menu
 
@@ -23,8 +24,8 @@
     
     UIButton *scoreButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 150, 70)];
     [scoreButton setTitle:@"LEADERBOARD" forState:UIControlStateNormal];
-    [scoreButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [scoreButton setBackgroundColor:[UIColor blackColor]];
+    [scoreButton setTitleColor:[Colors red] forState:UIControlStateNormal];
+    [scoreButton setBackgroundColor:[Colors bg]];
 //    [scoreButton setImage:[UIImage imageNamed:@"FlashBearAwfulScoreButton.png"] forState:UIControlStateNormal];
     [scoreButton addTarget:self action:@selector(scoreTapped) forControlEvents:UIControlEventTouchUpInside];
     scoreButton.center = CGPointMake(frame.size.width / 2, frame.size.height - 100);

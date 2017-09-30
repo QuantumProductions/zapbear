@@ -31,14 +31,15 @@
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.titleLabel.text = @"Tap on Zap";
     self.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:50];
-    self.titleLabel.center = CGPointMake(self.view.center.x, 50);
-    self.titleLabel.textColor = [UIColor blackColor];
+    self.titleLabel.center = CGPointMake(self.view.center.x, 150);
+    self.titleLabel.textColor = [Colors bg];
     [self.view addSubview:self.titleLabel];
     
 }
 
 - (void)showBg {
     self.bg.alpha = 1;
+    self.titleLabel.alpha = 0;
 }
 
 - (void)hideBg {
@@ -58,13 +59,21 @@
         [self.f start];
         self.titleLabel.alpha = 0;
     }
+    
     [self.f touchBegan];
 }
 
 - (void)showMenu {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self showRealMenu];
+    });
+}
+
+- (void)showRealMenu {
     self.menu = [[Menu alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height - 60) points:0];
     self.menu.delegate = self;
     [self.view addSubview:self.menu];
+    self.titleLabel.alpha = 1;
 }
 
 //- (BOOL)prefersStatusBarHidden {

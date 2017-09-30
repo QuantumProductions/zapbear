@@ -14,6 +14,7 @@
 #import "RedZapStage.h"
 #import "ThunderStruck.h"
 #import "RedThunderStruck.h"
+#import "Colors.h"
 
 @implementation Field
 
@@ -33,6 +34,7 @@
     [self.view addSubview:self.bear];
 
     self.label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, size.width, 40)];
+    self.label.textColor = [Colors bg];
     self.label.textAlignment = NSTextAlignmentCenter;
     self.label.font = [UIFont systemFontOfSize:40];
     [self.view addSubview:self.label];
@@ -55,8 +57,6 @@
 }
 
 - (void)showLightning {
-            self.stage = [[RedFlashStage alloc] initWithField:self];
-    return;
     if ([self.scorer advanced]) {
         int r = arc4random() % 2;
         if (r == 0) {
@@ -88,6 +88,7 @@
 }
 
 - (void)touchBegan {
+    [self.soundPlayer playJump];
     [self.stage touchBegan];
 }
 

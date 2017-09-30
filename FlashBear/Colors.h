@@ -11,5 +11,6 @@
 @interface Colors : NSObject
 
 + (UIColor *)red;
++ (UIColor *)bg;
 
 @end

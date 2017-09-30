@@ -16,6 +16,7 @@
     [l removeFromSuperview];
     l = nil;
     [self.f reportScores];
+    ready = false;
     return self;
 }
 
@@ -32,9 +33,19 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showMenu" object:nil];
 
     self.bear.image = [UIImage imageNamed:@"ZappedBear1.png"];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self getReady];
+    });
+}
+
+- (void)getReady {
+    ready = true;
 }
 
 - (void)touchBegan {
+    if (!ready) {
+        return;
+    }
     [super touchBegan];
     [self.f.scorer reset];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showbg" object:nil];
