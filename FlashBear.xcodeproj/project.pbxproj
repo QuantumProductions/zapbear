@@ -15,6 +15,10 @@
 		0E043A841FD76F8F00723E1E /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A831FD76F8F00723E1E /* CoreAudioKit.framework */; };
 		0E043A861FD76F9700723E1E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A851FD76F9700723E1E /* Security.framework */; };
 		0E043A881FD7700E00723E1E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A871FD7700E00723E1E /* AdSupport.framework */; };
+		0E043A8A1FD7705300723E1E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A891FD7705300723E1E /* CFNetwork.framework */; };
+		0E043A8C1FD7706300723E1E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A8B1FD7706300723E1E /* GLKit.framework */; };
+		0E043A8E1FD7707700723E1E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A8D1FD7707700723E1E /* CoreMotion.framework */; };
+		0E043A901FD770AC00723E1E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A8F1FD770AC00723E1E /* MobileCoreServices.framework */; };
 		0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E05D6251B3E554E0058727A /* AVFoundation.framework */; };
 		0E05D6281B3E55C90058727A /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E05D6271B3E55C90058727A /* jump.wav */; };
 		0E0F58961B4B4815002CF575 /* lightning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E0F58931B4B4815002CF575 /* lightning.mp3 */; };
@@ -49,6 +53,8 @@
 		0ECE2CCB1B8BBE33004C4AD9 /* ZapStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2CCA1B8BBE33004C4AD9 /* ZapStage.m */; };
 		0ED4E3961B3F735E0094E73A /* Menu.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ED4E3951B3F735E0094E73A /* Menu.m */; };
 		0ED4E3981B3F78EE0094E73A /* theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0ED4E3971B3F78EE0094E73A /* theme.wav */; };
+		0EDE33191FD771330041AEE5 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDE33181FD771330041AEE5 /* CoreAudio.framework */; };
+		0EDE331C1FD7716D0041AEE5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDE331B1FD7716D0041AEE5 /* AudioToolbox.framework */; };
 		5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847A1B3CB10C003497B4 /* UIKit.framework */; };
 		5B6F847D1B3CB10C003497B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847C1B3CB10C003497B4 /* Foundation.framework */; };
 		5B6F847F1B3CB10C003497B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */; };
@@ -77,6 +83,11 @@
 		0E043A831FD76F8F00723E1E /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		0E043A851FD76F9700723E1E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0E043A871FD7700E00723E1E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		0E043A891FD7705300723E1E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		0E043A8B1FD7706300723E1E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		0E043A8D1FD7707700723E1E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		0E043A8F1FD770AC00723E1E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		0E043A911FD770B700723E1E /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = System/Library/Frameworks/AudioUnit.framework; sourceTree = SDKROOT; };
 		0E05D6251B3E554E0058727A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0E05D6271B3E55C90058727A /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 		0E0F58931B4B4815002CF575 /* lightning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightning.mp3; sourceTree = "<group>"; };
@@ -128,6 +139,8 @@
 		0ED4E3941B3F735E0094E73A /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = ../Menu.h; sourceTree = "<group>"; };
 		0ED4E3951B3F735E0094E73A /* Menu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Menu.m; path = ../Menu.m; sourceTree = "<group>"; };
 		0ED4E3971B3F78EE0094E73A /* theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = theme.wav; sourceTree = "<group>"; };
+		0EDE33181FD771330041AEE5 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		0EDE331B1FD7716D0041AEE5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5B6F84771B3CB10C003497B4 /* ZapBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZapBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6F847A1B3CB10C003497B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B6F847C1B3CB10C003497B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -157,6 +170,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EDE331C1FD7716D0041AEE5 /* AudioToolbox.framework in Frameworks */,
+				0EDE33191FD771330041AEE5 /* CoreAudio.framework in Frameworks */,
+				0E043A901FD770AC00723E1E /* MobileCoreServices.framework in Frameworks */,
+				0E043A8E1FD7707700723E1E /* CoreMotion.framework in Frameworks */,
+				0E043A8C1FD7706300723E1E /* GLKit.framework in Frameworks */,
+				0E043A8A1FD7705300723E1E /* CFNetwork.framework in Frameworks */,
 				0E043A881FD7700E00723E1E /* AdSupport.framework in Frameworks */,
 				0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */,
 				0E043A861FD76F9700723E1E /* Security.framework in Frameworks */,
@@ -233,6 +252,13 @@
 		5B6F84791B3CB10C003497B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0EDE331B1FD7716D0041AEE5 /* AudioToolbox.framework */,
+				0EDE33181FD771330041AEE5 /* CoreAudio.framework */,
+				0E043A911FD770B700723E1E /* AudioUnit.framework */,
+				0E043A8F1FD770AC00723E1E /* MobileCoreServices.framework */,
+				0E043A8D1FD7707700723E1E /* CoreMotion.framework */,
+				0E043A8B1FD7706300723E1E /* GLKit.framework */,
+				0E043A891FD7705300723E1E /* CFNetwork.framework */,
 				0E043A871FD7700E00723E1E /* AdSupport.framework */,
 				0E043A851FD76F9700723E1E /* Security.framework */,
 				0E043A831FD76F8F00723E1E /* CoreAudioKit.framework */,

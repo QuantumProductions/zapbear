@@ -20,7 +20,6 @@
     
     self.banner = [[GADBannerView alloc] initWithFrame:CGRectMake(0, size.height - 44, size.width, 44)];
     
-//    GADMobileAds.configure(withApplicationID: "YOUR_ADMOB_APP_ID")
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-8143809646615023~3124447940"];
     
     self.banner.adUnitID = @"ca-app-pub-8143809646615023/9306712917";
@@ -33,7 +32,7 @@
     
     self.f = [[Field alloc] initWithVC:self];
     self.bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FlashBearAwfulBackground.png"]];
-    self.bg.frame = CGRectMake(0, 0, size.width, size.height);
+    self.bg.frame = CGRectMake(0, 0, size.width, size.height - 44);
     [self.view insertSubview:self.bg atIndex:0];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showBg) name:@"showbg" object:nil];
