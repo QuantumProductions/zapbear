@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E043A7A1FD76F1B00723E1E /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A791FD76F1B00723E1E /* CoreMedia.framework */; };
+		0E043A7C1FD76F2A00723E1E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A7B1FD76F2A00723E1E /* MediaPlayer.framework */; };
+		0E043A7E1FD76F4900723E1E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A7D1FD76F4900723E1E /* OpenGLES.framework */; };
+		0E043A801FD76F6900723E1E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A7F1FD76F6900723E1E /* CoreTelephony.framework */; };
+		0E043A821FD76F8000723E1E /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A811FD76F8000723E1E /* CoreVideo.framework */; };
+		0E043A841FD76F8F00723E1E /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A831FD76F8F00723E1E /* CoreAudioKit.framework */; };
+		0E043A861FD76F9700723E1E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A851FD76F9700723E1E /* Security.framework */; };
+		0E043A881FD7700E00723E1E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043A871FD7700E00723E1E /* AdSupport.framework */; };
 		0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E05D6251B3E554E0058727A /* AVFoundation.framework */; };
 		0E05D6281B3E55C90058727A /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0E05D6271B3E55C90058727A /* jump.wav */; };
 		0E0F58961B4B4815002CF575 /* lightning.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E0F58931B4B4815002CF575 /* lightning.mp3 */; };
@@ -16,6 +24,11 @@
 		0E223A561B8E4488003F160B /* ZappedBear1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E223A551B8E4488003F160B /* ZappedBear1.png */; };
 		0E223A591B8E4497003F160B /* ThunderStruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E223A581B8E4497003F160B /* ThunderStruck.m */; };
 		0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */; };
+		0E32F6101FD749F7007BDD93 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F60F1FD749F7007BDD93 /* GoogleMobileAds.framework */; };
+		0E32F6121FD74CAA007BDD93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F6111FD74CAA007BDD93 /* StoreKit.framework */; };
+		0E32F6141FD74CB3007BDD93 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F6131FD74CB3007BDD93 /* MessageUI.framework */; };
+		0E32F6161FD74CB8007BDD93 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F6151FD74CB8007BDD93 /* Messages.framework */; };
+		0E32F6181FD74D50007BDD93 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F6171FD74D50007BDD93 /* SystemConfiguration.framework */; };
 		0E55669A1F7F28D500C9B060 /* RedFlashStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5566991F7F28D500C9B060 /* RedFlashStage.m */; };
 		0E55669D1F7F297800C9B060 /* RedZapStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55669C1F7F297800C9B060 /* RedZapStage.m */; };
 		0E5566A01F7F29B300C9B060 /* RedLightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E55669F1F7F29B300C9B060 /* RedLightning.m */; };
@@ -56,6 +69,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E043A791FD76F1B00723E1E /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		0E043A7B1FD76F2A00723E1E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0E043A7D1FD76F4900723E1E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		0E043A7F1FD76F6900723E1E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0E043A811FD76F8000723E1E /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		0E043A831FD76F8F00723E1E /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		0E043A851FD76F9700723E1E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0E043A871FD7700E00723E1E /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		0E05D6251B3E554E0058727A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		0E05D6271B3E55C90058727A /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
 		0E0F58931B4B4815002CF575 /* lightning.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lightning.mp3; sourceTree = "<group>"; };
@@ -66,6 +87,11 @@
 		0E223A571B8E4497003F160B /* ThunderStruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThunderStruck.h; sourceTree = "<group>"; };
 		0E223A581B8E4497003F160B /* ThunderStruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThunderStruck.m; sourceTree = "<group>"; };
 		0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearProto.png; sourceTree = "<group>"; };
+		0E32F60F1FD749F7007BDD93 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		0E32F6111FD74CAA007BDD93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0E32F6131FD74CB3007BDD93 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		0E32F6151FD74CB8007BDD93 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		0E32F6171FD74D50007BDD93 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		0E5566981F7F28D500C9B060 /* RedFlashStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedFlashStage.h; sourceTree = "<group>"; };
 		0E5566991F7F28D500C9B060 /* RedFlashStage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedFlashStage.m; sourceTree = "<group>"; };
 		0E55669B1F7F297800C9B060 /* RedZapStage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedZapStage.h; sourceTree = "<group>"; };
@@ -131,12 +157,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E043A881FD7700E00723E1E /* AdSupport.framework in Frameworks */,
+				0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */,
+				0E043A861FD76F9700723E1E /* Security.framework in Frameworks */,
+				0E043A841FD76F8F00723E1E /* CoreAudioKit.framework in Frameworks */,
+				0E043A821FD76F8000723E1E /* CoreVideo.framework in Frameworks */,
+				0E043A801FD76F6900723E1E /* CoreTelephony.framework in Frameworks */,
+				0E043A7E1FD76F4900723E1E /* OpenGLES.framework in Frameworks */,
+				0E043A7C1FD76F2A00723E1E /* MediaPlayer.framework in Frameworks */,
+				0E043A7A1FD76F1B00723E1E /* CoreMedia.framework in Frameworks */,
+				0E32F6181FD74D50007BDD93 /* SystemConfiguration.framework in Frameworks */,
+				5B6F847F1B3CB10C003497B4 /* CoreGraphics.framework in Frameworks */,
+				0E32F6161FD74CB8007BDD93 /* Messages.framework in Frameworks */,
+				0E32F6141FD74CB3007BDD93 /* MessageUI.framework in Frameworks */,
+				0E32F6121FD74CAA007BDD93 /* StoreKit.framework in Frameworks */,
 				0EA059131B4B063D0028A7F0 /* GameKit.framework in Frameworks */,
 				0EC37A431B4748FE00F571BE /* QuartzCore.framework in Frameworks */,
-				0E05D6261B3E554E0058727A /* AVFoundation.framework in Frameworks */,
 				5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */,
 				5B6F847D1B3CB10C003497B4 /* Foundation.framework in Frameworks */,
-				5B6F847F1B3CB10C003497B4 /* CoreGraphics.framework in Frameworks */,
+				0E32F6101FD749F7007BDD93 /* GoogleMobileAds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +233,19 @@
 		5B6F84791B3CB10C003497B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E043A871FD7700E00723E1E /* AdSupport.framework */,
+				0E043A851FD76F9700723E1E /* Security.framework */,
+				0E043A831FD76F8F00723E1E /* CoreAudioKit.framework */,
+				0E043A811FD76F8000723E1E /* CoreVideo.framework */,
+				0E043A7F1FD76F6900723E1E /* CoreTelephony.framework */,
+				0E043A7D1FD76F4900723E1E /* OpenGLES.framework */,
+				0E043A7B1FD76F2A00723E1E /* MediaPlayer.framework */,
+				0E043A791FD76F1B00723E1E /* CoreMedia.framework */,
+				0E32F60F1FD749F7007BDD93 /* GoogleMobileAds.framework */,
+				0E32F6171FD74D50007BDD93 /* SystemConfiguration.framework */,
+				0E32F6151FD74CB8007BDD93 /* Messages.framework */,
+				0E32F6131FD74CB3007BDD93 /* MessageUI.framework */,
+				0E32F6111FD74CAA007BDD93 /* StoreKit.framework */,
 				0E9F74D81B4C4A5D003ABED9 /* iAd.framework */,
 				0EA059121B4B063D0028A7F0 /* GameKit.framework */,
 				0EC37A421B4748FE00F571BE /* QuartzCore.framework */,
@@ -296,6 +348,7 @@
 				TargetAttributes = {
 					5B6F84761B3CB10C003497B4 = {
 						DevelopmentTeam = 7Y7DD8XY72;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -484,6 +537,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7Y7DD8XY72;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
@@ -491,6 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.quantumproductions.flashbear;
 				PRODUCT_NAME = ZapBear;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -503,6 +561,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7Y7DD8XY72;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlashBear/FlashBear-Prefix.pch";
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
@@ -510,6 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.quantumproductions.flashbear;
 				PRODUCT_NAME = ZapBear;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

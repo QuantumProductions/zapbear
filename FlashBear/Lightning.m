@@ -47,7 +47,6 @@
     
     CGContextAddLines(context, zaps, sizeof(zaps) / sizeof(zaps[0]));
     CGContextStrokePath(context);
-
 }
 
 - (void)incrementIterations {

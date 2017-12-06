@@ -10,6 +10,7 @@
 #import "Menu.h"
 #import "Lightning.h"
 #import "Field.h"
+#import <GoogleMobileAds/GoogleMobileAds.h>
 
 typedef enum : NSUInteger {
     Title,
@@ -62,5 +63,7 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) Lightning *lightning;
 
 @property (strong, nonatomic) UILabel *titleLabel;
+
+@property (strong, nonatomic) GADBannerView *banner;
 
 @end
