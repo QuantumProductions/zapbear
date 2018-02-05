@@ -11,10 +11,8 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
     
     size = [[UIScreen mainScreen] bounds].size;
     
@@ -24,10 +22,12 @@
     
     self.banner.adUnitID = @"ca-app-pub-8143809646615023/9306712917";
     self.banner.rootViewController = self;
+    
     GADRequest *request = [GADRequest request];
     
-    request.testDevices = @[ kGADSimulatorID ];
+//    request.testDevices = @[ kGADSimulatorID ];
     [self.banner loadRequest:request];
+    [self.view addSubview:self.banner];
     
     
     self.f = [[Field alloc] initWithVC:self];

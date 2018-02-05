@@ -28,7 +28,6 @@
 		0E223A561B8E4488003F160B /* ZappedBear1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E223A551B8E4488003F160B /* ZappedBear1.png */; };
 		0E223A591B8E4497003F160B /* ThunderStruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E223A581B8E4497003F160B /* ThunderStruck.m */; };
 		0E2EFAA81B41F9C60004EC3A /* FlashBearProto.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */; };
-		0E32F6101FD749F7007BDD93 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F60F1FD749F7007BDD93 /* GoogleMobileAds.framework */; };
 		0E32F6121FD74CAA007BDD93 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F6111FD74CAA007BDD93 /* StoreKit.framework */; };
 		0E32F6141FD74CB3007BDD93 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F6131FD74CB3007BDD93 /* MessageUI.framework */; };
 		0E32F6161FD74CB8007BDD93 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E32F6151FD74CB8007BDD93 /* Messages.framework */; };
@@ -55,6 +54,7 @@
 		0ED4E3981B3F78EE0094E73A /* theme.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0ED4E3971B3F78EE0094E73A /* theme.wav */; };
 		0EDE33191FD771330041AEE5 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDE33181FD771330041AEE5 /* CoreAudio.framework */; };
 		0EDE331C1FD7716D0041AEE5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EDE331B1FD7716D0041AEE5 /* AudioToolbox.framework */; };
+		384A54018319AA6DF33A4C6A /* libPods-FlashBear.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 916A4E43182578CD455FE42B /* libPods-FlashBear.a */; };
 		5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847A1B3CB10C003497B4 /* UIKit.framework */; };
 		5B6F847D1B3CB10C003497B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847C1B3CB10C003497B4 /* Foundation.framework */; };
 		5B6F847F1B3CB10C003497B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */; };
@@ -98,7 +98,6 @@
 		0E223A571B8E4497003F160B /* ThunderStruck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThunderStruck.h; sourceTree = "<group>"; };
 		0E223A581B8E4497003F160B /* ThunderStruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThunderStruck.m; sourceTree = "<group>"; };
 		0E2EFAA71B41F9C60004EC3A /* FlashBearProto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearProto.png; sourceTree = "<group>"; };
-		0E32F60F1FD749F7007BDD93 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		0E32F6111FD74CAA007BDD93 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		0E32F6131FD74CB3007BDD93 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		0E32F6151FD74CB8007BDD93 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
@@ -163,6 +162,9 @@
 		5BC78DF61B4DE1FC007B976F /* thunder4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thunder4.mp3; sourceTree = "<group>"; };
 		5BC78DFC1B4DF825007B976F /* FlashBearAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FlashBearAppIcon.png; sourceTree = "<group>"; };
 		5BC78DFE1B4DF88F007B976F /* preThunder3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = preThunder3.wav; sourceTree = "<group>"; };
+		8421A6C04D32FEA7232A4F2E /* Pods-FlashBear.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashBear.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlashBear/Pods-FlashBear.debug.xcconfig"; sourceTree = "<group>"; };
+		916A4E43182578CD455FE42B /* libPods-FlashBear.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlashBear.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69CA1F778B03E7ABCEE227F /* Pods-FlashBear.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlashBear.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlashBear/Pods-FlashBear.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +196,7 @@
 				0EC37A431B4748FE00F571BE /* QuartzCore.framework in Frameworks */,
 				5B6F847B1B3CB10C003497B4 /* UIKit.framework in Frameworks */,
 				5B6F847D1B3CB10C003497B4 /* Foundation.framework in Frameworks */,
-				0E32F6101FD749F7007BDD93 /* GoogleMobileAds.framework in Frameworks */,
+				384A54018319AA6DF33A4C6A /* libPods-FlashBear.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +233,15 @@
 			name = Stages;
 			sourceTree = "<group>";
 		};
+		4CE6634DB42A79F39C4203F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8421A6C04D32FEA7232A4F2E /* Pods-FlashBear.debug.xcconfig */,
+				D69CA1F778B03E7ABCEE227F /* Pods-FlashBear.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		5B6F846E1B3CB10C003497B4 = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +249,7 @@
 				0E8C42DC1B434038000028B7 /* playbutton.png */,
 				5B6F84791B3CB10C003497B4 /* Frameworks */,
 				5B6F84781B3CB10C003497B4 /* Products */,
+				4CE6634DB42A79F39C4203F8 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -267,7 +279,6 @@
 				0E043A7D1FD76F4900723E1E /* OpenGLES.framework */,
 				0E043A7B1FD76F2A00723E1E /* MediaPlayer.framework */,
 				0E043A791FD76F1B00723E1E /* CoreMedia.framework */,
-				0E32F60F1FD749F7007BDD93 /* GoogleMobileAds.framework */,
 				0E32F6171FD74D50007BDD93 /* SystemConfiguration.framework */,
 				0E32F6151FD74CB8007BDD93 /* Messages.framework */,
 				0E32F6131FD74CB3007BDD93 /* MessageUI.framework */,
@@ -279,6 +290,7 @@
 				5B6F847A1B3CB10C003497B4 /* UIKit.framework */,
 				5B6F847C1B3CB10C003497B4 /* Foundation.framework */,
 				5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */,
+				916A4E43182578CD455FE42B /* libPods-FlashBear.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -350,9 +362,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B6F849A1B3CB10C003497B4 /* Build configuration list for PBXNativeTarget "FlashBear" */;
 			buildPhases = (
+				D81AC3F0FDEEE8E99FB4CE2A /* [CP] Check Pods Manifest.lock */,
 				5B6F84731B3CB10C003497B4 /* Sources */,
 				5B6F84741B3CB10C003497B4 /* Frameworks */,
 				5B6F84751B3CB10C003497B4 /* Resources */,
+				9B0100087BF1933AAB40ADD9 /* [CP] Embed Pods Frameworks */,
+				AA278EB179DF2527EB0D9217 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -425,6 +440,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B0100087BF1933AAB40ADD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlashBear/Pods-FlashBear-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA278EB179DF2527EB0D9217 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlashBear/Pods-FlashBear-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D81AC3F0FDEEE8E99FB4CE2A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5B6F84731B3CB10C003497B4 /* Sources */ = {
@@ -557,6 +620,7 @@
 		};
 		5B6F849B1B3CB10C003497B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8421A6C04D32FEA7232A4F2E /* Pods-FlashBear.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -581,6 +645,7 @@
 		};
 		5B6F849C1B3CB10C003497B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D69CA1F778B03E7ABCEE227F /* Pods-FlashBear.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
