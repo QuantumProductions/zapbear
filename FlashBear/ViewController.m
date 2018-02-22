@@ -45,7 +45,7 @@
     
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
     self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.titleLabel.text = @"Tap on Zap";
+    self.titleLabel.text = @"Tap = Jump";
     self.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:50];
     self.titleLabel.center = CGPointMake(self.view.center.x, 150);
     self.titleLabel.textColor = [Colors bg];
