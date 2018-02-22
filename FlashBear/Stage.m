@@ -15,9 +15,8 @@
     
 }
 
-- (id)initWithField:(Field *)field {
+- (id)init {
     self = [super init];
-    self.f = field;
     [self activate];
     return self;
 }
@@ -31,11 +30,11 @@
 }
 
 - (Bear *)bear {
-    return self.f.bear;
+    return [Field shared].bear;
 }
 
 - (void)scoreLoop {
-    [self.f.scorer loop];
+    [[Field shared].scorer loop];
 }
 
 - (void)loop {
@@ -45,7 +44,7 @@
 }
 
 - (UIViewController *)vc {
-    return self.f.vc;
+    return [Field shared].vc;
 }
 
 - (void)touchBegan {
@@ -53,11 +52,11 @@
 }
 
 - (UIView *)view {
-    return self.f.view;
+    return [Field shared].view;
 }
 
 - (SoundPlayer *)soundPlayer {
-    return self.f.soundPlayer;
+    return [Field shared].soundPlayer;
 }
 
 @end

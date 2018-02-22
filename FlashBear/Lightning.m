@@ -11,9 +11,12 @@
 
 @implementation Lightning
 
-- (id)initWithFrame:(CGRect)frame field:(Field *)f {
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    self.f = f;
+    
+    [self addObserver:self forKeyPath:@"f" options:NSKeyValueObservingOptionNew context:nil];
+
+    
     self.backgroundColor = [UIColor clearColor];
     
     for (int i = 0; i < 23; i++) {
@@ -23,6 +26,10 @@
     strikingLeft = [self getDirection];
     
     return self;
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"observed");
 }
 
 - (bool)getDirection {
@@ -56,7 +63,7 @@
 - (void)strike {
     [self incrementIterations];
     
-    if (iterations <= 34) {
+    if (iterations <= 36) {
         int direction = strikingLeft ? - 1 : 1;
         CGPoint oldBolt = bolts[iterations-1];
         int randX = arc4random() % 15;
@@ -74,11 +81,11 @@
         }
         bolts[iterations] = CGPointMake(oldBolt.x + (direction * randX), oldBolt.y + randY);
         
-        if (iterations >= 33) {
-            bool shouldStrikeBear = [self.f shouldStrikeBear:self];
+        if (iterations >= 35) {
+            bool shouldStrikeBear = [[Field shared] shouldStrikeBear:self];
             if (shouldStrikeBear) {
-                bolts[iterations] = self.f.bear.center;
-                [self.f thunderStruck:self];
+                bolts[iterations] = [Field shared].bear.center;
+                [[Field shared] thunderStruck:self];
             } else {
                 bolts[iterations] = CGPointMake(oldBolt.x + (direction * randX), self.frame.size.height * .85);
             }
@@ -95,7 +102,7 @@
 }
 
 - (bool)struck {
-    return iterations >= 34;
+    return iterations >= 36;
 }
 
 - (CGPoint)latest {

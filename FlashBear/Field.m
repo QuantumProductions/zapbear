@@ -16,7 +16,21 @@
 #import "RedThunderStruck.h"
 #import "Colors.h"
 
+static Field *sharedField = nil;
+
 @implementation Field
+
++ (Field *)main:(UIViewController *)vc {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedField = [[self alloc] initWithVC:vc];
+    });
+    return sharedField;
+}
+
++ (Field *)shared {
+    return sharedField;
+}
 
 - (void)start {
     [self showStorm];
@@ -60,12 +74,12 @@
     if ([self.scorer advanced]) {
         int r = arc4random() % 2;
         if (r == 0) {
-            self.stage = [[FlashStage alloc] initWithField:self];
+            self.stage = [[FlashStage alloc] init];
         } else {
-            self.stage = [[RedFlashStage alloc] initWithField:self];
+            self.stage = [[RedFlashStage alloc] init];
         }
     } else {
-        self.stage = [[FlashStage alloc] initWithField:self];
+        self.stage = [[FlashStage alloc] init];
     }
 }
 
@@ -75,14 +89,14 @@
         [z.lightning removeFromSuperview];
         z.lightning = nil;
     }
-    self.stage = [[StormStage alloc] initWithField:self];
+    self.stage = [[StormStage alloc] init];
 }
 
 - (void)showZap {
     if ([self.stage class] == [FlashStage class]) {
-        self.stage = [[ZapStage alloc] initWithField:self];
+        self.stage = [[ZapStage alloc] init];
     } else {
-        self.stage = [[RedZapStage alloc] initWithField:self];
+        self.stage = [[RedZapStage alloc] init];
     }
    
 }
@@ -110,9 +124,9 @@
 
 - (void)thunderStruck:(Lightning *)l {
     if ([l advanced]) {
-        self.stage = [[RedThunderStruck alloc] initWithField:self lightning:l];
+        self.stage = [[RedThunderStruck alloc] initWithLightning:l];
     } else {
-        self.stage = [[ThunderStruck alloc] initWithField:self lightning:l];
+        self.stage = [[ThunderStruck alloc] initWithLightning:l];
     }
     
 }
@@ -175,6 +189,10 @@
     } else {
         
     }
+}
+
+- (void)dealloc {
+    NSLog(@"help");
 }
 
 @end

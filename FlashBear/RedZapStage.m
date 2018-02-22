@@ -12,7 +12,7 @@
 @implementation RedZapStage
 
 - (void)createLightning {
-    self.lightning = [[RedLightning alloc] initWithFrame:self.view.frame field:self.f];
+    self.lightning = [[RedLightning alloc] initWithFrame:self.view.frame];
 }
 
 @end

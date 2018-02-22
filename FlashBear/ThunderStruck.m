@@ -11,11 +11,11 @@
 
 @implementation ThunderStruck
 
-- (id)initWithField:(Field *)field lightning:(Lightning *)l {
-    self = [super initWithField:field];
+- (id)initWithLightning:(Lightning *)l {
+    self = [super init];
     [l removeFromSuperview];
     l = nil;
-    [self.f reportScores];
+    [[Field shared] reportScores];
     ready = false;
     return self;
 }
@@ -47,10 +47,10 @@
         return;
     }
     [super touchBegan];
-    [self.f.scorer reset];
+    [[Field shared].scorer reset];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"showbg" object:nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"hideMenu" object:nil];
-    [self.f showStorm];
+    [[Field shared] showStorm];
 }
 
 @end

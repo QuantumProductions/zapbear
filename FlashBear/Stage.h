@@ -7,20 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Field;
 #import "Bear.h"
 #import "SoundPlayer.h"
 
 @interface Stage : NSObject
 
-@property (nonatomic, assign) Field *f;
-
 - (void)loop;
 - (void)zapLoop;
 - (void)bearLoop;
 - (void)scoreLoop;
-
-- (id)initWithField:(Field *)field;
 
 - (Bear *)bear;
 - (UIViewController *)vc;

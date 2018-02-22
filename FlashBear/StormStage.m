@@ -31,7 +31,7 @@
 - (void)zapLoop {
     lightningDelay--;
     if (lightningDelay <= 0) {
-        [self.f showLightning];
+        [[Field shared] showLightning];
     }
 }
 

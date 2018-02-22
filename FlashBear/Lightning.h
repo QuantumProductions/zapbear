@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Field;
 
 @interface Lightning : UIView {
     int iterations;
@@ -17,14 +16,11 @@
 }
 
 @property (nonatomic) float x;
-@property (nonatomic, assign) Field *f;
 
 - (void)strike;
 
 - (bool)onLeft;
 - (bool)struck;
-
-- (id)initWithFrame:(CGRect)frame field:(Field *)f;
 
 - (CGPoint)latest;
 

@@ -52,4 +52,7 @@
 
 - (void)start;
 
++ (Field *)main:(UIViewController *)vc;
++ (Field *)shared;
+
 @end

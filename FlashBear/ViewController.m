@@ -30,7 +30,8 @@
     [self.view addSubview:self.banner];
     
     
-    self.f = [[Field alloc] initWithVC:self];
+    self.f = [Field main:self];
+//    [[Field alloc] initWithVC:self];
     self.bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FlashBearAwfulBackground.png"]];
     self.bg.frame = CGRectMake(0, 0, size.width, size.height - 44);
     [self.view insertSubview:self.bg atIndex:0];

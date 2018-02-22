@@ -13,7 +13,7 @@
     bool ready;
 }
 
-- (id)initWithField:(Field *)field lightning:(Lightning *)l;
+- (id)initWithLightning:(Lightning *)l;
 
 - (void)announceHit;
 

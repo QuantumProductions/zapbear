@@ -12,7 +12,7 @@
 @implementation ZapStage
 
 - (void)createLightning {
-    self.lightning = [[Lightning alloc] initWithFrame:self.view.frame field:self.f];
+    self.lightning = [[Lightning alloc] initWithFrame:self.view.frame];
 }
 
 - (void)activate {
@@ -29,7 +29,7 @@
         afterImageFrames--;
         if (afterImageFrames <= 0) {
             [self.bear redraw];
-            [self.f showStorm];
+            [[Field shared] showStorm];
         }
     } else {
         [self.lightning strike];
