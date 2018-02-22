@@ -140,7 +140,7 @@
 		0ED4E3971B3F78EE0094E73A /* theme.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = theme.wav; sourceTree = "<group>"; };
 		0EDE33181FD771330041AEE5 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		0EDE331B1FD7716D0041AEE5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		5B6F84771B3CB10C003497B4 /* Zap Bear ⊂(ϟ(ェ)ϟ)⊃.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zap Bear ⊂(ϟ(ェ)ϟ)⊃.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B6F84771B3CB10C003497B4 /* Zap Bear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zap Bear.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B6F847A1B3CB10C003497B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5B6F847C1B3CB10C003497B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5B6F847E1B3CB10C003497B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -256,7 +256,7 @@
 		5B6F84781B3CB10C003497B4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B6F84771B3CB10C003497B4 /* Zap Bear ⊂(ϟ(ェ)ϟ)⊃.app */,
+				5B6F84771B3CB10C003497B4 /* Zap Bear.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -375,7 +375,7 @@
 			);
 			name = FlashBear;
 			productName = FlashBear;
-			productReference = 5B6F84771B3CB10C003497B4 /* Zap Bear ⊂(ϟ(ェ)ϟ)⊃.app */;
+			productReference = 5B6F84771B3CB10C003497B4 /* Zap Bear.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -575,7 +575,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "Zap Bear ⊂(ϟ(ェ)ϟ)⊃";
+				PRODUCT_NAME = "Zap Bear";
 				PROVISIONING_PROFILE = "74c9e116-679b-4ecc-8b9c-c38266d6c887";
 				SDKROOT = iphoneos;
 			};
@@ -611,7 +611,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PRODUCT_NAME = "Zap Bear ⊂(ϟ(ェ)ϟ)⊃";
+				PRODUCT_NAME = "Zap Bear";
 				PROVISIONING_PROFILE = "0feb89da-be84-400e-a7e7-5333b316da66";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -636,7 +636,7 @@
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quantumproductions.flashbear;
-				PRODUCT_NAME = "Zap Bear ⊂(ϟ(ェ)ϟ)⊃";
+				PRODUCT_NAME = "Zap Bear";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
@@ -661,7 +661,7 @@
 				INFOPLIST_FILE = "FlashBear/FlashBear-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.quantumproductions.flashbear;
-				PRODUCT_NAME = "Zap Bear ⊂(ϟ(ェ)ϟ)⊃";
+				PRODUCT_NAME = "Zap Bear";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
