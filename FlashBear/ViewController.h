@@ -19,7 +19,7 @@ typedef enum : NSUInteger {
     ThunderStruck
 } GameState;
 
-@interface ViewController : UIViewController <MenuDelegate> {
+@interface ViewController : UIViewController <MenuDelegate, GADBannerViewDelegate> {
     int accumulationDelay;
     NSInteger displayTotal;
     
