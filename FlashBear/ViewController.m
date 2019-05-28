@@ -18,17 +18,19 @@
     
     self.banner = [[GADBannerView alloc] initWithFrame:CGRectMake(0, size.height - 44, size.width, 44)];
     
-    [GADMobileAds configureWithApplicationID:@"ca-app-pub-8143809646615023~3124447940"];
+    [[GADMobileAds sharedInstance] startWithCompletionHandler:^(GADInitializationStatus * _Nonnull status) {
+        self.banner.adUnitID = @"ca-app-pub-8143809646615023/9306712917";
+        self.banner.rootViewController = self;
+        self.banner.delegate = self;
+        
+        GADRequest *request = [GADRequest request];
+        //    request.testDevices = @[ kGADSimulatorID ];
+        [self.banner loadRequest:request];
+        [self.view addSubview:self.banner];
+    }];
     
-    self.banner.adUnitID = @"ca-app-pub-8143809646615023/9306712917";
-    self.banner.rootViewController = self;
-    self.banner.delegate = self;
     
-    GADRequest *request = [GADRequest request];
     
-//    request.testDevices = @[ kGADSimulatorID ];
-    [self.banner loadRequest:request];
-    [self.view addSubview:self.banner];
     
     
     self.f = [Field main:self];
