@@ -9,11 +9,14 @@
 #import "Field.h"
 #import "FlashStage.h"
 #import "RedFlashStage.h"
+#import "BlueFlashStage.h"
 #import "StormStage.h"
 #import "ZapStage.h"
 #import "RedZapStage.h"
 #import "ThunderStruck.h"
+#import "BlueZapStage.h"
 #import "RedThunderStruck.h"
+#import "BlueThunderStruck.h"
 #import "Colors.h"
 
 static Field *sharedField = nil;
@@ -40,6 +43,7 @@ static Field *sharedField = nil;
 
 - (id)initWithVC:(UIViewController *)vc {
     self = [super init];
+    NSLog(@"My field");
     self.vc = vc;
     self.bear = [[Bear alloc] initWithFrame:CGRectMake(0, 0, 200, 332)];
     size = [[UIScreen mainScreen] bounds].size;
@@ -71,6 +75,19 @@ static Field *sharedField = nil;
 }
 
 - (void)showLightning {
+    if ([self.scorer expert]) {
+        int r = arc4random() % 3;
+        r = 2;
+        if (r == 0) {
+            self.stage = [[FlashStage alloc] init];
+        } else if (r == 1) {
+            self.stage = [[RedFlashStage alloc] init];
+        } else if (r == 2) {
+            self.stage = [[BlueFlashStage alloc] init];
+        }
+        return;
+    }
+    
     if ([self.scorer advanced]) {
         int r = arc4random() % 2;
         if (r == 0) {
@@ -84,7 +101,7 @@ static Field *sharedField = nil;
 }
 
 - (void)showStorm {
-    if (self.stage.class == [ZapStage class] || self.stage.class == [RedZapStage class]) {
+    if (self.stage.class == [ZapStage class] || self.stage.class == [RedZapStage class] || self.stage.class == [BlueZapStage class]) {
         ZapStage *z = (ZapStage *)self.stage;
         [z.lightning removeFromSuperview];
         z.lightning = nil;
@@ -95,8 +112,11 @@ static Field *sharedField = nil;
 - (void)showZap {
     if ([self.stage class] == [FlashStage class]) {
         self.stage = [[ZapStage alloc] init];
-    } else {
+    } else if ([self.stage class] == [RedFlashStage class]) {
         self.stage = [[RedZapStage alloc] init];
+    } else {
+        NSLog(@"Blue zap");
+        self.stage = [[BlueZapStage alloc] init];
     }
    
 }
@@ -123,7 +143,9 @@ static Field *sharedField = nil;
 }
 
 - (void)thunderStruck:(Lightning *)l {
-    if ([l advanced]) {
+    if ([l expert]) {
+        self.stage = [[BlueThunderStruck alloc] initWithLightning:l];
+    } else if ([l advanced]) {
         self.stage = [[RedThunderStruck alloc] initWithLightning:l];
     } else {
         self.stage = [[ThunderStruck alloc] initWithLightning:l];

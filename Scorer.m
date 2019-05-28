@@ -92,4 +92,9 @@
     return seconds > 60;
 }
 
+- (bool)expert {
+    return seconds > 120;
+}
+
+
 @end

@@ -69,6 +69,11 @@
     self.view.backgroundColor = [Colors red];
 }
 
+- (void)hideBlueBg {
+    self.bg.alpha = 0;
+    self.view.backgroundColor = [Colors blue];
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if (state == Title) {
         state = Storm;

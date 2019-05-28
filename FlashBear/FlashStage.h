@@ -14,6 +14,8 @@
 
 - (void)flashBackground;
 
+- (int)flashDelay;
+
 - (NSString *)noteName;
 
 @end

@@ -19,9 +19,13 @@
     return @"hidebg";
 }
 
+- (int)flashDelay {
+    return 8;
+}
+
 - (void)activate {
     [self flashBackground];
-    flash = 8;
+    flash = [self flashDelay];
     [[NSNotificationCenter defaultCenter] postNotificationName:[self noteName] object:nil];
     [self.soundPlayer playThunder];
 }

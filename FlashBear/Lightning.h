@@ -31,5 +31,6 @@
 - (void)assignColor:(CGContextRef)context;
 
 - (bool)advanced;
+- (bool)expert;
 
 @end
