@@ -42,6 +42,10 @@
 		0E5566A31F7F2C9E00C9B060 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5566A21F7F2C9E00C9B060 /* Colors.m */; };
 		0E5566A61F7F2E2B00C9B060 /* RedThunderStruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5566A51F7F2E2B00C9B060 /* RedThunderStruck.m */; };
 		0E6CDBB91B422B060005A755 /* Lightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6CDBB81B422B060005A755 /* Lightning.m */; };
+		0E78606B23269F7F00F0BF8D /* PurpleLightning.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E78606A23269F7F00F0BF8D /* PurpleLightning.m */; };
+		0E7860722326A07800F0BF8D /* PurpleFlashStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7860712326A07800F0BF8D /* PurpleFlashStage.m */; };
+		0E7860752326A08700F0BF8D /* PurpleZapStage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7860742326A08700F0BF8D /* PurpleZapStage.m */; };
+		0E7860782326A09D00F0BF8D /* PurpleThunderStruck.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7860772326A09D00F0BF8D /* PurpleThunderStruck.m */; };
 		0E792DEA1B4DFB3700E5B6DE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E792DE91B4DFB3700E5B6DE /* Images.xcassets */; };
 		0E8C42DD1B434038000028B7 /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E8C42DC1B434038000028B7 /* playbutton.png */; };
 		0EA059131B4B063D0028A7F0 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EA059121B4B063D0028A7F0 /* GameKit.framework */; };
@@ -126,6 +130,14 @@
 		0E5566A51F7F2E2B00C9B060 /* RedThunderStruck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedThunderStruck.m; sourceTree = "<group>"; };
 		0E6CDBB71B422B060005A755 /* Lightning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lightning.h; sourceTree = "<group>"; };
 		0E6CDBB81B422B060005A755 /* Lightning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lightning.m; sourceTree = "<group>"; };
+		0E78606923269F7F00F0BF8D /* PurpleLightning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurpleLightning.h; sourceTree = "<group>"; };
+		0E78606A23269F7F00F0BF8D /* PurpleLightning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurpleLightning.m; sourceTree = "<group>"; };
+		0E7860702326A07800F0BF8D /* PurpleFlashStage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurpleFlashStage.h; sourceTree = "<group>"; };
+		0E7860712326A07800F0BF8D /* PurpleFlashStage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurpleFlashStage.m; sourceTree = "<group>"; };
+		0E7860732326A08700F0BF8D /* PurpleZapStage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurpleZapStage.h; sourceTree = "<group>"; };
+		0E7860742326A08700F0BF8D /* PurpleZapStage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurpleZapStage.m; sourceTree = "<group>"; };
+		0E7860762326A09D00F0BF8D /* PurpleThunderStruck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PurpleThunderStruck.h; sourceTree = "<group>"; };
+		0E7860772326A09D00F0BF8D /* PurpleThunderStruck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PurpleThunderStruck.m; sourceTree = "<group>"; };
 		0E792DE91B4DFB3700E5B6DE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0E8C42DC1B434038000028B7 /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
 		0E9F74D81B4C4A5D003ABED9 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
@@ -215,6 +227,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E78606C23269FD500F0BF8D /* RedStage */ = {
+			isa = PBXGroup;
+			children = (
+				0E55669B1F7F297800C9B060 /* RedZapStage.h */,
+				0E55669C1F7F297800C9B060 /* RedZapStage.m */,
+				0E55669E1F7F29B300C9B060 /* RedLightning.h */,
+				0E55669F1F7F29B300C9B060 /* RedLightning.m */,
+				0E5566A41F7F2E2B00C9B060 /* RedThunderStruck.h */,
+				0E5566A51F7F2E2B00C9B060 /* RedThunderStruck.m */,
+				0E5566981F7F28D500C9B060 /* RedFlashStage.h */,
+				0E5566991F7F28D500C9B060 /* RedFlashStage.m */,
+			);
+			name = RedStage;
+			sourceTree = "<group>";
+		};
+		0E78606D23269FDD00F0BF8D /* BlueStage */ = {
+			isa = PBXGroup;
+			children = (
+				0E259682229DA8E600CE0C61 /* BlueZapStage.h */,
+				0E259683229DA8E600CE0C61 /* BlueZapStage.m */,
+				0E259685229DA92000CE0C61 /* BlueLightning.h */,
+				0E259686229DA92000CE0C61 /* BlueLightning.m */,
+				0E259688229DA9A600CE0C61 /* BlueThunderStruck.h */,
+				0E259689229DA9A600CE0C61 /* BlueThunderStruck.m */,
+				0E25967F229DA78400CE0C61 /* BlueFlashStage.h */,
+				0E259680229DA78400CE0C61 /* BlueFlashStage.m */,
+			);
+			name = BlueStage;
+			sourceTree = "<group>";
+		};
+		0E78606E23269FE100F0BF8D /* PurpleStage */ = {
+			isa = PBXGroup;
+			children = (
+				0E7860732326A08700F0BF8D /* PurpleZapStage.h */,
+				0E7860742326A08700F0BF8D /* PurpleZapStage.m */,
+				0E78606923269F7F00F0BF8D /* PurpleLightning.h */,
+				0E78606A23269F7F00F0BF8D /* PurpleLightning.m */,
+				0E7860762326A09D00F0BF8D /* PurpleThunderStruck.h */,
+				0E7860772326A09D00F0BF8D /* PurpleThunderStruck.m */,
+				0E7860702326A07800F0BF8D /* PurpleFlashStage.h */,
+				0E7860712326A07800F0BF8D /* PurpleFlashStage.m */,
+			);
+			name = PurpleStage;
+			sourceTree = "<group>";
+		};
 		0ECE2CB71B8BA892004C4AD9 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,33 +279,23 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
-		0ECE2CBF1B8BAC51004C4AD9 /* Stages */ = {
+		0ECE2CBF1B8BAC51004C4AD9 /* StartStage */ = {
 			isa = PBXGroup;
 			children = (
 				0ECE2CBC1B8BAC37004C4AD9 /* Stage.h */,
 				0ECE2CBD1B8BAC37004C4AD9 /* Stage.m */,
+				0ECE2CC91B8BBE33004C4AD9 /* ZapStage.h */,
+				0ECE2CCA1B8BBE33004C4AD9 /* ZapStage.m */,
+				0E6CDBB71B422B060005A755 /* Lightning.h */,
+				0E6CDBB81B422B060005A755 /* Lightning.m */,
 				0ECE2CC01B8BAC64004C4AD9 /* StormStage.h */,
 				0ECE2CC11B8BAC64004C4AD9 /* StormStage.m */,
 				0ECE2CC61B8BB236004C4AD9 /* FlashStage.h */,
 				0ECE2CC71B8BB236004C4AD9 /* FlashStage.m */,
-				0ECE2CC91B8BBE33004C4AD9 /* ZapStage.h */,
-				0ECE2CCA1B8BBE33004C4AD9 /* ZapStage.m */,
-				0E5566981F7F28D500C9B060 /* RedFlashStage.h */,
-				0E5566991F7F28D500C9B060 /* RedFlashStage.m */,
-				0E25967F229DA78400CE0C61 /* BlueFlashStage.h */,
-				0E259680229DA78400CE0C61 /* BlueFlashStage.m */,
 				0E223A571B8E4497003F160B /* ThunderStruck.h */,
 				0E223A581B8E4497003F160B /* ThunderStruck.m */,
-				0E5566A41F7F2E2B00C9B060 /* RedThunderStruck.h */,
-				0E5566A51F7F2E2B00C9B060 /* RedThunderStruck.m */,
-				0E259688229DA9A600CE0C61 /* BlueThunderStruck.h */,
-				0E259689229DA9A600CE0C61 /* BlueThunderStruck.m */,
-				0E259682229DA8E600CE0C61 /* BlueZapStage.h */,
-				0E259683229DA8E600CE0C61 /* BlueZapStage.m */,
-				0E55669B1F7F297800C9B060 /* RedZapStage.h */,
-				0E55669C1F7F297800C9B060 /* RedZapStage.m */,
 			);
-			name = Stages;
+			name = StartStage;
 			sourceTree = "<group>";
 		};
 		4CE6634DB42A79F39C4203F8 /* Pods */ = {
@@ -316,7 +363,10 @@
 		5B6F84801B3CB10C003497B4 /* FlashBear */ = {
 			isa = PBXGroup;
 			children = (
-				0ECE2CBF1B8BAC51004C4AD9 /* Stages */,
+				0E78606E23269FE100F0BF8D /* PurpleStage */,
+				0E78606D23269FDD00F0BF8D /* BlueStage */,
+				0E78606C23269FD500F0BF8D /* RedStage */,
+				0ECE2CBF1B8BAC51004C4AD9 /* StartStage */,
 				0ECE2CB71B8BA892004C4AD9 /* Categories */,
 				0ED4E3941B3F735E0094E73A /* Menu.h */,
 				0ED4E3951B3F735E0094E73A /* Menu.m */,
@@ -344,12 +394,6 @@
 				5BC78DFE1B4DF88F007B976F /* preThunder3.wav */,
 				5BC78DF61B4DE1FC007B976F /* thunder4.mp3 */,
 				5B6F84811B3CB10C003497B4 /* Supporting Files */,
-				0E6CDBB71B422B060005A755 /* Lightning.h */,
-				0E6CDBB81B422B060005A755 /* Lightning.m */,
-				0E55669E1F7F29B300C9B060 /* RedLightning.h */,
-				0E55669F1F7F29B300C9B060 /* RedLightning.m */,
-				0E259685229DA92000CE0C61 /* BlueLightning.h */,
-				0E259686229DA92000CE0C61 /* BlueLightning.m */,
 				0E792DE91B4DFB3700E5B6DE /* Images.xcassets */,
 				0ECE2CB91B8BAB25004C4AD9 /* SoundPlayer.h */,
 				0ECE2CBA1B8BAB25004C4AD9 /* SoundPlayer.m */,
@@ -493,14 +537,18 @@
 				0ECE2CC81B8BB236004C4AD9 /* FlashStage.m in Sources */,
 				0ECE2CC21B8BAC64004C4AD9 /* StormStage.m in Sources */,
 				0E5566A01F7F29B300C9B060 /* RedLightning.m in Sources */,
+				0E78606B23269F7F00F0BF8D /* PurpleLightning.m in Sources */,
 				0E25968A229DA9A600CE0C61 /* BlueThunderStruck.m in Sources */,
 				5B6F84871B3CB10C003497B4 /* main.m in Sources */,
 				0ECE2CB01B8BA71A004C4AD9 /* Scorer.m in Sources */,
+				0E7860752326A08700F0BF8D /* PurpleZapStage.m in Sources */,
 				0E259684229DA8E600CE0C61 /* BlueZapStage.m in Sources */,
 				5B6F848B1B3CB10C003497B4 /* AppDelegate.m in Sources */,
 				0ECE2CB61B8BA87E004C4AD9 /* Bear.m in Sources */,
 				0ECE2CC51B8BAC7E004C4AD9 /* Field.m in Sources */,
 				0E6CDBB91B422B060005A755 /* Lightning.m in Sources */,
+				0E7860722326A07800F0BF8D /* PurpleFlashStage.m in Sources */,
+				0E7860782326A09D00F0BF8D /* PurpleThunderStruck.m in Sources */,
 				0ED4E3961B3F735E0094E73A /* Menu.m in Sources */,
 				0E5566A31F7F2C9E00C9B060 /* Colors.m in Sources */,
 				0ECE2CBB1B8BAB25004C4AD9 /* SoundPlayer.m in Sources */,

@@ -96,5 +96,9 @@
     return seconds > 120;
 }
 
+- (bool)adept {
+    return seconds > 180;
+}
+
 
 @end

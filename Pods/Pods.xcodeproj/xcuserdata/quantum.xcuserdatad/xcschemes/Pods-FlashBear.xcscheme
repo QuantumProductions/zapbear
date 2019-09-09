@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "741D4BAC9E14B9E97010A4614AD2E68A"
+               BlueprintIdentifier = "E58D062F304231E69DB1F327B1D6CD08"
+               BuildableName = "libPods-FlashBear.a"
                BlueprintName = "Pods-FlashBear"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libPods-FlashBear.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

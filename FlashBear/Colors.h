@@ -12,6 +12,7 @@
 
 + (UIColor *)red;
 + (UIColor *)blue;
++ (UIColor *)purple;
 + (UIColor *)bg;
 
 @end

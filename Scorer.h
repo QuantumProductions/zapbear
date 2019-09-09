@@ -19,5 +19,6 @@
 - (NSInteger)points;
 - (bool)advanced;
 - (bool)expert;
+- (bool)adept;
 
 @end

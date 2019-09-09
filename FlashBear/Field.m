@@ -10,13 +10,16 @@
 #import "FlashStage.h"
 #import "RedFlashStage.h"
 #import "BlueFlashStage.h"
+#import "PurpleFlashStage.h"
 #import "StormStage.h"
 #import "ZapStage.h"
 #import "RedZapStage.h"
-#import "ThunderStruck.h"
 #import "BlueZapStage.h"
+#import "PurpleZapStage.h"
+#import "ThunderStruck.h"
 #import "RedThunderStruck.h"
 #import "BlueThunderStruck.h"
+#import "PurpleThunderStruck.h"
 #import "Colors.h"
 
 static Field *sharedField = nil;
@@ -43,7 +46,6 @@ static Field *sharedField = nil;
 
 - (id)initWithVC:(UIViewController *)vc {
     self = [super init];
-    NSLog(@"My field");
     self.vc = vc;
     self.bear = [[Bear alloc] initWithFrame:CGRectMake(0, 0, 200, 332)];
     size = [[UIScreen mainScreen] bounds].size;
@@ -75,9 +77,20 @@ static Field *sharedField = nil;
 }
 
 - (void)showLightning {
-    if ([self.scorer expert]) {
-        int r = arc4random() % 3;
-        r = 2;
+    if ([self.scorer adept]) {
+        int r = arc4random() % 4;
+        if (r == 0) {
+            self.stage = [[FlashStage alloc] init];
+        } else if (r == 1) {
+            self.stage = [[RedFlashStage alloc] init];
+        } else if (r == 2) {
+            self.stage = [[BlueFlashStage alloc] init];
+        } else if (r == 3) {
+            self.stage = [[PurpleFlashStage alloc] init];
+        }
+        return;
+    } else if ([self.scorer expert]) {
+        int r = arc4random() % 4;
         if (r == 0) {
             self.stage = [[FlashStage alloc] init];
         } else if (r == 1) {
@@ -114,9 +127,10 @@ static Field *sharedField = nil;
         self.stage = [[ZapStage alloc] init];
     } else if ([self.stage class] == [RedFlashStage class]) {
         self.stage = [[RedZapStage alloc] init];
-    } else {
-        NSLog(@"Blue zap");
+    } else if ([self.stage class] == [BlueFlashStage class]){
         self.stage = [[BlueZapStage alloc] init];
+    } else {
+        self.stage = [[PurpleZapStage alloc] init];
     }
    
 }

@@ -32,5 +32,6 @@
 
 - (bool)advanced;
 - (bool)expert;
+- (bool)adept;
 
 @end

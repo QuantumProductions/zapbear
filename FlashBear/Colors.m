@@ -18,6 +18,10 @@
     return [UIColor colorWithRed:0.1 green:0.2 blue:0.78 alpha:1.00];
 }
 
++ (UIColor *)purple {
+    return [UIColor colorWithRed:0.627 green:0.29 blue:0.98 alpha:1.00];
+}
+
 + (UIColor *)bg {
     return [UIColor colorWithRed:0.200 green:0.165 blue:0.208 alpha:1.00];
 }

@@ -117,4 +117,8 @@
     return false;
 }
 
+- (bool)adept {
+    return false;
+}
+
 @end

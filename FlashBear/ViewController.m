@@ -29,12 +29,7 @@
         [self.view addSubview:self.banner];
     }];
     
-    
-    
-    
-    
     self.f = [Field main:self];
-//    [[Field alloc] initWithVC:self];
     self.bg = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FlashBearAwfulBackground.png"]];
     self.bg.frame = CGRectMake(0, 0, size.width, size.height - 44);
     [self.view insertSubview:self.bg atIndex:0];
@@ -42,6 +37,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showBg) name:@"showbg" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBg) name:@"hidebg" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideRedBg) name:@"hideredbg" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBlueBg) name:@"hidebluebg" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hidePurpleBg) name:@"hidepurplebg" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMenu) name:@"showMenu" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenu) name:@"hideMenu" object:nil];
     state = Title;
@@ -74,6 +71,11 @@
 - (void)hideBlueBg {
     self.bg.alpha = 0;
     self.view.backgroundColor = [Colors blue];
+}
+
+- (void)hidePurpleBg {
+    self.bg.alpha = 0;
+    self.view.backgroundColor = [Colors purple];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
