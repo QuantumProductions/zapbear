@@ -82,7 +82,6 @@ static Field *sharedField = nil;
 - (void)showLightning {
     if ([self.scorer adroit]) {
         int r = arc4random() % 5;
-        r = 4;
         if (r == 0) {
             self.stage = [[FlashStage alloc] init];
         } else if (r == 1) {
@@ -117,9 +116,7 @@ static Field *sharedField = nil;
             self.stage = [[BlueFlashStage alloc] init];
         }
         return;
-    }
-    
-    if ([self.scorer advanced]) {
+    } else if ([self.scorer advanced]) {
         int r = arc4random() % 2;
         if (r == 0) {
             self.stage = [[FlashStage alloc] init];
@@ -132,7 +129,7 @@ static Field *sharedField = nil;
 }
 
 - (void)showStorm {
-    if (self.stage.class == [ZapStage class] || self.stage.class == [RedZapStage class] || self.stage.class == [BlueZapStage class]) {
+    if (self.stage.class == [ZapStage class] || self.stage.class == [RedZapStage class] || self.stage.class == [BlueZapStage class] || self.stage.class == [PurpleZapStage class] || self.stage.class == [GreenZapStage class]) {
         ZapStage *z = (ZapStage *)self.stage;
         [z.lightning removeFromSuperview];
         z.lightning = nil;
@@ -165,10 +162,10 @@ static Field *sharedField = nil;
 }
 
 - (bool)shouldStrikeBear:(Lightning *)l {
-    if ([l adroit]) {
-        return ![self.bear bearReachedGround];
-    }
-    
+//    if ([l adroit]) {
+//        return ![self.bear bearReachedGround];
+//    }
+//    
     float cx = size.width / 2;
     
     bool bearOnLeft = self.bear.center.x < cx;

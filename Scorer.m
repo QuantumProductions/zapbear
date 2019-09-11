@@ -101,7 +101,7 @@
 }
 
 - (bool)adroit {
-    return true || seconds > 240;
+    return seconds > 240;
 }
 
 @end

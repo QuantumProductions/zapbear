@@ -75,6 +75,7 @@
 }
 
 - (void)hidePurpleBg {
+    NSLog(@"hide purple called");
     self.bg.alpha = 0;
     self.view.backgroundColor = [Colors purple];
 }

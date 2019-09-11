@@ -7,12 +7,12 @@
 //
 
 #import "GreenZapStage.h"
-#import "BlueLightning.h"
+#import "GreenLightning.h"
 
 @implementation GreenZapStage
 
 - (void)createLightning {
-    self.lightning = [[BlueLightning alloc] initWithFrame:self.view.frame];
+    self.lightning = [[GreenLightning alloc] initWithFrame:self.view.frame];
 }
 
 @end
