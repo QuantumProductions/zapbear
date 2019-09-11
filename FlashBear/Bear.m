@@ -10,8 +10,7 @@
 
 @implementation Bear
 
-- (void)preparePhysics
-{
+- (void)preparePhysics {
     gravity = .8;
     jumpForce = 6;
     fallSpeed = 0;
@@ -28,8 +27,7 @@
     return self;
 }
 
-- (bool)bearReachedGround
-{
+- (bool)bearReachedGround {
     return self.frame.origin.y + self.frame.size.height >= [self floor];
 }
 

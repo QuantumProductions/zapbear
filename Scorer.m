@@ -100,5 +100,8 @@
     return seconds > 180;
 }
 
+- (bool)adroit {
+    return true || seconds > 240;
+}
 
 @end

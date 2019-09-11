@@ -11,15 +11,18 @@
 #import "RedFlashStage.h"
 #import "BlueFlashStage.h"
 #import "PurpleFlashStage.h"
+#import "GreenFlashStage.h"
 #import "StormStage.h"
 #import "ZapStage.h"
 #import "RedZapStage.h"
 #import "BlueZapStage.h"
 #import "PurpleZapStage.h"
+#import "GreenZapStage.h"
 #import "ThunderStruck.h"
 #import "RedThunderStruck.h"
 #import "BlueThunderStruck.h"
 #import "PurpleThunderStruck.h"
+#import "GreenThunderStruck.h"
 #import "Colors.h"
 
 static Field *sharedField = nil;
@@ -77,7 +80,22 @@ static Field *sharedField = nil;
 }
 
 - (void)showLightning {
-    if ([self.scorer adept]) {
+    if ([self.scorer adroit]) {
+        int r = arc4random() % 5;
+        r = 4;
+        if (r == 0) {
+            self.stage = [[FlashStage alloc] init];
+        } else if (r == 1) {
+            self.stage = [[RedFlashStage alloc] init];
+        } else if (r == 2) {
+            self.stage = [[BlueFlashStage alloc] init];
+        } else if (r == 3) {
+            self.stage = [[PurpleFlashStage alloc] init];
+        } else if (r == 4) {
+            self.stage = [[GreenFlashStage alloc] init];
+        }
+        return;
+    } else if ([self.scorer adept]) {
         int r = arc4random() % 4;
         if (r == 0) {
             self.stage = [[FlashStage alloc] init];
@@ -129,6 +147,8 @@ static Field *sharedField = nil;
         self.stage = [[RedZapStage alloc] init];
     } else if ([self.stage class] == [BlueFlashStage class]){
         self.stage = [[BlueZapStage alloc] init];
+    } else if ([self.stage class] == [GreenFlashStage class]) {
+        self.stage = [[GreenZapStage alloc] init];
     } else {
         self.stage = [[PurpleZapStage alloc] init];
     }
@@ -145,8 +165,14 @@ static Field *sharedField = nil;
 }
 
 - (bool)shouldStrikeBear:(Lightning *)l {
-    bool bearOnLeft = self.bear.center.x < size.width / 2;
-    bool lightningLeft = l.latest.x < size.width / 2;
+    if ([l adroit]) {
+        return ![self.bear bearReachedGround];
+    }
+    
+    float cx = size.width / 2;
+    
+    bool bearOnLeft = self.bear.center.x < cx;
+    bool lightningLeft = l.latest.x < cx;
     
     if (lightningLeft && bearOnLeft) {
         return true;
@@ -157,7 +183,12 @@ static Field *sharedField = nil;
 }
 
 - (void)thunderStruck:(Lightning *)l {
-    if ([l expert]) {
+    NSLog(@"Thunder struck %@", [l class]);
+    if ([l adroit]) {
+        self.stage = [[GreenThunderStruck alloc] initWithLightning:l];
+    } else if ([l adept]) {
+        self.stage = [[PurpleThunderStruck alloc] initWithLightning:l];
+    } else if ([l expert]) {
         self.stage = [[BlueThunderStruck alloc] initWithLightning:l];
     } else if ([l advanced]) {
         self.stage = [[RedThunderStruck alloc] initWithLightning:l];

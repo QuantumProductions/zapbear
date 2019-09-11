@@ -39,6 +39,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideRedBg) name:@"hideredbg" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideBlueBg) name:@"hidebluebg" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hidePurpleBg) name:@"hidepurplebg" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideGreenBg) name:@"hidegreenbg" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMenu) name:@"showMenu" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenu) name:@"hideMenu" object:nil];
     state = Title;
@@ -76,6 +77,12 @@
 - (void)hidePurpleBg {
     self.bg.alpha = 0;
     self.view.backgroundColor = [Colors purple];
+}
+
+- (void)hideGreenBg {
+    NSLog(@"Hide green called");
+    self.bg.alpha = 0;
+    self.view.backgroundColor = [Colors green];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

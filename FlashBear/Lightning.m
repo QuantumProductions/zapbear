@@ -29,7 +29,6 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    NSLog(@"observed");
 }
 
 - (bool)getDirection {
@@ -118,6 +117,10 @@
 }
 
 - (bool)adept {
+    return false;
+}
+
+- (bool)adroit {
     return false;
 }
 

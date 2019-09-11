@@ -27,4 +27,6 @@
 - (void)plantBearOnGround;
 - (void)redraw;
 
+- (bool)bearReachedGround;
+
 @end
